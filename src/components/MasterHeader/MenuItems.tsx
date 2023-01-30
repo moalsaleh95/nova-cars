@@ -1,0 +1,40 @@
+import React, { FC } from "react";
+import { NavLink } from "react-router-dom";
+import { NavigationItemType } from "../../types/menus/menus";
+
+interface MenuItemsProps {
+  menuItem: NavigationItemType;
+};
+
+const MenuItems: FC<MenuItemsProps> = ({
+  menuItem
+}) => {
+
+  const handleNavLink = (item: NavigationItemType) => {
+
+  };
+
+  const RenderItem = (item: NavigationItemType) => {
+    return (
+      <div className="flex items-center">
+        <NavLink
+          // exact
+          // strict
+          target={item.targetBlank ? "_blank" : undefined}
+          rel="noopener noreferrer"
+          className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium text-[#ffffff] py-2 px-[.1vw]`}
+          to={ item.href }
+          onClick={(e: any) => { handleNavLink(item) }}
+        >
+            <span className={`font-poppins font-medium text-xl xl:px-4 `}>
+             { item.name }
+            </span>
+        </NavLink>
+      </div>
+    );
+  };
+
+  return <li className="menu-item nav-item relative">{RenderItem(menuItem)}</li>;
+};
+
+export default MenuItems;
