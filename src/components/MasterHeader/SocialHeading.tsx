@@ -45,7 +45,7 @@ const SocialHeading: FC<SocialHeadingProps> = () => {
 
     return (
         <>
-            <div className="container h-[50px] lg:flex mt-8 bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
+            <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
                 <div className='w-full flex justify-between my-4'>
 
                     <div className='flex items-end'>
