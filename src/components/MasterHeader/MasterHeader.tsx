@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react';
+import { MainColor } from '../constants/colors';
 import Navigation from './Navigation';
+import SocialHeading from './SocialHeading';
 
 interface MasterHeaderProps {
 };
@@ -29,9 +31,12 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
     };
 
     return (
-      <div className='header bg-[#d81212] h-[520px] relative lg:sticky lg:top-0 w-full lg:left-0 lg:right-0 z-40'>
+      <>
+       <SocialHeading />
+       <div className={`header bg-[${MainColor}] h-[520px] relative lg:sticky lg:top-0 w-full lg:left-0 lg:right-0 z-40`}>
         <Navigation isScrollTop = { isScrollTop} />
-      </div>
+       </div>
+      </>
     )
 };
 

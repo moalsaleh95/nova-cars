@@ -1,0 +1,80 @@
+import React, { FC, ReactNode, useState } from 'react'
+import logo from "../../assets/logo/logo.png";
+import instagram from '../../assets/socials/Component1.svg';
+import facebook from '../../assets/socials/Component2.svg';
+import twitter from '../../assets/socials/Component3.svg';
+import youtube from '../../assets/socials/Component4.svg';
+import whatsapp from '../../assets/socials/Component5.svg';
+import ButtonPrimary from '../../lib/Button/ButtonPrimary';
+import { MainColor } from '../constants/colors';
+
+
+interface SocialHeadingProps {
+
+};
+
+interface SocialIconsProps {
+    name: string;
+    icon: ReactNode;
+};
+
+export const SocialIcons: SocialIconsProps[] = [
+    {
+        name: 'Instagram',
+        icon: instagram
+    },
+    {
+        name: 'Facebook',
+        icon: facebook
+    },
+    {
+        name: 'Twitter',
+        icon: twitter
+    },
+    {
+        name: 'Youtube',
+        icon: youtube
+    },
+    {
+        name: 'Whatsapp',
+        icon: whatsapp
+    }
+];
+
+const SocialHeading: FC<SocialHeadingProps> = () => {
+
+    return (
+        <>
+            <div className="container h-[50px] lg:flex mt-8 bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
+                <div className='w-full flex justify-between my-4'>
+
+                    <div className='flex items-end'>
+                        <div className='flex items-center justify-center h-full'>
+                            <span className='font-poppins font-normal text-[18px] text-[#ffffff] whitespace-nowrap mr-4'>
+                                <ButtonPrimary className={`w-full rounded-t-[10px] bg-[${MainColor}] h-[20px] text-[18px]`} >
+                                   Mechanics
+                                </ButtonPrimary>
+                            </span>
+                            <span className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4'>
+                                Detailing
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className='flex justify-end items-center'>
+                        <div className="flex justify-between space-x-4">
+                            {
+                               SocialIcons?.map((social: any) => (
+                                 <section><img src={social.icon} /></section>
+                               )) 
+                            }
+                            <section className='text-[#43AF77] text-[14px] font-medium flex items-center whitespace-nowrap'>+90 212 344 xx xx</section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+};
+
+export default SocialHeading;
