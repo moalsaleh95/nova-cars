@@ -1,10 +1,10 @@
 import React, { FC, ReactNode, useState } from 'react'
 import logo from "../../assets/logo/logo.png";
-import instagram from '../../assets/socials/Component1.svg';
-import facebook from '../../assets/socials/Component2.svg';
-import twitter from '../../assets/socials/Component3.svg';
-import youtube from '../../assets/socials/Component4.svg';
-import whatsapp from '../../assets/socials/Component5.svg';
+import instagram from '../../assets/socials/instagram.svg';
+import facebook from '../../assets/socials/facebook.svg';
+import twitter from '../../assets/socials/twitter.svg';
+import youtube from '../../assets/socials/youtube.svg';
+import whatsapp from '../../assets/socials/whatsapp.svg';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 import { MainColor } from '../constants/colors';
 
