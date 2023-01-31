@@ -3,6 +3,6 @@
 @tailwind utilities;
 @tailwind variants;
 
-*, ::before, ::after {
+/* *, ::before, ::after {
     border-color: #fff !important;
-}
+} */
