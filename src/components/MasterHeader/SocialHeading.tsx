@@ -41,6 +41,7 @@ export const SocialIcons: SocialIconsProps[] = [
     }
 ];
 
+// TODO: on Mechanics or Detailing active, use ButtonPrimary
 const SocialHeading: FC<SocialHeadingProps> = () => {
 
     return (
@@ -50,12 +51,12 @@ const SocialHeading: FC<SocialHeadingProps> = () => {
 
                     <div className='flex items-end'>
                         <div className='flex items-center justify-center h-full'>
-                            <span className='font-poppins font-normal text-[18px] text-[#ffffff] whitespace-nowrap mr-4'>
-                                <ButtonPrimary className={`w-full rounded-t-[10px] bg-[${MainColor}] h-[20px] text-[18px]`} >
-                                   Mechanics
+                            <span className='whitespace-nowrap mr-4 mt-5'>
+                                <ButtonPrimary className={`w-full rounded-t-[10px] bg-[${MainColor}] h-[60px] text-[18px]`} >
+                                  <span className='font-poppins font-normal text-[18px] text-[#ffffff] whitespace-nowrap mr-4'> Mechanics </span>
                                 </ButtonPrimary>
                             </span>
-                            <span className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4'>
+                            <span className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5'>
                                 Detailing
                             </span>
                         </div>
