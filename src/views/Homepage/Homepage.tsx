@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
+import Faq from "../../components/Faq/Faq";
 
 const Homepage = () => {
   return (
@@ -9,6 +10,7 @@ const Homepage = () => {
       </Helmet>
       <div className='h-[500px]'>
         {/*  div free */}
+        <Faq />
       </div>
     </div>
   )
