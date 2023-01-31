@@ -7,6 +7,9 @@ const Homepage = () => {
       <Helmet>
         <title>Nova Car Care || Homepage</title>
       </Helmet>
+      <div className='h-[500px]'>
+        {/*  div free */}
+      </div>
     </div>
   )
 };
