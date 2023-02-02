@@ -1,4 +1,4 @@
-import React, { FC, ReactNode, useState } from 'react'
+import React, { FC, Fragment, ReactNode, useState } from 'react'
 import logo from "../../assets/logo/logo.png";
 import instagram from '../../assets/socials/instagram.svg';
 import facebook from '../../assets/socials/facebook.svg';
@@ -10,7 +10,8 @@ import { MainColor } from '../constants/colors';
 
 
 interface SocialHeadingProps {
-
+    activeHeadingTab?: string;
+    setActiveHeadingTab?: any;
 };
 
 interface SocialIconsProps {
@@ -42,7 +43,34 @@ export const SocialIcons: SocialIconsProps[] = [
 ];
 
 // TODO: on Mechanics or Detailing active, use ButtonPrimary
-const SocialHeading: FC<SocialHeadingProps> = () => {
+const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHeadingTab}) => {
+
+    // active heading
+    const ActiveHeading = ( heading: any ) => (
+        <>
+            <ButtonPrimary className={`w-full rounded-t-[10px] bg-[${MainColor}] h-[60px] text-[18px]`} >
+                <span className='font-poppins font-normal text-[18px] text-[#ffffff] whitespace-nowrap mr-4'>
+                    {heading}
+                </span>
+            </ButtonPrimary>
+        </>
+    );
+
+    // inactive heading
+    const InactiveHeading = ( heading: any ) => (
+        <>
+            <span 
+              className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5 cursor-pointer' 
+              onClick={() => handleHeadingTab(heading)}
+            >
+                { heading }
+            </span>
+        </>
+    );
+
+    const handleHeadingTab = ( heading: string ) => {
+        setActiveHeadingTab(heading?.toLowerCase());
+    };
 
     return (
         <>
@@ -52,12 +80,11 @@ const SocialHeading: FC<SocialHeadingProps> = () => {
                     <div className='flex items-end'>
                         <div className='flex items-center justify-center h-full'>
                             <span className='whitespace-nowrap mr-4 mt-5'>
-                                <ButtonPrimary className={`w-full rounded-t-[10px] bg-[${MainColor}] h-[60px] text-[18px]`} >
-                                  <span className='font-poppins font-normal text-[18px] text-[#ffffff] whitespace-nowrap mr-4'> Mechanics </span>
-                                </ButtonPrimary>
+                                { activeHeadingTab == 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
                             </span>
-                            <span className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5'>
-                                Detailing
+
+                            <span className='mt-5'>
+                                { activeHeadingTab == 'detailing' ? ActiveHeading('Detailing') : InactiveHeading('Detailing') }
                             </span>
                         </div>
                     </div>
