@@ -7,6 +7,9 @@ import {ReactComponent as  carPaintingIcon }  from '../../assets/icons/carPainti
 import {ReactComponent as  carWashIcon }  from '../../assets/icons/carWashIcon.svg'
 import {ReactComponent as  bodyRepairIcon }  from '../../assets/icons/bodyRepairIcon.svg'
 import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/expertiseReportIcon.svg'
+import CarWashTab from './TabsContent/CarWashTab'
+
+
 
 
 const tabsData = [
@@ -14,13 +17,13 @@ const tabsData = [
         id: '1',
         name: 'Roadside Assistance',
         Icon: carTransportationIcon,
-        content: 'Roadside Assistance'
+        content:'Roadside Assistance'
     },
     {
         id: '2',
         name: 'Car Wash',
         Icon: CarWashIcon,
-        content: 'Car Wash',
+        content: <CarWashTab />,
     },
     {
         id: '3',
@@ -117,8 +120,8 @@ const ServicesTabs: FC = () => {
     
       return (
         <div className="container w-full py-16 bg-[#f1f1f1] ">
-                <Tab.Group>
-                    <Tab.List className="flex w-full space-x-1 rounded-xl bg-[#F1F1F1]  pt-1">
+                <Tab.Group defaultIndex={1}>
+                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-xl bg-[#F1F1F1] pt-1">
                     {tabsData.map((tab) => {
                         const {name, Icon, id} = tab
                         return (
@@ -141,16 +144,18 @@ const ServicesTabs: FC = () => {
                         </Tab>
                     )})}
                     </Tab.List>
-                    <Tab.Panels className="w-full">
-                    {tabsData.map((tab, idx) => (
-                        <Tab.Panel
-                        key={idx}
-                        className={'rounded-b-xl bg-white p-3 ring-white ring-opacity-60 ring-offset-2 ring-offset-blue-400 focus:outline-none focus:ring-2'}>
-                       
-                           {tab.name}
+                    <Tab.Panels className="w-full ">
+                    {tabsData.map((tab, idx) => {
+                        const { content } = tab
+                        return (
+                            <Tab.Panel
+                            key={idx}
+                            className={'min-h-[620px] rounded-b-xl bg-white p-3 ring-white  focus:outline-none focus:ring-0'}>
                         
-                        </Tab.Panel>
-                    ))}
+                                {content}
+                            
+                            </Tab.Panel>
+                    )})}
                     </Tab.Panels>
                 </Tab.Group>
             </div>
