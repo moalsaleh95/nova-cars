@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
+import ServicesTabs from '../../components/ServicesTabs/ServicesTabs';
 import Faq from "../../components/Faq/Faq";
 
 const Homepage = () => {
@@ -8,6 +9,7 @@ const Homepage = () => {
       <Helmet>
         <title>Nova Car Care || Homepage</title>
       </Helmet>
+      <ServicesTabs />
       <div className='h-[500px]'>
         {/*  div free */}
         <Faq />
