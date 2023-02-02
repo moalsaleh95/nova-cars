@@ -44,7 +44,7 @@ function CustomerReviewsCarousel() {
 
   return (
     <div className='rounded-t-md overflow-hidden'>  
-        <div className='w-[45rem] rounded-md relative' >   
+        <div className='w-[45rem] rounded-md relative overflow-hidden' >   
             <OwlCarousel 
             navText={[
                 `<div class='nav-button owl-prev rotate-180'><img class="!w-3" src=${arrow} alt="" /></div>`,
@@ -54,6 +54,7 @@ function CustomerReviewsCarousel() {
                 {reviews} 
             </OwlCarousel>  
             <div className='triangle absolute top-[10.5rem]'></div>
+            <div className='triangle-small absolute'></div>
         </div>  
     </div> 
   )
