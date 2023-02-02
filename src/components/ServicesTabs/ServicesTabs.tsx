@@ -129,7 +129,7 @@ const ServicesTabs: FC = () => {
                             key={id}
                             className={({ selected }) =>
                                 (
-                                ` w-full flex flex-col justify-start items-center space-y-4  rounded-t-lg py-2.5 text-sm font-normal leading-5 text-blue-700 focus:outline-none
+                                ` w-full flex flex-col justify-start items-center space-y-4  rounded-t-lg py-2.5 text-sm font-normal leading-5 focus:outline-none
                                
                                 ${selected
                                     ? 'bg-white text-[#D81212]'
