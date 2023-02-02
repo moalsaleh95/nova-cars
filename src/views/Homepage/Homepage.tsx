@@ -2,6 +2,8 @@ import React from 'react';
 import { Helmet } from "react-helmet";
 import { CustomerReviews } from '../../components/CustomerReviews';
 import { Faq } from '../../components/Faq';
+import ServicesTabs from '../../components/ServicesTabs/ServicesTabs';
+import Faq from "../../components/Faq/Faq";
 
 const Homepage = () => {
   return (
@@ -11,6 +13,11 @@ const Homepage = () => {
       </Helmet>
       <CustomerReviews />
       <Faq />
+      <ServicesTabs />
+      <div className='h-[500px]'>
+        {/*  div free */}
+        <Faq />
+      </div>
     </div>
   )
 };

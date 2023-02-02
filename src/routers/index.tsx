@@ -25,10 +25,10 @@ function Routers() {
   return (
       <Routes>
         {
-          viewsUrls?.map(({ component, path, exact, type}) => {
+          viewsUrls?.map(({ component, path, exact, type, id}) => {
             let Component = component;
             return (
-              <Route path={path} element = { <Component /> } />
+              <Route path={path} element = { <Component /> } key={id}/>
             );
           })
         }

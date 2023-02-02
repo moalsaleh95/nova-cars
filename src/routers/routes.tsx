@@ -5,7 +5,8 @@ const viewsUrls: any[] = [
         path: "/",
         exact: true,
         component: Homepage,
-        type: "public"
+        type: "public",
+        id: '1'
     }
 ];
 

@@ -1,11 +1,14 @@
 import React, { FC, useEffect, useState } from 'react';
+import { MainColor } from '../constants/colors';
 import Navigation from './Navigation';
+import SocialHeading from './SocialHeading';
 
 interface MasterHeaderProps {
 };
 
 const MasterHeader: FC<MasterHeaderProps> = () => {
     const [isScrollTop, setIsScrollTop] = useState(true);
+    const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
 
     useEffect(() => {
       window.onscroll = function () {
@@ -29,7 +32,6 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
     };
 
     return (
-      // lg:sticky
       <div className='header bg-[#d81212] h-[520px] relative  lg:top-0 w-full lg:left-0 lg:right-0 z-40'>
         <Navigation isScrollTop = { isScrollTop} />
       </div>

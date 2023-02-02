@@ -96,3 +96,6 @@ img.arrow {
         border-top-left-radius: 7px;
         overflow: hidden;
  }
+/* *, ::before, ::after {
+    border-color: #fff !important;
+} */
