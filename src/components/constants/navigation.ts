@@ -4,7 +4,7 @@ import { NavigationItemType } from "../../types/menus/menus";
 export const NAVIGATION_MENU: NavigationItemType[] = [
   {
     id: randomId(),
-    href: "/",
+    href: "/about",
     name: "About",
   },
   {

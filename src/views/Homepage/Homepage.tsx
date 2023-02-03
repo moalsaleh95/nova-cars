@@ -1,8 +1,6 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import { CustomerReviews } from '../../components/CustomerReviews';
-import ServicesTabs from '../../components/ServicesTabs/ServicesTabs';
-import Faq from "../../components/Faq/Faq";
+import { CustomerReviews, Faq, ServicesTabs } from '../../components';
 import { Video } from '../../components/Video';
 
 const Homepage = () => {
