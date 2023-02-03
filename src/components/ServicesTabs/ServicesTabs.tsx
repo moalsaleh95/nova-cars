@@ -119,7 +119,7 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className="w-full py-16 bg-[#f1f1f1] ">
+        <div className="w-full py-16 bg-[#f1f1f1] services-tab mb-[-29rem]">
             <div className='container w-full'>
                 <Tab.Group defaultIndex={1}>
                     <Tab.List className="flex w-full h-[140px] space-x-1 rounded-t-[20px] md:rounded-t-xl bg-[#F1F1F1] pt-1 overflow-x-scroll md:overflow-x-hidden">

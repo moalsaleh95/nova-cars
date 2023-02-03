@@ -1,19 +1,19 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
-import ServicesTabs from '../../components/ServicesTabs/ServicesTabs';
-import Faq from "../../components/Faq/Faq";
+import { CustomerReviews, Faq, ServicesTabs } from '../../components';
+import { Video } from '../../components/Video';
 
 const Homepage = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div>
       <Helmet>
         <title>Nova Car Care || Homepage</title>
       </Helmet>
+      
+      <Video />
       <ServicesTabs />
-      <div className='h-[500px]'>
-        {/*  div free */}
-        <Faq />
-      </div>
+      <CustomerReviews />
+      <Faq />
     </div>
   )
 };
