@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import { CustomerReviews, Faq, ServicesTabs } from '../../components';
-import { Video } from '../../components/Video';
+import { HeroVideo } from '../../components/HeroVideo';
 
 const Homepage = () => {
   return (
@@ -10,7 +10,7 @@ const Homepage = () => {
         <title>Nova Car Care || Homepage</title>
       </Helmet>
       
-      <Video />
+      <HeroVideo />
       <ServicesTabs />
       <CustomerReviews />
       <Faq />

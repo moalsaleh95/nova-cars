@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Video() {
+function HeroVideo() {
   return (
         <div className='relative flex justify-center'>
             <video className='heroVideo w-[90%]'
@@ -23,4 +23,4 @@ function Video() {
   )
 }
 
-export default Video;
+export default HeroVideo;

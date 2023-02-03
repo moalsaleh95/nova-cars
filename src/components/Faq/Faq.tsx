@@ -1,7 +1,7 @@
 import React from 'react';
 import FaqAccordion from '../FaqAccordion/FaqAccordion';
 
-function Faq() {
+const Faq = () => {
   return (
     <div className='bg-[#f9f9f9]'>
       <div className='container py-20 flex flex-row justify-center poppins'>

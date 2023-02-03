@@ -1,7 +1,7 @@
 import React from 'react';
 import { CustomerReviewsCarousel } from '../CustomerReviewsCarousel';
 
-function CustomerReviews() {
+const CustomerReviews = () => {
 
   return (
     <div className='bg-[#D81212]'>
