@@ -1,5 +1,6 @@
 import React, { FC } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink , useNavigate } from "react-router-dom";
+import { goToPage } from "../../common/goToPage";
 import { NavigationItemType } from "../../types/menus/menus";
 
 interface MenuItemsProps {
@@ -14,8 +15,12 @@ const MenuItems: FC<MenuItemsProps> = ({
   itemColor = '#ffffff'
 }) => {
 
-  const handleNavLink = (item: NavigationItemType) => {
+  const urlNavigate = useNavigate();
 
+  const handleNavLink = (item: NavigationItemType) => {
+    // urlNavigate(item.href)
+    if(item.href == '/about') goToPage(item.href);
+    else goToPage('/');
   };
 
   const RenderItem = (item: NavigationItemType) => {
