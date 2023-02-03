@@ -119,10 +119,10 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className="container w-full pb-16 services-tab -mb-[35rem]">
-            <div className='w-full'>
+        <div className=" z-0 -mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px] ">
+            <div className='w-full container pb-16 rounded-[2rem] '>
                 <Tab.Group defaultIndex={1}>
-                    <Tab.List className="flex w-full h-[160px] items-end space-x-1 rounded-t-[20px] pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
+                    <Tab.List className="flex w-full h-[152px] md:h-[160px] items-end space-x-1 rounded-t-[20px] pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
                     <div className='w-full h-[140px] flex items-end bg-[#F1F1F1] rounded-t-lg'>
                         {tabsData.map((tab, index) => {
                             const {name, Icon, id} = tab
@@ -152,7 +152,7 @@ const ServicesTabs: FC = () => {
 
                     </div>
                     </Tab.List>
-                    <Tab.Panels className="w-full ">
+                    <Tab.Panels className="w-full">
                     {tabsData.map((tab, idx) => {
                         const { content } = tab
                         return (
