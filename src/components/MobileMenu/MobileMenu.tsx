@@ -12,12 +12,6 @@ const MobileMenu: FC = () => {
     const handleClick = () => {
         setIsMenuOpen(prevState => !prevState)
     }
- 
-
-    useEffect(() => {
-        console.log('mobile menu: drawerRef', drawerRef)
-    } ,[drawerRef])
-
 
       
   const eventClickOutsideDrawer = (event: MouseEvent) => {
@@ -42,6 +36,26 @@ const MobileMenu: FC = () => {
     };
   }, []);
 
+  useEffect(() => { 
+    if (typeof window != 'undefined' && window.document) {
+      if(isMenuOpen) {
+
+        // document.body.style.height = '100vh'
+        // document.body.style.overflowY = 'hidden';
+        document.body.style.position = 'fixed';
+        document.body.style.width = '100vw'
+        document.body.style.top = `-${window.scrollY}px`;
+
+      }
+      if(!isMenuOpen){
+        // document.body.style.height = 'unset'
+          // document.body.style.overflowY = 'unset';
+          document.body.style.position = '';
+          document.body.style.top = '';
+          document.body.style.width = 'auto'
+        }
+    }
+  } ,[isMenuOpen]) 
 
 
   return (
@@ -55,11 +69,11 @@ const MobileMenu: FC = () => {
         leave="transition-opacity duration-500 transition-[transform_,_opacity]"
         leaveFrom="opacity-100 translate-x-0"
         leaveTo="opacity-0 translate-x-[100%]"
-        className='absolute top-0 right-0 h-[calc(100%)] w-2/3 min-w-[250px] min-w- border-2 border-orange-400  z-[100] bg-white'
+        className='absolute top-0 right-0 h-[calc(100%)] w-2/3 min-w-[250px] z-[100] bg-white'
         ref={drawerRef}
 
         >
-            <div className='w-full h-full border-2 border-pink-600' ref={drawerRef} >   
+            <div className='w-full h-full mobileMenuShadow' ref={drawerRef} >   
                 <div className='w-full border-b h-10'>    
                     <XMarkIcon className='h-9' onClick={() => {setIsMenuOpen(false)}}/>
                 </div>    
