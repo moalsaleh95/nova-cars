@@ -119,9 +119,10 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className="container w-full py-16 bg-[#f1f1f1] ">
+        <div className="w-full py-16 bg-[#f1f1f1] ">
+            <div className='container w-full'>
                 <Tab.Group defaultIndex={1}>
-                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-t-[20px] md:rounded-t-xl bg-[#F1F1F1] pt-1 overflow-x-scroll">
+                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-t-[20px] md:rounded-t-xl bg-[#F1F1F1] pt-1 overflow-x-scroll md:overflow-x-hidden">
                     {tabsData.map((tab) => {
                         const {name, Icon, id} = tab
                         return (
@@ -150,7 +151,7 @@ const ServicesTabs: FC = () => {
                         return (
                             <Tab.Panel
                             key={idx}
-                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white p-3 ring-white  focus:outline-none focus:ring-0'}>
+                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white ring-white  focus:outline-none focus:ring-0'}>
                         
                                 {content}
                             
@@ -158,6 +159,7 @@ const ServicesTabs: FC = () => {
                     )})}
                     </Tab.Panels>
                 </Tab.Group>
+            </div>
             </div>
       )
 }
