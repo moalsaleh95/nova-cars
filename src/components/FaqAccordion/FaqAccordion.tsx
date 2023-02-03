@@ -55,7 +55,7 @@ export default function Example() {
   })
 
   return (
-    <div className="min-w-[50rem]">
+    <div className="md:min-w-[50rem]">
       <div className=" max-w-3xl rounded-2xl p-2 bg-[#f9f9f9]">
        {questions}
       </div>
