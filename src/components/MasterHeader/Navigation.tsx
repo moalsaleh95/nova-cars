@@ -21,7 +21,7 @@ const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrol
 
   return (
     <div className={`relative z-10 ${isScrollTop && 'topnotreach backdrop-filter'}`}>
-      <div className="container py-5 relative flex justify-between items-center">
+      <div className="container py-5 relative flex justify-between items-center overflow-hidden">
         <div className="flex justify-start flex-grow items-center space-x-3 sm:space-x-8 lg:space-x-10">
           <Logo img={located == 'header' ? HeadingLogo() : logoFooter} />
         </div>
