@@ -26,8 +26,8 @@ const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrol
           <Logo img={located == 'header' ? HeadingLogo() : logoFooter} />
         </div>
         <div className="flex-shrink-0 flex items-center justify-end text-neutral-700 space-x-1">
-          <div className="items-center xl:flex space-x-1">
-            <ul className={`navigation p-0 xl:flex xl:justify-between w-[60%] xl:items-center xl:space-x-0 relative`}>
+          <div className="items-center flex space-x-1">
+            <ul className={`navigation p-0 flex justify-between items-center space-x-2 relative`}>
              {
                NAVIGATION_MENU?.map((item: any) => (
                  <MenuItems key={item.id} menuItem={item} itemColor = { itemColor } />

@@ -40,15 +40,21 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
 
     return (
       <>
-        {isMobile 
-        ? <MobileHeader />
-        : <>
-          <SocialHeading activeHeadingTab = { activeHeadingTab } setActiveHeadingTab = { setActiveHeadingTab }  />
+       
+          {
+          !isMobile && <SocialHeading activeHeadingTab = { activeHeadingTab } setActiveHeadingTab = { setActiveHeadingTab }  />
+          }
           <div className={`header bg-[#d81212] h-[520px] relative lg:top-0 w-full lg:left-0 lg:right-0 z-40`}>
-            <Navigation isScrollTop = { isScrollTop} activeHeadingTab = { activeHeadingTab } />
+            {
+              isMobile 
+              ? 
+              <MobileHeader />
+              : 
+              <Navigation isScrollTop = { isScrollTop} activeHeadingTab = { activeHeadingTab } />
+
+            }
           </div>
-        </>
-       }
+      
     </>
     )
 };

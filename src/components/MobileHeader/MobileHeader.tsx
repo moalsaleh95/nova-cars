@@ -4,7 +4,7 @@ import MobileMenu from '../MobileMenu/MobileMenu'
 
 const MobileHeader: FC = () => {
   return (
-    <div className='w-full py-6 px-5'>
+    <div className='w-full py-6 px-5 bg-white'>
         <div className='flex justify-between items-center'>
             <img src={Logo} className='w-[156px] h-[53px]'/>
             <MobileMenu />
