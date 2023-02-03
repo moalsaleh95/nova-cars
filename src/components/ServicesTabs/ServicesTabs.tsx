@@ -119,31 +119,38 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className="w-full py-16 bg-[#f1f1f1] services-tab mb-[-29rem]">
-            <div className='container w-full'>
+        <div className="container w-full pb-16 services-tab -mb-[35rem]">
+            <div className='w-full'>
                 <Tab.Group defaultIndex={1}>
-                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-t-[20px] md:rounded-t-xl bg-[#F1F1F1] pt-1 overflow-x-scroll md:overflow-x-hidden">
-                    {tabsData.map((tab) => {
-                        const {name, Icon, id} = tab
-                        return (
-                        <Tab
-                            key={id}
-                            className={({ selected }) =>
-                                (
-                                `w-[100px] md:w-full border-0 flex flex-col justify-start items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4  rounded-t-lg rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
-                               
-                                ${selected
-                                    ? 'bg-white text-[#D81212]'
-                                    : 'text-[#222222] bg-[#f1f1f1] text-opacity-30 hover:bg-white/[0.12] first-line:' } `
-                                )
-                            }
-                            >
-                            <Icon />
-                            <span>
-                                {name}
-                            </span>
-                        </Tab>
-                    )})}
+                    <Tab.List className="flex w-full h-[160px] items-end space-x-1 rounded-t-[20px] pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
+                    <div className='w-full h-[140px] flex items-end bg-[#F1F1F1] rounded-t-lg'>
+                        {tabsData.map((tab, index) => {
+                            const {name, Icon, id} = tab
+                            const isFirst = index === 0
+                            const isLast = index === (tabsData.length - 1 )
+                            return (
+                            <Tab
+                                key={id}
+                                className={({ selected }) =>
+                                    (
+                                    `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
+                                
+                                    ${selected
+                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_20px)] rounded-t-lg '
+                                        : 'text-[#222222] bg-[#f1f1f1] text-opacity-30 hover:bg-white/[0.12] h-full' } 
+                                    ${ isFirst && 'rounded-tl-lg' }
+                                     ${ isLast && 'rounded-tr-lg' }   `
+                                    )
+                                }
+                                >
+                                <Icon />
+                                <span>
+                                    {name}
+                                </span>
+                            </Tab>
+                        )})}
+
+                    </div>
                     </Tab.List>
                     <Tab.Panels className="w-full ">
                     {tabsData.map((tab, idx) => {
