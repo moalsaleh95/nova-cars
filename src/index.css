@@ -107,7 +107,23 @@ img.arrow {
 .owl-stage .active:nth-child(odd) {
         border-top-left-radius: 7px;
         overflow: hidden;
- }
-/* *, ::before, ::after {
-    border-color: #fff !important;
-} */
+}
+
+.heroVideo {
+        border-radius: 2rem;
+        transform: translate(0, -38%);
+        /* top: 0; */
+}
+
+.services-tab {
+        border-radius: 2rem;
+        transform: translate(0, -45%);
+        z-index: 0;
+}
+
+.heroText {
+        position: absolute;
+        /* transform: translate(50%, 0); */
+        top: 0;
+        left: 35%;
+}

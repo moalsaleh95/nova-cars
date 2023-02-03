@@ -7,16 +7,15 @@ import { Video } from '../../components/Video';
 
 const Homepage = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div>
       <Helmet>
         <title>Nova Car Care || Homepage</title>
       </Helmet>
-      <div className='border-2 border-black'>
-        <Video />
-      </div>
+      
+      <Video />
+      <ServicesTabs />
       <CustomerReviews />
       <Faq />
-      <ServicesTabs />
     </div>
   )
 };

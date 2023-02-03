@@ -119,7 +119,7 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className="container w-full py-16 bg-[#f1f1f1] ">
+        <div className="container w-full py-16 bg-[#f1f1f1] services-tab">
                 <Tab.Group defaultIndex={1}>
                     <Tab.List className="flex w-full h-[140px] space-x-1 rounded-xl bg-[#F1F1F1] pt-1">
                     {tabsData.map((tab) => {

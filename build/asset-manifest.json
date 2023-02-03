@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fdc945b2.css",
+    "main.js": "/static/js/main.5f799b98.js",
+    "static/js/787.8a04e2bc.chunk.js": "/static/js/787.8a04e2bc.chunk.js",
+    "static/media/Poppins-Light.ttf": "/static/media/Poppins-Light.f41b63c0bb0963ace821.ttf",
+    "static/media/car-wash-banner.png": "/static/media/car-wash-banner.a092348784b58d495437.png",
+    "static/media/logoFooter.svg": "/static/media/logoFooter.15a23ec84c367c610664936dfd7a7ac3.svg",
+    "static/media/MechanicsLogo.svg": "/static/media/MechanicsLogo.c012f0758c4f2a45f3d686c67ea0d13d.svg",
+    "static/media/DetailingLogo.svg": "/static/media/DetailingLogo.289b9f2d4010993eeb7d03d3a36c5f7d.svg",
+    "static/media/bodyRepairIcon.svg": "/static/media/bodyRepairIcon.7124554e7332342bc1d7e1c960a8d4e4.svg",
+    "static/media/carWashIcon.svg": "/static/media/carWashIcon.24c331ccefbf3b4eead074ee49578327.svg",
+    "static/media/carMaintenanceIcon.svg": "/static/media/carMaintenanceIcon.2cea01b067777f64f64bc20cd8c8edf1.svg",
+    "static/media/carPaintingIcon.svg": "/static/media/carPaintingIcon.b5c32f81bab10188e8d4022a1e8e03b3.svg",
+    "static/media/carTransportationIcon.svg": "/static/media/carTransportationIcon.6287ba91ba665f777686be4903ef5a8b.svg",
+    "static/media/expertiseReportIcon.svg": "/static/media/expertiseReportIcon.b39bdc5666d4f17ec5172deec61ecf72.svg",
+    "static/media/clock.svg": "/static/media/clock.bd306d0e8cb87d775ceb2b8283a12780.svg",
+    "static/media/email.svg": "/static/media/email.80374af28bc757fd5b61fefdcb7b9d98.svg",
+    "index.html": "/index.html",
+    "static/media/phone.svg": "/static/media/phone.981894ce2a58e9b51da653a05512d46e.svg",
+    "static/media/location.svg": "/static/media/location.88ece0bb5ad8502a494c966084fc4793.svg",
+    "static/media/right.svg": "/static/media/right.fda56ac7deedbddde0cf8e52cbbf157b.svg",
+    "main.fdc945b2.css.map": "/static/css/main.fdc945b2.css.map",
+    "main.5f799b98.js.map": "/static/js/main.5f799b98.js.map",
+    "787.8a04e2bc.chunk.js.map": "/static/js/787.8a04e2bc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdc945b2.css",
+    "static/js/main.5f799b98.js"
+  ]
+}
