@@ -38,7 +38,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
     return (
       <>
        <SocialHeading activeHeadingTab = { activeHeadingTab } setActiveHeadingTab = { setActiveHeadingTab }  />
-       <div className={`header bg-[#d81212] ${pageLen > 0 ? 'h-[120px]' : 'h-[520px]'} relative lg:top-0 w-full lg:left-0 lg:right-0 z-40`}>
+       <div className={`header bg-[#d81212] ${pageLen > 0 ? 'h-[120px]' : 'h-[520px]'} relative lg:top-0 w-full lg:left-0 lg:right-0`}>
         <Navigation isScrollTop = { isScrollTop} activeHeadingTab = { activeHeadingTab } />
        </div>
        <div>

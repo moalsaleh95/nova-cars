@@ -48,6 +48,18 @@
         border-color: white transparent transparent transparent;
 }
 
+.triangle-small {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0 6px 6px;
+        border-color: transparent transparent #d81212 transparent;
+
+        z-index: 1;
+        right: 0px;
+        bottom: 27px;
+}
+
 .owl-dots .owl-dot span {
         width: 7px;
         height: 7px;
@@ -95,7 +107,23 @@ img.arrow {
 .owl-stage .active:nth-child(odd) {
         border-top-left-radius: 7px;
         overflow: hidden;
- }
-/* *, ::before, ::after {
-    border-color: #fff !important;
-} */
+}
+
+.heroVideo {
+        border-radius: 2rem;
+        transform: translate(0, -38%);
+        /* top: 0; */
+}
+
+.services-tab {
+        border-radius: 2rem;
+        transform: translate(0, -45%);
+        z-index: 0;
+}
+
+.heroText {
+        position: absolute;
+        /* transform: translate(50%, 0); */
+        top: 0;
+        left: 35%;
+}
