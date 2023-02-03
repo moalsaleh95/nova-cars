@@ -121,7 +121,7 @@ const ServicesTabs: FC = () => {
       return (
         <div className="container w-full py-16 bg-[#f1f1f1] ">
                 <Tab.Group defaultIndex={1}>
-                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-xl bg-[#F1F1F1] pt-1 overflow-x-scroll">
+                    <Tab.List className="flex w-full h-[140px] space-x-1 rounded-t-[20px] md:rounded-t-xl bg-[#F1F1F1] pt-1 overflow-x-scroll">
                     {tabsData.map((tab) => {
                         const {name, Icon, id} = tab
                         return (
@@ -129,7 +129,7 @@ const ServicesTabs: FC = () => {
                             key={id}
                             className={({ selected }) =>
                                 (
-                                `w-[100px] md:w-full border border-b-0 md:border-0 flex flex-col justify-start items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4  rounded-t-lg rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
+                                `w-[100px] md:w-full border-0 flex flex-col justify-start items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4  rounded-t-lg rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
                                
                                 ${selected
                                     ? 'bg-white text-[#D81212]'
@@ -150,7 +150,7 @@ const ServicesTabs: FC = () => {
                         return (
                             <Tab.Panel
                             key={idx}
-                            className={'min-h-[620px] rounded-b-xl bg-white p-3 ring-white  focus:outline-none focus:ring-0'}>
+                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white p-3 ring-white  focus:outline-none focus:ring-0'}>
                         
                                 {content}
                             
