@@ -1,5 +1,5 @@
 import { Disclosure } from '@headlessui/react'
-import { ChevronUpIcon } from '@heroicons/react/20/solid'
+// import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
 export default function Example() {
   const FAQData = [
@@ -55,8 +55,8 @@ export default function Example() {
   })
 
   return (
-    <div className="w-full">
-      <div className="mx-auto min-w-[40rem] max-w-md rounded-2xl p-2 bg-[#f9f9f9]">
+    <div className="min-w-[50rem]">
+      <div className=" max-w-3xl rounded-2xl p-2 bg-[#f9f9f9]">
        {questions}
       </div>
     </div>   
