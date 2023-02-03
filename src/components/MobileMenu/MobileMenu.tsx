@@ -1,4 +1,5 @@
 import { Transition } from '@headlessui/react'
+import { XMarkIcon } from '@heroicons/react/20/solid'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { ReactComponent as Hamburger } from '../../assets/icons/Hamburger.svg'
 
@@ -57,8 +58,10 @@ const MobileMenu: FC = () => {
         ref={drawerRef}
 
         >
-            <div className='w-full h-full border-2 border-pink-600' ref={drawerRef} >               
-                    
+            <div className='w-full h-full border-2 border-pink-600' ref={drawerRef} >   
+                <div className='w-full border h-10'>    
+                    <XMarkIcon className='h-9' onClick={() => {setIsMenuOpen(false)}}/>
+                </div>            
             </div>
         </Transition>
         
