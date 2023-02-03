@@ -119,10 +119,10 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className=" z-0 -mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px] ">
+        <div className=" z-0 -mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px]">
             <div className='w-full container pb-16 rounded-[2rem] '>
                 <Tab.Group defaultIndex={1}>
-                    <Tab.List className="flex w-full h-[152px] md:h-[160px] items-end space-x-1 rounded-t-[20px] pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
+                    <Tab.List className="flex w-full h-[152px] md:h-[160px] items-end space-x-1 pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
                     <div className='w-full h-[140px] flex items-end bg-[#F1F1F1] rounded-t-lg'>
                         {tabsData.map((tab, index) => {
                             const {name, Icon, id} = tab
@@ -136,7 +136,7 @@ const ServicesTabs: FC = () => {
                                     `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
                                 
                                     ${selected
-                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_20px)] rounded-t-lg '
+                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_10px)] md:h-[calc(100%_+_20px)] rounded-t-lg '
                                         : 'text-[#222222] bg-[#f1f1f1] text-opacity-30 hover:bg-white/[0.12] h-full' } 
                                     ${ isFirst && 'rounded-tl-lg' }
                                      ${ isLast && 'rounded-tr-lg' }   `
