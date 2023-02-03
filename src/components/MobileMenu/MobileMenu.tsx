@@ -2,6 +2,7 @@ import { Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/20/solid'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { ReactComponent as Hamburger } from '../../assets/icons/Hamburger.svg'
+import { NAVIGATION_MENU } from '../constants/navigation'
 
 const MobileMenu: FC = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false)
@@ -59,9 +60,26 @@ const MobileMenu: FC = () => {
 
         >
             <div className='w-full h-full border-2 border-pink-600' ref={drawerRef} >   
-                <div className='w-full border h-10'>    
+                <div className='w-full border-b h-10'>    
                     <XMarkIcon className='h-9' onClick={() => {setIsMenuOpen(false)}}/>
-                </div>            
+                </div>    
+                <div className='pt-8 px-2'>
+                    <ul className='space-y-4'>
+                        {
+                            NAVIGATION_MENU.map(menuItem => {
+                                const {href, name, id, targetBlank} = menuItem
+                                return (
+                                    <li key={id}>
+                                        <a href={href} target={targetBlank ? "_blank" : ""}>
+                                            {name}
+                                        </a> 
+                                    </li>
+                                )
+                            })
+                        }
+
+                    </ul>
+                </div>        
             </div>
         </Transition>
         
