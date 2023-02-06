@@ -1,6 +1,6 @@
 import React from 'react';
 
-function TestimonialStars() {
+const TestimonialStars = () => {
   return (
     <div className="pl-5 pb-2">
         <span><img src="https://img.icons8.com/color/48/null/filled-star--v1.png" alt=''/></span>

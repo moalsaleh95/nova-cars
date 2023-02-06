@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Video() {
+function HeroVideo() {
   return (
         <div className='relative flex justify-center -translate-y-[380px] sm:-translate-y-[400px] overflow-hidden'>
             <video className='rounded-[2rem] w-[90%]'
@@ -23,4 +23,4 @@ function Video() {
   )
 }
 
-export default Video;
+export default HeroVideo;

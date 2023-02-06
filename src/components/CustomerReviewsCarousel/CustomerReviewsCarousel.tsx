@@ -5,7 +5,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { TestimonialStars } from '../TestimonialStars';
 import arrow from '../../assets/right.svg'
 
-function CustomerReviewsCarousel() {
+const CustomerReviewsCarousel = () => {
     const customerReviewsData = [
         {   
             id: "1",
