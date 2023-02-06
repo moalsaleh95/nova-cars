@@ -55,11 +55,11 @@ const Example = () => {
   })
 
   return (
-    <div className="md:min-w-[50rem]">
-      <div className=" max-w-3xl rounded-2xl p-2 bg-[#f9f9f9]">
+    // <div className="w-full max-w-[930px] ">
+      <div className="rounded-2xl p-2 bg-[#f9f9f9]">
        {questions}
       </div>
-    </div>   
+    // </div>   
   )
 }
 
