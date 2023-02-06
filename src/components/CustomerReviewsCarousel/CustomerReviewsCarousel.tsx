@@ -41,18 +41,31 @@ function CustomerReviewsCarousel() {
             </div>
         )
     })
-
+ 
   return (
     <div className='rounded-t-md overflow-hidden relative'>  
-        <div className='w-[45rem] rounded-md relative overflow-hidden' >   
+        <div className='md:w-[45rem] rounded-md relative overflow-hidden px-0' >   
             <OwlCarousel 
-            navText=
-            {[
-                `<div class='nav-button owl-prev rotate-180'><img class="!w-3" src=${arrow} alt="" /></div>`,
-                `<div class='nav-button owl-next'><img class="!w-3" src=${arrow} alt="" /></div>`
-            ]}
-                mouseDrag= {false} touchDrag={false}
-                stagePadding={0} items={2} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={1} loop>  
+                navText=
+                {[
+                    `<div class='nav-button owl-prev rotate-180'><img class="!w-3" src=${arrow} alt="" /></div>`,
+                    `<div class='nav-button owl-next'><img class="!w-3" src=${arrow} alt="" /></div>`
+                ]}
+                mouseDrag= {false} touchDrag={true}
+                stagePadding={0} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={1} loop={true}
+                responsive= {
+                    {
+                        '1':{
+                            items: 1
+                        },
+                        '768': {
+                            items: 2
+                        }
+                    }
+                    
+                }
+                
+                >  
                 {reviews} 
             </OwlCarousel>  
             <div className='triangle absolute top-[10.5rem]'></div>
