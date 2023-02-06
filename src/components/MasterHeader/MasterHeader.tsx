@@ -62,8 +62,10 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
           }
         </div>
 
-        <p className='container text-4xl font-extrabold py-3'>About Us</p>
-                
+        <div className='bg-white '>
+          <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
+        </div>    
+
         <div>
           { pageLen > 0 && 
             <HeadingTaxonomy 

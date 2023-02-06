@@ -14,12 +14,14 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({currentPage}) => {
 
   
   return (
-    <div className='container h-[700px] text-lg'>
+    <div className='bg-white pb-6 poppins'>
+      <div className='container text-lg'>
       <>
         <Link to="/">Home</Link> 
         <img className='inline px-6 w-[54px]' src={chevron_down} alt=""></img>
       </>
         {typeof currentPage == "string" && capitalizeFirstLetter(currentPage)}
+      </div>
     </div>
   )
 };
