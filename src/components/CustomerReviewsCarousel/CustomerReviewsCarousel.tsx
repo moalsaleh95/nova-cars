@@ -44,7 +44,7 @@ const CustomerReviewsCarousel = () => {
  
   return (
     <div className='rounded-t-md overflow-hidden relative'>  
-        <div className='md:w-[45rem] rounded-md relative overflow-hidden px-0' >   
+        <div className='rounded-md relative overflow-hidden px-0' >   
             <OwlCarousel 
                 navText=
                 {[
@@ -52,13 +52,13 @@ const CustomerReviewsCarousel = () => {
                     `<div class='nav-button owl-next'><img class="!w-3" src=${arrow} alt="" /></div>`
                 ]}
                 mouseDrag= {false} touchDrag={true}
-                stagePadding={0} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={1} loop={true}
+                stagePadding={0} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={1} loop={false}
                 responsive= {
                     {
                         '1':{
                             items: 1
                         },
-                        '768': {
+                        '1024': {
                             items: 2
                         }
                     }
