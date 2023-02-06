@@ -4,7 +4,7 @@ import { CustomerReviewsCarousel } from '../CustomerReviewsCarousel';
 const CustomerReviews = () => {
 
   return (
-    <div className='bg-[#D81212]'>
+    <div className='bg-[#D81212] overflow-hidden'>
         <div className='container poppins flex flex-row justify-center pt-24 bg-[#D81212] h-96'>
             <div className='basis-2/5 text-white '>
                 <p className='text-4xl w-72 font-bold'>Our Customer Reviews</p>

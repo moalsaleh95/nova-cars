@@ -3,7 +3,7 @@ import FaqAccordion from '../FaqAccordion/FaqAccordion';
 
 const Faq = () => {
   return (
-    <div className='bg-[#f9f9f9]'>
+    <div className='bg-[#f9f9f9] overflow-hidden'>
       <div className='container py-20 flex flex-row justify-center poppins'>
         <div className='basis-2/5'>
           <p className='text-4xl w-72 font-bold pt-10'>Frequently Asked Questions</p>

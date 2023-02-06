@@ -9,6 +9,10 @@
           url("./styles/fonts/Poppins/Poppins-Light.ttf") format("woff");
 }
 
+body{
+        background-color: #F1F1F1;
+}
+
 .poppins {
         font-family: "Poppins";
 }
@@ -117,7 +121,7 @@ img.arrow {
 
 .services-tab {
         border-radius: 2rem;
-        transform: translate(0, -45%);
+        transform: translate(0, -62%);
         z-index: 0;
 }
 

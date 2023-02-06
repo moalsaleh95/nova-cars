@@ -15,7 +15,6 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({currentPage}) => {
   
   return (
     <div className='container h-[700px] text-lg'>
-
       <>
         <Link to="/">Home</Link> 
         <img className='inline px-6 w-[54px]' src={chevron_down} alt=""></img>

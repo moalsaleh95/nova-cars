@@ -17,12 +17,19 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: "class",
   theme: {
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl' : '1410px'
+    },
     container: {
       center: true,
-      padding: {
-        DEFAULT: "1rem",
-        "2xl": "128px",
-      },
+      // padding: {
+      //   DEFAULT: "1rem",
+      //   "2xl": "128px",
+      // },
     },
     fontFamily: {
       display: ["var(--font-display)", ...defaultTheme.fontFamily.sans],
