@@ -58,7 +58,7 @@ const CustomerReviewsCarousel = () => {
                         '1':{
                             items: 1
                         },
-                        '1024': {
+                        '1025': {
                             items: 2
                         }
                     }
