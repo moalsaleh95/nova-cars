@@ -73,7 +73,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
     };
 
     return (
-        <>
+        <div className='w-full bg-white'>
             <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
                 <div className='w-full flex justify-between my-4'>
 
@@ -101,7 +101,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     )
 };
 
