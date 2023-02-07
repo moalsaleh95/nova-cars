@@ -20,7 +20,7 @@ const About: FC<AboutProps> = () => {
   
   return (
     <div>
-      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-[156px] font-poppins'>
+      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[156px] font-poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
@@ -48,7 +48,7 @@ const About: FC<AboutProps> = () => {
 
 
     <div className='bg-[#222222] px-5  md:px-9 lg:px-0'>
-      <div className='container grid grid-cols-1 md:grid-cols-2 justify-items-center content-start gap-12 py-[120px] text-white relative'>
+      <div className='container grid grid-cols-1 md:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[120px] text-white relative'>
 
         <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
 
