@@ -14,7 +14,7 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({currentPage}) => {
 
   
   return (
-    <div className='bg-white pb-6 poppins  px-5 md:px-9 lg:px-0'>
+    <div className='bg-white pb-6 font-poppins  px-5 md:px-9 lg:px-0'>
       <div className='container text-lg'>
       <>
         <Link to="/">Home</Link> 

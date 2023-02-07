@@ -11,7 +11,7 @@ import logo_5 from "../../../src/assets/icons/about_logo_5.png";
 import logo_6 from "../../../src/assets/icons/about_logo_6.png";
 import logo_7 from "../../../src/assets/icons/about_logo_7.png";
 import logo_8 from "../../../src/assets/icons/about_logo_8.png";
-
+import car_image from "../../../src/assets/icons/car_image.png";
 interface AboutProps {
 
 };
@@ -20,7 +20,7 @@ const About: FC<AboutProps> = () => {
   
   return (
     <div>
-      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-14 poppins'>
+      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-14 font-poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
@@ -95,7 +95,7 @@ const About: FC<AboutProps> = () => {
         </div>
 
         <div>
-        <div className='poppins'>
+        <div className='font-poppins'>
           <p className='py-3 font-semibold text-2xl my-4'>From its medieval origins to the digital era</p>
 
           <p className='pb-3'>
@@ -110,6 +110,8 @@ const About: FC<AboutProps> = () => {
 
         </div>
         </div>
+
+        <img className='absolute w-[650px] top-[-135px] right-[100px]' src={car_image} alt="car_image" />
 
       </div>
     </div>
