@@ -20,7 +20,7 @@ const About: FC<AboutProps> = () => {
   
   return (
     <div>
-      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-14 poppins'>
+      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-14 poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
@@ -40,8 +40,8 @@ const About: FC<AboutProps> = () => {
 
       </div>
 
-      <div className='self-center'> 
-        <img src={about_img_1} alt="logo_about" />
+      <div className='self-center max-w-'> 
+        <img src={about_img_1} alt="logo_about" className='max-w-[250px] md:max-w-[unset]'/>
       </div>
     </div>
 
