@@ -4,7 +4,7 @@ import FaqAccordion from '../FaqAccordion/FaqAccordion';
 const Faq = () => {
   return (
     <div className='bg-[#f9f9f9] overflow-hidden'>
-      <div className='container py-20 flex flex-row justify-center poppins'>
+      <div className='container py-20 flex flex-row justify-center font-poppins'>
         <div className='basis-2/5'>
           <p className='text-4xl w-72 font-bold pt-10'>Frequently Asked Questions</p>
           <p className='w-72 mt-3'>Here you can find the answers to frequently asked questions</p>

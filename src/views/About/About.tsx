@@ -11,7 +11,7 @@ import logo_5 from "../../../src/assets/icons/about_logo_5.png";
 import logo_6 from "../../../src/assets/icons/about_logo_6.png";
 import logo_7 from "../../../src/assets/icons/about_logo_7.png";
 import logo_8 from "../../../src/assets/icons/about_logo_8.png";
-
+import car_image from "../../../src/assets/icons/car_image.png";
 interface AboutProps {
 
 };
@@ -20,7 +20,7 @@ const About: FC<AboutProps> = () => {
   
   return (
     <div>
-      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-14 poppins'>
+      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-14 font-poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
@@ -41,14 +41,14 @@ const About: FC<AboutProps> = () => {
       </div>
 
       <div className='self-center'> 
-        <img src={about_img_1} alt="logo_about" />
+        <img className='max-w-[75%]' src={about_img_1} alt="logo_about" />
       </div>
     </div>
 
 
 
-    <div className='bg-[#222222]'>
-      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-20 text-white'>
+    <div className='bg-[#222222] py-8'>
+      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-20 text-white relative'>
 
         <div className='grid grid-cols-4 grid-rows2 gap-28 bg-[#0B0B0B] rounded-2xl p-14'>
 
@@ -95,7 +95,7 @@ const About: FC<AboutProps> = () => {
         </div>
 
         <div>
-        <div className='poppins'>
+        <div className='font-poppins'>
           <p className='py-3 font-semibold text-2xl my-4'>From its medieval origins to the digital era</p>
 
           <p className='pb-3'>
@@ -110,6 +110,8 @@ const About: FC<AboutProps> = () => {
 
         </div>
         </div>
+
+        <img className='absolute w-[650px] top-[-135px] right-[100px]' src={car_image} alt="car_image" />
 
       </div>
     </div>

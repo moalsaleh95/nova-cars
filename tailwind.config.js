@@ -75,6 +75,9 @@ module.exports = {
           900: customColors("--c-neutral-900"),
         },
       },
+      fontFamily: {
+        'poppins' : [ 'Poppins' ]
+      }
     },
   },
   variants: {
