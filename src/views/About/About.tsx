@@ -3,14 +3,14 @@ import HeadingTaxonomy from '../../components/MasterHeader/HeadingTaxonomy';
 import about_img_1 from '../../../src/assets/images/about_img_1.png';
 import { Helmet } from "react-helmet";
 
-import logo_1 from "../../../src/assets/icons/about_logo_1.png";
-import logo_2 from "../../../src/assets/icons/about_logo_2.png";
-import logo_3 from "../../../src/assets/icons/about_logo_3.png";
-import logo_4 from "../../../src/assets/icons/about_logo_4.png";
-import logo_5 from "../../../src/assets/icons/about_logo_5.png";
-import logo_6 from "../../../src/assets/icons/about_logo_6.png";
-import logo_7 from "../../../src/assets/icons/about_logo_7.png";
-import logo_8 from "../../../src/assets/icons/about_logo_8.png";
+import logo_1 from "../../../src/assets/icons/about_logo_1.svg";
+import logo_2 from "../../../src/assets/icons/about_logo_2.svg";
+import logo_3 from "../../../src/assets/icons/about_logo_3.svg";
+import logo_4 from "../../../src/assets/icons/about_logo_4.svg";
+import logo_5 from "../../../src/assets/icons/about_logo_5.svg";
+import logo_6 from "../../../src/assets/icons/about_logo_6.svg";
+import logo_7 from "../../../src/assets/icons/about_logo_7.svg";
+import logo_8 from "../../../src/assets/icons/about_logo_8.svg";
 import car_image from "../../../src/assets/icons/car_image.png";
 interface AboutProps {
 

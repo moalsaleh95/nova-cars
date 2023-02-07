@@ -38,7 +38,7 @@ const Example = () => {
             {({ open }) => (
               <>
                 <Disclosure.Button className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75`}>
-                  <span className={`${open ? "text-[#D81212] bg-white " : "text-black"} text-lg`}>{question}</span>
+                  <span className={`${open ? "text-[#D81212] bg-white " : "text-black"} text-lg font-semibold`}>{question}</span>
                   {/* <ChevronUpIcon
                     className={`${
                       open ? 'rotate-180 transform' : ''
