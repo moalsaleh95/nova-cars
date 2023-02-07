@@ -6,9 +6,9 @@ import FooterContact from './FooterContact';
 
 const MasterFooter = () => {
   return (
-    <div>
+    <div className='py-8 bg-white'>
       <FooterContact />
-      <div className='divide-x-4'></div>
+      <div className='divide-x-4 w-full mt-6 h-[1px] bg-black bg-opacity-[0.05]'></div>
       <Navigation located = 'footer' itemColor = '' />
     </div>
   )

@@ -119,7 +119,7 @@ const tabsData = [
 const ServicesTabs: FC = () => {
     
       return (
-        <div className=" z-0 -mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px]">
+        <div className=" z-0 -mb-[29rem] md:-mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px]">
             <div className='w-full container pb-16 rounded-[2rem] '>
                 <Tab.Group defaultIndex={1}>
                     <Tab.List className="flex w-full h-[152px] md:h-[160px] items-end space-x-1 pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
