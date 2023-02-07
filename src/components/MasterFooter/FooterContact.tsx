@@ -35,7 +35,7 @@ const Contacts: Contacts[] = [
 
 const FooterContact = () => {
   return (
-    <div className='container'>
+    <div className='container py-10'>
         <div className='flex flex-row justify-between'>
             {
                 Contacts.map((contact: any) => (
