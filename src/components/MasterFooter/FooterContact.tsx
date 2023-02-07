@@ -36,11 +36,11 @@ const Contacts: Contacts[] = [
 const FooterContact = () => {
   return (
     <div className='container'>
-        <div className='flex flex-row justify-between'>
+        <div className='flex flex-col md:flex-row justify-between px-5 md:px-9 space-y-12 md:space-y-0'>
             {
                 Contacts.map((contact: any) => (
-                 <div className='flex space-x-2'>
-                    <span>
+                 <div className='flex md:flex-row space-x-5 md:space-x-2 '>
+                    <span className=''>
                        <img src={contact.icon} alt="" />
                     </span>
                    <div className='flex flex-col'>
