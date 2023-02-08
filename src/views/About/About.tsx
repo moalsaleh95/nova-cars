@@ -20,7 +20,7 @@ const About: FC<AboutProps> = () => {
   
   return (
     <div>
-      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-14 font-poppins'>
+      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[156px] font-poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
@@ -41,16 +41,16 @@ const About: FC<AboutProps> = () => {
       </div>
 
       <div className='self-center'> 
-        <img className='max-w-[75%]' src={about_img_1} alt="logo_about" />
+        <img src={about_img_1} alt="logo_about" className='max-w-[250px] md:max-w-[377px]'/>
       </div>
     </div>
 
 
 
-    <div className='bg-[#222222] py-8'>
-      <div className='container grid grid-cols-2 justify-items-center content-start gap-12 py-20 text-white relative'>
+    <div className='bg-[#222222] px-5  md:px-9 lg:px-0'>
+      <div className='container grid grid-cols-1 md:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[120px] text-white relative'>
 
-        <div className='grid grid-cols-4 grid-rows2 gap-28 bg-[#0B0B0B] rounded-2xl p-14'>
+        <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_1} alt="logo_1" />
@@ -111,7 +111,7 @@ const About: FC<AboutProps> = () => {
         </div>
         </div>
 
-        <img className='absolute w-[650px] top-[-135px] right-[100px]' src={car_image} alt="car_image" />
+        <img className='hidden md:inline-block absolute w-[650px] top-[-125px] right-[100px]' src={car_image} alt="car_image" />
 
       </div>
     </div>
