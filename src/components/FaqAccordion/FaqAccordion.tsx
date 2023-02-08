@@ -1,5 +1,6 @@
 import { Disclosure } from '@headlessui/react'
-// import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import { ChevronUpIcon } from '@heroicons/react/20/solid';
+import React from 'react';
 
 const Example = () => {
   const FAQData = [
@@ -30,23 +31,56 @@ const Example = () => {
     }
   ]
 
-  const questions= FAQData.map(item => {
+  const refs = FAQData.map(()=> {
+        return React.createRef<HTMLButtonElement>();
+      })
+
+ 
+
+  const handleClosing= (id:string) => {
+    const otherRefs = refs.filter(ref => {
+      return ref.current?.getAttribute("data-id") !== id;
+    });
+
+    otherRefs.forEach(ref => {
+      const isOpen = ref.current?.getAttribute("data-open") === "true";
+
+      if (isOpen) {
+        ref.current?.click();
+    }})
+  } 
+
+  const questions= FAQData.map((item, idx) => {
 
     const { id, question, answer } = item;
     return (
       <Disclosure as="div" className="mt-2" key={id}>
             {({ open }) => (
               <>
-                <Disclosure.Button className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75`}>
+                <Disclosure.Button 
+                  ref={refs[idx]}
+                  data-id={id}
+                  data-open={open}
+                  onClick={()=> handleClosing(id)}
+
+                  className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red`}>
+
                   <span className={`${open ? "text-[#D81212] bg-white " : "text-black"} text-lg font-semibold`}>{question}</span>
-                  {/* <ChevronUpIcon
+
+                  <ChevronUpIcon
                     className={`${
-                      open ? 'rotate-180 transform' : ''
+                      !open ? 'rotate-180 transform' : ''
                     } h-5 w-5 text-black-500`}
-                  /> */}
+                  />
+
                 </Disclosure.Button>
+                
                 <Disclosure.Panel className={`${open ? "bg-white drop-shadow-xl rounded-b-md pt-0" : ""} px-6 pb-5 pt-3 text-sm text-gray-500`}>
-                  {answer}
+                  <Disclosure.Button className={"text-start"}>
+                    {answer}
+                    
+                  </Disclosure.Button>
+                  
                 </Disclosure.Panel>
               </>
             )}
@@ -55,11 +89,9 @@ const Example = () => {
   })
 
   return (
-    // <div className="w-full max-w-[930px] ">
       <div className="rounded-2xl bg-[#f9f9f9]">
        {questions}
       </div>
-    // </div>   
   )
 }
 

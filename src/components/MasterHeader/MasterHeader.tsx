@@ -11,11 +11,15 @@ interface MasterHeaderProps {
 const MasterHeader: FC<MasterHeaderProps> = () => {
     const [isScrollTop, setIsScrollTop] = useState(true);
     const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
-    const isMobile = useIsMobile()
-    const page = window.location.pathname.split('/').filter((_, idx) => _ != '');
+    const isMobile = useIsMobile()    
+
+    const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
     const pageLen = page?.length;
     const currentPage = pageLen > 0 && page[pageLen - 1];
 
+    useEffect(()=> {
+      setPage(window.location.pathname.split('/').filter((_, idx) => _ != ''))
+    })
 
     useEffect(() => {
       console.log('responsive header: isMobile:', isMobile)
@@ -62,17 +66,23 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
           }
         </div>
 
-        <div className='bg-white px-5 md:px-9 lg:px-0'>
-          <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
-        </div>    
+        {
+          page[0] === 'about' ? 
+        <>
+          <div className='bg-white '>
+            <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
+          </div>    
 
-        <div>
-          { pageLen > 0 && 
-            <HeadingTaxonomy 
-                currentPage = { currentPage } 
-            />
-          }
-        </div>
+          <div>
+            { pageLen > 0 && 
+              <HeadingTaxonomy 
+                  currentPage = { currentPage } 
+              />
+            }
+          </div>
+        </> :
+        null
+        }
       </>
     )
 };
