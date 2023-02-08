@@ -1,7 +1,6 @@
 import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import React from 'react';
-// import { ChevronUpIcon } from '@heroicons/react/20/solid';
 
 const Example = () => {
   const FAQData = [
@@ -32,22 +31,39 @@ const Example = () => {
     }
   ]
 
-  const refs = React.useMemo(()=> {
-    return (
-      FAQData.map(()=> {
+  const refs = FAQData.map(()=> {
         return React.createRef<HTMLButtonElement>();
-      }) ?? []
-    );
-  }, [FAQData])
+      })
 
-  const questions= FAQData.map(item => {
+ 
+
+  const handleClosing= (id:string) => {
+    const otherRefs = refs.filter(ref => {
+      return ref.current?.getAttribute("data-id") !== id;
+    });
+
+    otherRefs.forEach(ref => {
+      const isOpen = ref.current?.getAttribute("data-open") === "true";
+
+      if (isOpen) {
+        ref.current?.click();
+    }})
+  } 
+
+  const questions= FAQData.map((item, idx) => {
 
     const { id, question, answer } = item;
     return (
       <Disclosure as="div" className="mt-2" key={id}>
             {({ open }) => (
               <>
-                <Disclosure.Button className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red`}>
+                <Disclosure.Button 
+                  ref={refs[idx]}
+                  data-id={id}
+                  data-open={open}
+                  onClick={()=> handleClosing(id)}
+
+                  className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red`}>
 
                   <span className={`${open ? "text-[#D81212] bg-white " : "text-black"} text-lg font-semibold`}>{question}</span>
 

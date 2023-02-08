@@ -11,9 +11,7 @@ interface MasterHeaderProps {
 const MasterHeader: FC<MasterHeaderProps> = () => {
     const [isScrollTop, setIsScrollTop] = useState(true);
     const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
-    const isMobile = useIsMobile()
-    // const page = window.location.pathname.split('/').filter((_, idx) => _ != '');
-    
+    const isMobile = useIsMobile()    
 
     const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
     const pageLen = page?.length;
@@ -69,19 +67,19 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
         </div>
 
         {
-        page[0] == 'about' ? 
+          page[0] === 'about' ? 
         <>
-        <div className='bg-white '>
-          <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
-        </div>    
+          <div className='bg-white '>
+            <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
+          </div>    
 
-        <div>
-          { pageLen > 0 && 
-            <HeadingTaxonomy 
-                currentPage = { currentPage } 
-            />
-          }
-        </div>
+          <div>
+            { pageLen > 0 && 
+              <HeadingTaxonomy 
+                  currentPage = { currentPage } 
+              />
+            }
+          </div>
         </> :
         null
         }
