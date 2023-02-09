@@ -69,7 +69,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
         {
           page[0] === 'about' ? 
         <>
-          <div className='bg-white '>
+          <div className='bg-white px-5 md:px-9 lg:px-0'>
             <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
           </div>    
 
