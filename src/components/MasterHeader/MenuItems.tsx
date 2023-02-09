@@ -35,7 +35,7 @@ const MenuItems: FC<MenuItemsProps> = ({
           to={ item.href }
           onClick={(e: any) => { handleNavLink(item) }}
         >
-            <span className={`font-poppins font-medium text-xl xl:px-4 `}>
+            <span className={`font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
              { item.name }
             </span>
         </NavLink>
