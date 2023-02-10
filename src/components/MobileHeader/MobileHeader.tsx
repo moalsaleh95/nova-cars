@@ -1,6 +1,6 @@
 import React, {FC} from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../assets/logo/logoFooter.svg'
+import MechanicsLogo from "../../assets/logo/MechanicsLogo.svg";
 import MobileMenu from '../MobileMenu/MobileMenu'
 
 const MobileHeader: FC = () => {
@@ -12,7 +12,7 @@ const MobileHeader: FC = () => {
           className='inline-block'
         
         >
-            <img src={Logo} className='w-[156px] h-[53px]' />
+            <img src={MechanicsLogo} className='w-[156px] h-[53px]' />
          </Link>
             <MobileMenu />
         </div>

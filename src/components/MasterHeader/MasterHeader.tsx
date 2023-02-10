@@ -24,6 +24,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
       console.log('responsive header: isMobile:', isMobile)
     }, 
     [isMobile])
+    
     useEffect(() => {
       window.onscroll = function () {
         scrollFunction();
