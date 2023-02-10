@@ -116,7 +116,6 @@ img.arrow {
 .heroVideo {
         border-radius: 2rem;
         transform: translate(0, -38%);
-        /* top: 0; */
 }
 
 .services-tab {
@@ -127,7 +126,10 @@ img.arrow {
 
 .heroText {
         position: absolute;
-        /* transform: translate(50%, 0); */
         top: 0;
         left: 35%;
+}
+
+.styles-module_buttonSend__kXjja {
+        margin: auto !important;
 }

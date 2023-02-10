@@ -2,7 +2,7 @@ import { Disclosure } from '@headlessui/react'
 import { ChevronUpIcon } from '@heroicons/react/20/solid';
 import React from 'react';
 
-const Example = () => {
+const FaqAccordion = () => {
   const FAQData = [
     {
       id: '1',
@@ -95,4 +95,4 @@ const Example = () => {
   )
 }
 
-export default Example;
+export default FaqAccordion;
