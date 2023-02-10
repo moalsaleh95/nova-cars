@@ -19,8 +19,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
 
     useEffect(()=> {
       setPage(window.location.pathname.split('/').filter((_, idx) => _ != ''))
-    })
-
+    },[window.location.pathname])
     useEffect(() => {
       console.log('responsive header: isMobile:', isMobile)
     }, 
