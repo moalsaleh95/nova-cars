@@ -12,7 +12,7 @@ const WhatsAppBtn = () => {
         notification
         notificationSound={true}
         allowClickAway
-        avatar={""}
+        avatar={"https://novacarcare.s3.amazonaws.com/whatsapp.png"}
     />
   )
 }
