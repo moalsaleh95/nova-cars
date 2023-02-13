@@ -4,7 +4,7 @@ import { FloatingWhatsApp } from 'react-floating-whatsapp';
 const WhatsAppBtn = () => {
   return (
     <FloatingWhatsApp 
-        phoneNumber={"+905456031675"} 
+        phoneNumber={"+905549867024"} 
         accountName={"Nova Car Care"} 
         chatboxHeight={400}
         // darkMode
@@ -13,6 +13,9 @@ const WhatsAppBtn = () => {
         notificationSound={true}
         allowClickAway
         avatar={"https://novacarcare.s3.amazonaws.com/whatsapp.png"}
+        messageDelay={1}
+        // statusMessage={""}
+        // chatMessage={""}
     />
   )
 }
