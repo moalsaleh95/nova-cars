@@ -9,6 +9,7 @@ import {ReactComponent as  bodyRepairIcon }  from '../../assets/icons/bodyRepair
 import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/expertiseReportIcon.svg'
 import CarWashTab from './TabsContent/CarWashTab'
 import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
+import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
 
 
 
@@ -28,9 +29,9 @@ const tabsData = [
     },
     {
         id: '3',
-        name: 'Machanical Maintenance',
+        name: 'Mekanik Bakım',
         Icon: carMaintenanceIcon,
-        content: 'Machanical Maintenance',
+        content: <MechanicalMaintenanceTab />,
     },
     {
         id: '4',
