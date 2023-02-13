@@ -13,6 +13,7 @@ import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
 import PaintRepairTab from './TabsContent/PaintRepairTab'
 import BodyRepairTab from './TabsContent/BodyRepairTab'
 import PolishPasteTab from './TabsContent/PolishPasteTab'
+import PaintlessDentRepairTab from './TabsContent/PaintlessDentRepairTab'
 
 
 
@@ -56,9 +57,9 @@ const tabsData = [
     },
     {
         id: '7',
-        name: 'Mechanical Maintenance',
+        name: 'Boyasız Göçük Onarımı',
         Icon: carMaintenanceIcon,
-        content: 'Mechanical Maintenance',
+        content: <PaintlessDentRepairTab />,
     },
     {
         id: '8',
