@@ -26,8 +26,12 @@ const About: FC<AboutProps> = () => {
       </Helmet>
 
       <div>
-        <p className='py-3 font-semibold text-2xl'>From its medieval origins to the digital era</p>
-
+        <p className='py-3 font-semibold text-2xl'>About Nova Car Care</p>
+        Nova Car Care otomobil ile ilgili tüm ihtiyaçlarınıza yönelik bir çözüm noktası olarak hizmet 
+        vermektedir. Uzun yıllara dayanan tecrübesini, son teknolojiyi içeren detaycı hizmet anlayışı 
+        ile bir arada sunan Nova Car Care verdiği tüm hizmetlerde müşteri memnuniyetini ön planda 
+        tutmaktadır.
+{/*   
         <p className='pb-3'>
           So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero’s De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book. 
         </p>
@@ -36,7 +40,7 @@ const About: FC<AboutProps> = () => {
         </p>
         <p>  
           And anyways, as Cecil Adams reasoned, “[Do you really] think graphic arts supply houses were hiring classics scholars in the 1960s?” Perhaps. But it seems reasonable to imagine that there was a version in use far before the age of Letraset.
-        </p>
+        </p> */}
 
       </div>
 
@@ -59,37 +63,37 @@ const About: FC<AboutProps> = () => {
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_2} alt="logo_1" />
-            <p className='text-center'>Car <br/> Washing</p>
+            <p className='text-center'>Oto <br/> Yıkama</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_3} alt="logo_1" />
-            <p className='text-center'>Mechanical <br/> Maintenance</p>
+            <p className='text-center'>Mekanik <br/> Onarımı</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_4} alt="logo_1" />
-            <p className='text-center'>Paint <br/> Repair</p>
+            <p className='text-center'>Boya <br/> Onarımı</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_5} alt="logo_1" />
-            <p className='text-center'>Body <br/> Repair</p>
+            <p className='text-center'>Kaporta <br/> Onarımı</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_6} alt="logo_1" />
-            <p className='text-center'>Expertise <br/> Report</p>
+            <p className='text-center'>Pasta <br/> Cila</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_7} alt="logo_1" />
-            <p className='text-center'>Mechanical <br/> Maintenance</p>
+            <p className='text-center'>Göçük <br/> Onarımı</p>
           </div>
 
           <div className='grid justify-items-center'>
             <img className='h-10 mb-4' src={logo_8} alt="logo_1" />
-            <p className='text-center'>Paint <br/> Repair</p>
+            <p className='text-center'>Seramik <br/> kaplama</p>
           </div>
 
         </div>
