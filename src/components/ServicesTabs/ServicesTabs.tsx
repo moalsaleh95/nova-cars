@@ -12,6 +12,7 @@ import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
 import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
 import PaintRepairTab from './TabsContent/PaintRepairTab'
 import BodyRepairTab from './TabsContent/BodyRepairTab'
+import PolishPasteTab from './TabsContent/PolishPasteTab'
 
 
 
@@ -49,9 +50,9 @@ const tabsData = [
     },
     {
         id: '6',
-        name: 'Expertise Report',
+        name: "Pasta Cila",
         Icon: expertiseReportIcon,
-        content: 'Expertise Report',
+        content: <PolishPasteTab />,
     },
     {
         id: '7',
