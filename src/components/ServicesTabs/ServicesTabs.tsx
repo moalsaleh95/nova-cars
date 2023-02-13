@@ -14,6 +14,7 @@ import PaintRepairTab from './TabsContent/PaintRepairTab'
 import BodyRepairTab from './TabsContent/BodyRepairTab'
 import PolishPasteTab from './TabsContent/PolishPasteTab'
 import PaintlessDentRepairTab from './TabsContent/PaintlessDentRepairTab'
+import MotorCleansingTab from './TabsContent/MotorCleansingTab'
 
 
 
@@ -63,9 +64,9 @@ const tabsData = [
     },
     {
         id: '8',
-        name: 'Paint Repair',
+        name: 'Detaylı Motor Temizlik',
         Icon: carPaintingIcon,
-        content: '',
+        content: <MotorCleansingTab />,
     },
 ]
 
