@@ -10,6 +10,8 @@ import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/exper
 import CarWashTab from './TabsContent/CarWashTab'
 import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
 import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
+import PaintRepairTab from './TabsContent/PaintRepairTab'
+import BodyRepairTab from './TabsContent/BodyRepairTab'
 
 
 
@@ -35,15 +37,15 @@ const tabsData = [
     },
     {
         id: '4',
-        name: 'Paint Repair',
+        name: 'Boya Onarımı',
         Icon: carPaintingIcon,
-        content: 'Paint Repair',
+        content: <PaintRepairTab />,
     },
     {
         id: '5',
-        name: 'Body Repair',
+        name: 'Kaporta Onarımı',
         Icon: bodyRepairIcon,
-        content: 'Body Repair',
+        content: <BodyRepairTab />,
     },
     {
         id: '6',
