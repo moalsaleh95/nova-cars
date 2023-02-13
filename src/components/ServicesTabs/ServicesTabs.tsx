@@ -28,7 +28,7 @@ const tabsData = [
     },
     {
         id: '2',
-        name: 'Car Wash',
+        name: 'Oto Yıkama',
         Icon: CarWashIcon,
         content: <CarWashTab />,
     },
