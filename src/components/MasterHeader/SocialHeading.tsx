@@ -1,5 +1,4 @@
-import React, { FC, Fragment, ReactNode, useState } from 'react'
-import logo from "../../assets/logo/logo.png";
+import React, { FC, ReactNode } from 'react'
 import instagram from '../../assets/socials/instagram.svg';
 import facebook from '../../assets/socials/facebook.svg';
 import twitter from '../../assets/socials/twitter.svg';
@@ -70,8 +69,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
 
     const handleHeadingTab = ( heading: string ) => {
         setActiveHeadingTab(heading?.toLowerCase());
-        // console.log(heading?.toLowerCase())
-    };
+    }; 
 
     return (
         <div className='w-full bg-white'>

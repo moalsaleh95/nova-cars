@@ -5,12 +5,14 @@ import MobileHeader from '../MobileHeader/MobileHeader';
 import HeadingTaxonomy from './HeadingTaxonomy';
 import Navigation from './Navigation';
 import SocialHeading from './SocialHeading';
+
 interface MasterHeaderProps {
+  activeHeadingTab?: string;
+  setActiveHeadingTab?: any;
 };
 
-const MasterHeader: FC<MasterHeaderProps> = () => {
+const MasterHeader: FC<MasterHeaderProps> = ({activeHeadingTab, setActiveHeadingTab}) => {
     const [isScrollTop, setIsScrollTop] = useState(true);
-    const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
     const isMobile = useIsMobile()    
 
     const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
@@ -45,6 +47,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
         setIsScrollTop(true);
       }
     };
+
 
     return (
       <>
