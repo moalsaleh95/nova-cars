@@ -8,6 +8,7 @@ import {ReactComponent as  carWashIcon }  from '../../assets/icons/carWashIcon.s
 import {ReactComponent as  bodyRepairIcon }  from '../../assets/icons/bodyRepairIcon.svg'
 import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/expertiseReportIcon.svg'
 import CarWashTab from './TabsContent/CarWashTab'
+import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
 
 
 
@@ -15,9 +16,9 @@ import CarWashTab from './TabsContent/CarWashTab'
 const tabsData = [
     {
         id: '1',
-        name: 'Roadside Assistance',
-        Icon: carTransportationIcon,
-        content:'Roadside Assistance'
+        name: 'Detaylı İç Temizlik',
+        Icon: CarWashIcon,
+        content:<InterriorCleaningTab />
     },
     {
         id: '2',
