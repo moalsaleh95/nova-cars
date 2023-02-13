@@ -8,6 +8,13 @@ import {ReactComponent as  carWashIcon }  from '../../assets/icons/carWashIcon.s
 import {ReactComponent as  bodyRepairIcon }  from '../../assets/icons/bodyRepairIcon.svg'
 import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/expertiseReportIcon.svg'
 import CarWashTab from './TabsContent/CarWashTab'
+import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
+import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
+import PaintRepairTab from './TabsContent/PaintRepairTab'
+import BodyRepairTab from './TabsContent/BodyRepairTab'
+import PolishPasteTab from './TabsContent/PolishPasteTab'
+import PaintlessDentRepairTab from './TabsContent/PaintlessDentRepairTab'
+import MotorCleansingTab from './TabsContent/MotorCleansingTab'
 
 
 
@@ -15,51 +22,51 @@ import CarWashTab from './TabsContent/CarWashTab'
 const tabsData = [
     {
         id: '1',
-        name: 'Roadside Assistance',
-        Icon: carTransportationIcon,
-        content:'Roadside Assistance'
+        name: 'Detaylı İç Temizlik',
+        Icon: CarWashIcon,
+        content:<InterriorCleaningTab />
     },
     {
         id: '2',
-        name: 'Car Wash',
+        name: 'Oto Yıkama',
         Icon: CarWashIcon,
         content: <CarWashTab />,
     },
     {
         id: '3',
-        name: 'Machanical Maintenance',
+        name: 'Mekanik Bakım',
         Icon: carMaintenanceIcon,
-        content: 'Machanical Maintenance',
+        content: <MechanicalMaintenanceTab />,
     },
     {
         id: '4',
-        name: 'Paint Repair',
+        name: 'Boya Onarımı',
         Icon: carPaintingIcon,
-        content: 'Paint Repair',
+        content: <PaintRepairTab />,
     },
     {
         id: '5',
-        name: 'Body Repair',
+        name: 'Kaporta Onarımı',
         Icon: bodyRepairIcon,
-        content: 'Body Repair',
+        content: <BodyRepairTab />,
     },
     {
         id: '6',
-        name: 'Expertise Report',
+        name: "Pasta Cila",
         Icon: expertiseReportIcon,
-        content: 'Expertise Report',
+        content: <PolishPasteTab />,
     },
     {
         id: '7',
-        name: 'Mechanical Maintenance',
+        name: 'Boyasız Göçük Onarımı',
         Icon: carMaintenanceIcon,
-        content: 'Mechanical Maintenance',
+        content: <PaintlessDentRepairTab />,
     },
     {
         id: '8',
-        name: 'Paint Repair',
+        name: 'Detaylı Motor Temizlik',
         Icon: carPaintingIcon,
-        content: '',
+        content: <MotorCleansingTab />,
     },
 ]
 
