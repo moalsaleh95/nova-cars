@@ -1,15 +1,20 @@
-import React from 'react'
-import { MasterHeader } from '../MasterHeader';
+import React, { FC } from 'react'
 import Navigation from '../MasterHeader/Navigation';
-import SocialHeading from '../MasterHeader/SocialHeading';
 import FooterContact from './FooterContact';
 
-const MasterFooter = () => {
+interface MasterFooterProps {
+  activeHeadingTab?: string;
+  setActiveHeadingTab?: string;
+};
+
+const MasterFooter: FC<MasterFooterProps> = ({ activeHeadingTab}) => {
+
+
   return (
     <div className='py-8 bg-white'>
       <FooterContact />
       <div className='container divide-x-4 w-full mt-6 h-[1px] bg-black bg-opacity-[0.05]'></div>
-      <Navigation located = 'footer' itemColor = '' />
+      <Navigation located = 'footer' itemColor = '' activeHeadingTab = { activeHeadingTab }  />
     </div>
   )
 };
