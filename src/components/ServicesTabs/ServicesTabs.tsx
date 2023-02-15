@@ -140,11 +140,11 @@ const ServicesTabs: FC = () => {
                                 key={id}
                                 className={({ selected }) =>
                                     (
-                                    `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
+                                    `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none 
                                 
                                     ${selected
-                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_10px)] md:h-[calc(100%_+_20px)] rounded-t-lg '
-                                        : 'text-[#222222] bg-[#f1f1f1] text-opacity-30 hover:bg-white/[0.12] h-full' } 
+                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_10px)] md:h-[calc(100%_+_20px)] rounded-t-lg  dark:bg-[#141414] dark:text-white'
+                                        : 'text-[#222222] bg-[#f1f1f1] dark:bg-[#0b0b0b] dark:text-white text-opacity-30 hover:bg-white/[0.12] h-full' } 
                                     ${ isFirst && 'rounded-tl-lg' }
                                      ${ isLast && 'rounded-tr-lg' }   `
                                     )
@@ -165,7 +165,7 @@ const ServicesTabs: FC = () => {
                         return (
                             <Tab.Panel
                             key={idx}
-                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white ring-white  focus:outline-none focus:ring-0'}>
+                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white dark:bg-[#141414] ring-white  focus:outline-none focus:ring-0'}>
                         
                                 {content}
                             

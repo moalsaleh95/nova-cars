@@ -35,7 +35,6 @@ const FaqAccordion = () => {
         return React.createRef<HTMLButtonElement>();
       })
 
- 
 
   const handleClosing= (id:string) => {
     const otherRefs = refs.filter(ref => {
@@ -62,25 +61,23 @@ const FaqAccordion = () => {
                   data-id={id}
                   data-open={open}
                   onClick={()=> handleClosing(id)}
+                  className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0 dark:bg-[#141414]" : "hover:bg-[#F1F1F1] dark:hover:bg-[#141414] dark:hover: rounded-lg"} group py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red dark:bg-[#222222]`}
+                  >
 
-                  className={`${open ? "bg-white rounded-t-md drop-shadow-2xl pb-0" : "hover:bg-[#F1F1F1] rounded-lg"} py-5 flex w-full justify-between bg-purple-0 px-6 text-left text-sm font-medium text-black focus:text-red`}>
-
-                  <span className={`${open ? "text-[#D81212] bg-white " : "text-black"} text-lg font-semibold`}>{question}</span>
+                  <span id="quesitonSpan" className={`${open ? "text-[#D81212] bg-white dark:bg-[#141414]" : "text-black dark:text-white"}  dark:group-hover:bg-[#141414] text-lg font-semibold dark:bg-[#222222] `}>{question}</span>
 
                   <ChevronUpIcon
                     className={`${
                       !open ? 'rotate-180 transform' : ''
-                    } h-5 w-5 text-black-500`}
+                    } h-5 w-5 text-black-500 dark:text-white`}
                   />
 
                 </Disclosure.Button>
                 
-                <Disclosure.Panel className={`${open ? "bg-white drop-shadow-xl rounded-b-md pt-0" : ""} px-6 pb-5 pt-3 text-sm text-gray-500`}>
+                <Disclosure.Panel className={`${open ? "bg-white drop-shadow-xl rounded-b-md pt-0 dark:[#141414]" : ""} dark:bg-[#141414] px-6 pb-5 pt-3 text-sm text-gray-500 dark:text-white`}>
                   <Disclosure.Button className={"text-start"}>
                     {answer}
-                    
                   </Disclosure.Button>
-                  
                 </Disclosure.Panel>
               </>
             )}
@@ -89,7 +86,7 @@ const FaqAccordion = () => {
   })
 
   return (
-      <div className="rounded-2xl bg-[#f9f9f9]">
+      <div className="rounded-2xl bg-[#f9f9f9] dark:bg-[#222222]">
        {questions}
       </div>
   )

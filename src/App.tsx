@@ -4,6 +4,7 @@ import './App.css';
 import { MasterFooter, MasterHeader } from './components';
 import { WhatsAppBtn } from './components/WhatsAppBtn';
 import Routers from './routers';
+import { DarkModeSwitch } from './components/DarkModeSwitch';
 
 interface AppProps {
   activeHeadingTab?: string;
@@ -19,6 +20,7 @@ const App: FC<AppProps> = () => {
       <Routers />
       <WhatsAppBtn />
       <MasterFooter activeHeadingTab = {activeHeadingTab} />
+      <DarkModeSwitch />
     </Router>
   );
 };

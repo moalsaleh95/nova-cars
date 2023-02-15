@@ -1,6 +1,7 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import HeadingTaxonomy from '../../components/MasterHeader/HeadingTaxonomy';
-import about_img_1 from '../../../src/assets/images/about_img_1.png';
+import about_img_light from '../../../src/assets/images/about_img_1.png';
+import about_img_dark from '../../../src/assets/images/about_img_dark.png';
 import { Helmet } from "react-helmet";
 
 import logo_1 from "../../../src/assets/icons/about_logo_1.svg";
@@ -17,16 +18,29 @@ interface AboutProps {
 };
 
 const About: FC<AboutProps> = () => {
+
+  const [darkMode, setDarkMode ] = useState<string>(localStorage.theme)
+
+  useEffect(()=> {
+    const mode = localStorage.theme;
+    console.log("current theme is ",localStorage.theme)
+    if (mode === 'dark') {
+      setDarkMode('dark')
+    }
+    else {
+      setDarkMode('light')
+    }
+  }, [localStorage.theme])
   
   return (
     <div>
-      <div className='container px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[156px] font-poppins'>
+      <div className='container dark:text-white px-5 md:px-9 lg:px-0 flex flex-col-reverse grid-cols-1 lg:grid lg:grid-cols-2 justify-items-center content-start gap-12 py-6 md:pb-[300px] font-poppins'>
       <Helmet>
         <title>Nova Car Care || About</title>
       </Helmet>
 
       <div>
-        <p className='py-3 font-semibold text-2xl'>About Nova Car Care</p>
+        <p className='py-3 font-semibold text-2xl '>About Nova Car Care</p>
         Nova Car Care otomobil ile ilgili tüm ihtiyaçlarınıza yönelik bir çözüm noktası olarak hizmet 
         vermektedir. Uzun yıllara dayanan tecrübesini, son teknolojiyi içeren detaycı hizmet anlayışı 
         ile bir arada sunan Nova Car Care verdiği tüm hizmetlerde müşteri memnuniyetini ön planda 
@@ -43,9 +57,10 @@ const About: FC<AboutProps> = () => {
         </p> */}
 
       </div>
+      
 
       <div className='self-center'> 
-        <img src={about_img_1} alt="logo_about" className='max-w-[250px] md:max-w-[377px]'/>
+        <img src={localStorage.theme === 'dark' ? about_img_dark : about_img_light } alt="logo_about" className='max-w-[250px] md:max-w-[377px] mt-[80px]'/>
       </div>
     </div>
 
