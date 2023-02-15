@@ -1,6 +1,6 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import HeadingTaxonomy from '../../components/MasterHeader/HeadingTaxonomy';
-import about_img_1 from '../../../src/assets/images/about_img_1.png';
+import about_img_light from '../../../src/assets/images/about_img_1.png';
 import about_img_dark from '../../../src/assets/images/about_img_dark.png';
 import { Helmet } from "react-helmet";
 
@@ -18,6 +18,19 @@ interface AboutProps {
 };
 
 const About: FC<AboutProps> = () => {
+
+  const [darkMode, setDarkMode ] = useState<string>(localStorage.theme)
+
+  useEffect(()=> {
+    const mode = localStorage.theme;
+    console.log("current theme is ",localStorage.theme)
+    if (mode === 'dark') {
+      setDarkMode('dark')
+    }
+    else {
+      setDarkMode('light')
+    }
+  }, [localStorage.theme])
   
   return (
     <div>
@@ -47,7 +60,7 @@ const About: FC<AboutProps> = () => {
       
 
       <div className='self-center'> 
-        <img src={localStorage.theme==="dark" ? about_img_dark : about_img_1 } alt="logo_about" className='max-w-[250px] md:max-w-[377px]'/>
+        <img src={localStorage.theme === 'dark' ? about_img_dark : about_img_light } alt="logo_about" className='max-w-[250px] md:max-w-[377px] mt-[80px]'/>
       </div>
     </div>
 
