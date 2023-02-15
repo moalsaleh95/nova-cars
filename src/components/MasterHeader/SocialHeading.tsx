@@ -59,7 +59,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
     const InactiveHeading = ( heading: any ) => (
         <>
             <span 
-              className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5 cursor-pointer' 
+              className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5 cursor-pointer dark:text-[#fff]' 
               onClick={() => handleHeadingTab(heading)}
             >
                 { heading }
@@ -72,8 +72,8 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
     }; 
 
     return (
-        <div className='w-full bg-white'>
-            <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
+        <div className='w-full bg-white  dark:bg-[#0B0B0B]'>
+            <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff] dark:bg-[#0B0B0B]">
                 <div className='w-full flex justify-between my-4'>
 
                     <div className='flex items-end'>

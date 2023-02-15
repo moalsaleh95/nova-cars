@@ -4,8 +4,8 @@ import { CustomerReviewsCarousel } from '../CustomerReviewsCarousel';
 
 const CustomerReviews = () => {
 
-  const appearance = useAppearance();
-  console.log({appearance});
+  // const appearance = useAppearance();
+  // console.log({appearance});
   
   return (
     <div className='bg-[#D81212] overflow-hidden px-5 md:px-9 pb-[61px] md:pb-0'>
