@@ -16,12 +16,14 @@ export interface NavigationProps {
 
 const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics'}) => {
 
+  const whichLogo = localStorage.theme === 'dark' ? MechanicsLogo : MechanicsLogoFooter
+
   const HeadingLogo = () => {
     return activeHeadingTab === 'mechanics' ? MechanicsLogo : DetailingLogo;
   };
 
   const FooterLogo = () => {
-    return activeHeadingTab === 'mechanics' ? MechanicsLogoFooter :  DetailingLogoFooter;
+    return activeHeadingTab === 'mechanics' ? whichLogo :  DetailingLogoFooter;
   };
 
   return (

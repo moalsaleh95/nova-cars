@@ -17,7 +17,7 @@ const CarWashTab: FC = () => {
                 hızlı ıslak cilalar ile araçların boya ve kaportalarına en ufak zarar verilmeden özenli bir 
                 yıkama hizmeti verilir.
             </p>            
-            <div className='absolute bottom-8 mt-10 flex justify-start space-x-8 '>
+            <div className='absolute bottom-[-6rem] mt-10 flex justify-start space-x-8 '>
                 <button className='px-10 py-4 bg-[#D81212] border-2 border-[#D81212] transition-all text-white rounded-[10px] text-lg hover:text-black hover:bg-white'>Learn More</button>
                 <a target="_blank" rel="noreferrer" href="https://wa.me/905549867024"><button className='px-10 py-4 hidden md:inline-block rounded-[10px] text-lg border-2 border-[#707070] hover:bg-[#D81212] hover:text-white transition-all hover:border-[#D81212]'>Contact Now</button></a>
 
