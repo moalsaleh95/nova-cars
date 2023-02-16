@@ -6,10 +6,10 @@
 @font-face {
         font-family: "Poppins";
         src: local("Poppins"),
-          url("./styles/fonts/Poppins/Poppins-Light.ttf") format("woff");
+                url("./styles/fonts/Poppins/Poppins-Light.ttf") format("woff");
 }
 
-body{
+body {
         background-color: #F1F1F1;
 }
 
@@ -17,14 +17,14 @@ body{
         font-family: "Poppins";
 }
 
-.title  
-{  
-        margin-bottom: 20px;  
-        padding:20px  
-}  
-.img  
-{  
-        height: 260px;width:100%  
+.title {
+        margin-bottom: 20px;
+        padding: 20px
+}
+
+.img {
+        height: 260px;
+        width: 100%
 }
 
 .owl-nav {
@@ -32,8 +32,9 @@ body{
         justify-content: end;
 }
 
-.owl-carousel .owl-nav button.owl-prev, .owl-carousel .owl-nav button.owl-next {
-        padding:0 5px !important;
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+        padding: 0 5px !important;
         color: #fff !important;
         font-weight: bold !important;
         font-size: 1.5rem !important;
@@ -74,13 +75,15 @@ body{
         transition: opacity .2s ease;
         border-radius: 30px;
 }
-    
-.owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+
+.owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
         background: #D6D6D6;
         width: 20px;
 }
 
-.owl-nav .owl-prev, .owl-nav .owl-next {
+.owl-nav .owl-prev,
+.owl-nav .owl-next {
         padding: 0.5rem !important;
 }
 
@@ -94,7 +97,7 @@ img.arrow {
         bottom: -1.5px;
 }
 
-.owl-carousel { 
+.owl-carousel {
         position: relative;
 }
 
@@ -103,9 +106,9 @@ img.arrow {
 }
 
 .owl-stage .active:nth-child(even) {
-       border-top-right-radius: 7px;
-       border-bottom-right-radius: 7px;
-       overflow: hidden;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        overflow: hidden;
 }
 
 .owl-stage .active:nth-child(odd) {
@@ -132,4 +135,89 @@ img.arrow {
 
 .styles-module_buttonSend__kXjja {
         margin: auto !important;
+}
+
+.modal_bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(28, 28, 28, 0.19);
+        backdrop-filter: blur(6px);
+        opacity: 1;
+        animation-timing-function: ease-out;
+        animation-duration: 0.3s;
+        animation-name: modal-video;
+        -webkit-transition: opacity 0.3s ease-out;
+        -moz-transition: opacity 0.3s ease-out;
+        -ms-transition: opacity 0.3s ease-out;
+        -o-transition: opacity 0.3s ease-out;
+        transition: opacity 0.3s ease-out;
+        z-index: 100;
+}
+
+.modal_align {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+}
+
+.modal_content {
+        width: 100vw;
+        height: 60vh;
+        box-shadow: 0px 100px 80px rgba(184, 184, 184, 0.07),
+                0px 25.8162px 19px 4px rgba(178, 178, 178, 0.0456112),
+                0px 7.779px 7.30492px rgba(0, 0, 0, 0.035),
+                0px 1.48838px 2.0843px rgba(0, 0, 0, 0.0243888);
+        border-radius: 20px;
+        background: transparent;
+        color: #000;
+        margin: 0rem 4rem;
+}
+
+.modal_close {
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+        bottom: 50px;
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        right: 0px;
+}
+
+.modal_video-style {
+        border-radius: 20px;
+        z-index: 100;
+}
+
+
+@media screen and (max-width: 800px) {
+        .modal_content {
+                margin: 0rem 1rem;
+                width: 100%;
+        }
+
+        .modal_video_style {
+                width: 100%;
+        }
+}
+
+@media screen and (max-width: 499px) {
+        .modal_content {
+                background: transparent;
+                height: auto;
+        }
+
+        .modal_video_align {
+                bottom: 0px;
+        }
+
+        .modal_video_style {
+                height: auto;
+        }
 }
