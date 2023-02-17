@@ -1,5 +1,4 @@
-import React, { FC, Fragment, ReactNode, useState } from 'react'
-import logo from "../../assets/logo/logo.png";
+import React, { FC, ReactNode } from 'react'
 import instagram from '../../assets/socials/instagram.svg';
 import facebook from '../../assets/socials/facebook.svg';
 import twitter from '../../assets/socials/twitter.svg';
@@ -60,7 +59,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
     const InactiveHeading = ( heading: any ) => (
         <>
             <span 
-              className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5 cursor-pointer' 
+              className='font-poppins font-normal text-[18px] text-[#222222] whitespace-nowrap mr-4 mt-5 cursor-pointer dark:text-[#fff]' 
               onClick={() => handleHeadingTab(heading)}
             >
                 { heading }
@@ -70,21 +69,21 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
 
     const handleHeadingTab = ( heading: string ) => {
         setActiveHeadingTab(heading?.toLowerCase());
-    };
+    }; 
 
     return (
-        <div className='w-full bg-white'>
-            <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff]">
+        <div className='w-full bg-white  dark:bg-[#0B0B0B]'>
+            <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff] dark:bg-[#0B0B0B]">
                 <div className='w-full flex justify-between my-4'>
 
                     <div className='flex items-end'>
                         <div className='flex items-center justify-center h-full'>
                             <span className='whitespace-nowrap mr-4 mt-5'>
-                                { activeHeadingTab == 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
+                                { activeHeadingTab === 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
                             </span>
 
                             <span className='mt-5'>
-                                { activeHeadingTab == 'detailing' ? ActiveHeading('Detailing') : InactiveHeading('Detailing') }
+                                { activeHeadingTab === 'detailing' ? ActiveHeading('Detailing') : InactiveHeading('Detailing') }
                             </span>
                         </div>
                     </div>

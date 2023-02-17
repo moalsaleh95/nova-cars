@@ -5,12 +5,14 @@ import MobileHeader from '../MobileHeader/MobileHeader';
 import HeadingTaxonomy from './HeadingTaxonomy';
 import Navigation from './Navigation';
 import SocialHeading from './SocialHeading';
+
 interface MasterHeaderProps {
+  activeHeadingTab?: string;
+  setActiveHeadingTab?: any;
 };
 
-const MasterHeader: FC<MasterHeaderProps> = () => {
+const MasterHeader: FC<MasterHeaderProps> = ({activeHeadingTab, setActiveHeadingTab}) => {
     const [isScrollTop, setIsScrollTop] = useState(true);
-    const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
     const isMobile = useIsMobile()    
 
     const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
@@ -46,6 +48,7 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
       }
     };
 
+
     return (
       <>
        
@@ -69,8 +72,8 @@ const MasterHeader: FC<MasterHeaderProps> = () => {
         {
           page[0] === 'about' ? 
         <>
-          <div className='bg-white px-5 md:px-9 lg:px-0'>
-            <p className='container text-4xl font-extrabold pb-3 pt-6'>About Us</p>
+          <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
+            <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>About Us</p>
           </div>    
 
           <div>

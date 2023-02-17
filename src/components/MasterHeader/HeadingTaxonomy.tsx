@@ -1,6 +1,8 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import chevron_down from '../../assets/icons/chevron-down.svg';
+import chevron_black from '../../assets/icons/chevron-down.svg';
+import chevron_white from '../../assets/icons/chevron-left-white.svg';
+
 import { capitalizeFirstLetter } from '../../common/capitalizeFirstLetter';
 
 interface HeadingTaxonomyProps {
@@ -12,13 +14,17 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({currentPage}) => {
   const pageLen = page?.length;
   const currpage = pageLen > 0 && page[pageLen - 1];
 
+  let image;
+  useEffect(() => {
+    image = localStorage.theme === "dark" ? chevron_white : chevron_black ;
+  }, [localStorage.theme])
   
   return (
-    <div className='bg-white pb-6 font-poppins  px-5 md:px-9 lg:px-0'>
-      <div className='container text-lg'>
+    <div className='bg-white pb-6 font-poppins  px-5 md:px-9 lg:px-0 dark:bg-[#0B0B0B]'>
+      <div className='container text-lg dark:text-[#fff]'>
       <>
         <Link to="/">Home</Link> 
-        <img className='inline px-6 w-[54px]' src={chevron_down} alt=""></img>
+        <img className='inline px-6 w-[54px]' src={image} alt=""></img>
       </>
         {typeof currentPage == "string" && capitalizeFirstLetter(currentPage)}
       </div>

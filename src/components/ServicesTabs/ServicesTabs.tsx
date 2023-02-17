@@ -8,6 +8,13 @@ import {ReactComponent as  carWashIcon }  from '../../assets/icons/carWashIcon.s
 import {ReactComponent as  bodyRepairIcon }  from '../../assets/icons/bodyRepairIcon.svg'
 import {ReactComponent as  expertiseReportIcon }  from '../../assets/icons/expertiseReportIcon.svg'
 import CarWashTab from './TabsContent/CarWashTab'
+import InterriorCleaningTab from './TabsContent/InterriorCleaningTab'
+import MechanicalMaintenanceTab from './TabsContent/MechanicalMaintenanceTab'
+import PaintRepairTab from './TabsContent/PaintRepairTab'
+import BodyRepairTab from './TabsContent/BodyRepairTab'
+import PolishPasteTab from './TabsContent/PolishPasteTab'
+import PaintlessDentRepairTab from './TabsContent/PaintlessDentRepairTab'
+import MotorCleansingTab from './TabsContent/MotorCleansingTab'
 
 
 
@@ -15,51 +22,51 @@ import CarWashTab from './TabsContent/CarWashTab'
 const tabsData = [
     {
         id: '1',
-        name: 'Roadside Assistance',
-        Icon: carTransportationIcon,
-        content:'Roadside Assistance'
+        name: 'Detaylı İç Temizlik',
+        Icon: CarWashIcon,
+        content:<InterriorCleaningTab />
     },
     {
         id: '2',
-        name: 'Car Wash',
+        name: 'Oto Yıkama',
         Icon: CarWashIcon,
         content: <CarWashTab />,
     },
     {
         id: '3',
-        name: 'Machanical Maintenance',
+        name: 'Mekanik Bakım',
         Icon: carMaintenanceIcon,
-        content: 'Machanical Maintenance',
+        content: <MechanicalMaintenanceTab />,
     },
     {
         id: '4',
-        name: 'Paint Repair',
+        name: 'Boya Onarımı',
         Icon: carPaintingIcon,
-        content: 'Paint Repair',
+        content: <PaintRepairTab />,
     },
     {
         id: '5',
-        name: 'Body Repair',
+        name: 'Kaporta Onarımı',
         Icon: bodyRepairIcon,
-        content: 'Body Repair',
+        content: <BodyRepairTab />,
     },
     {
         id: '6',
-        name: 'Expertise Report',
+        name: "Pasta Cila",
         Icon: expertiseReportIcon,
-        content: 'Expertise Report',
+        content: <PolishPasteTab />,
     },
     {
         id: '7',
-        name: 'Mechanical Maintenance',
+        name: 'Boyasız Göçük Onarımı',
         Icon: carMaintenanceIcon,
-        content: 'Mechanical Maintenance',
+        content: <PaintlessDentRepairTab />,
     },
     {
         id: '8',
-        name: 'Paint Repair',
+        name: 'Detaylı Motor Temizlik',
         Icon: carPaintingIcon,
-        content: '',
+        content: <MotorCleansingTab />,
     },
 ]
 
@@ -133,11 +140,11 @@ const ServicesTabs: FC = () => {
                                 key={id}
                                 className={({ selected }) =>
                                     (
-                                    `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none
+                                    `w-[100px] md:w-full border-0 flex flex-col justify-center items-center grow-0 shrink-0 md:grow-1 md:shrink-1 md:flex-1 space-y-4 rounded-b-0 py-2.5 px-3 md:px-0 text-sm font-normal leading-5 focus:outline-none 
                                 
                                     ${selected
-                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_10px)] md:h-[calc(100%_+_20px)] rounded-t-lg '
-                                        : 'text-[#222222] bg-[#f1f1f1] text-opacity-30 hover:bg-white/[0.12] h-full' } 
+                                        ? 'bg-white text-[#D81212] h-[calc(100%_+_10px)] md:h-[calc(100%_+_20px)] rounded-t-lg  dark:bg-[#141414] dark:text-white'
+                                        : 'text-[#222222] bg-[#f1f1f1] dark:bg-[#0b0b0b] dark:text-white text-opacity-30 hover:bg-white/[0.12] h-full' } 
                                     ${ isFirst && 'rounded-tl-lg' }
                                      ${ isLast && 'rounded-tr-lg' }   `
                                     )
@@ -158,7 +165,7 @@ const ServicesTabs: FC = () => {
                         return (
                             <Tab.Panel
                             key={idx}
-                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white ring-white  focus:outline-none focus:ring-0'}>
+                            className={'min-h-[620px] rounded-b-[20px] md:rounded-b-xl bg-white dark:bg-[#141414] ring-white  focus:outline-none focus:ring-0'}>
                         
                                 {content}
                             
