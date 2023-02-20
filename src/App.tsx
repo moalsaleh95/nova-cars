@@ -12,7 +12,7 @@ interface AppProps {
 }
 
 const App: FC<AppProps> = () => {
-  const [activeHeadingTab, setActiveHeadingTab] = useState<string>('mechanics');
+  const [activeHeadingTab, setActiveHeadingTab] = useState<string>('detailing');
 
   return (
     <Router>

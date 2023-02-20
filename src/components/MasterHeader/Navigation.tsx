@@ -14,7 +14,7 @@ export interface NavigationProps {
   activeHeadingTab?: string;
 };
 
-const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics'}) => {
+const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics' }) => {
 
   const whichLogo = localStorage.theme === 'dark' ? MechanicsLogo : MechanicsLogoFooter
 
@@ -23,7 +23,7 @@ const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrol
   };
 
   const FooterLogo = () => {
-    return activeHeadingTab === 'mechanics' ? whichLogo :  DetailingLogoFooter;
+    return activeHeadingTab === 'mechanics' ? whichLogo : DetailingLogoFooter;
   };
 
   return (
@@ -33,25 +33,25 @@ const Navigation: FC<NavigationProps> = ({located = 'header', itemColor, isScrol
 
         <div className="hidden md:flex justify-start flex-grow items-center space-x-3 sm:space-x-8 lg:space-x-10">
           {/* <Logo img={located === 'header' ? HeadingLogo() : FooterLogo()}  /> */}
-        {localStorage.theme === 'dark' ? <Logo img={HeadingLogo()}  /> : <Logo img={located === 'header' ? HeadingLogo() : FooterLogo()}  />}
+          {localStorage.theme === 'dark' ? <Logo img={HeadingLogo()} /> : <Logo img={located === 'header' ? HeadingLogo() : FooterLogo()} />}
 
         </div>
-        
+
         <div className="flex-shrink-0 hidden md:flex items-center justify-end text-neutral-700 space-x-1 ">
           <div className="items-center flex space-x-1">
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
-             {
-               NAVIGATION_MENU?.map((item: any) => (
-                 <MenuItems key={item.id} menuItem={item} itemColor = { itemColor } />
-               ))
-             }
+              {
+                NAVIGATION_MENU?.map((item: any) => (
+                  <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
+                ))
+              }
             </ul>
           </div>
         </div>
 
         <div className="w-full flex md:hidden justify-center items-center px-5 ">
           <div className="w-[352px] flex md:pt-6 justify-center flex-grow items-center space-x-3 sm:space-x-8 lg:space-x-10">
-          <Logo img={located === 'header' ? HeadingLogo() : FooterLogo()}  />
+            <Logo img={located === 'header' ? HeadingLogo() : FooterLogo()} />
           </div>
         </div>
 
