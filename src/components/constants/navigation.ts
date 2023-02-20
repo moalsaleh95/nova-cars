@@ -12,16 +12,16 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
     href: "/",
     name: "Our Services",
   },
-  {
-    id: randomId(),
-    href: "/",
-    name: "Corporate",
-  },
-  {
-    id: randomId(),
-    href: "/",
-    name: "Reservations",
-  },
+  // {
+  //   id: randomId(),
+  //   href: "/",
+  //   name: "Corporate",
+  // },
+  // {
+  //   id: randomId(),
+  //   href: "/",
+  //   name: "Reservations",
+  // },
   {
     id: randomId(),
     href: "/",
