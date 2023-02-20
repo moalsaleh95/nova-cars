@@ -78,9 +78,9 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
 
                     <div className='flex items-end'>
                         <div className='flex items-center justify-center h-full'>
-                            <span className='whitespace-nowrap mr-4 mt-5'>
+                            {/* <span className='whitespace-nowrap mr-4 mt-5'>
                                 { activeHeadingTab === 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
-                            </span>
+                            </span> */}
 
                             <span className='mt-5'>
                                 { activeHeadingTab === 'detailing' ? ActiveHeading('Detailing') : InactiveHeading('Detailing') }
