@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 import services_img from '../../../src/assets/images/services.png'
+import services_img_mobile from '../../../src/assets/images/services_mobile.png';
+import services_img_tablet from '../../../src/assets/images/services_tablet.png';
 import logo_1 from "../../../src/assets/icons/about_logo_1.svg";
 import logo_2 from "../../../src/assets/icons/about_logo_2.svg";
 import logo_3 from "../../../src/assets/icons/about_logo_3.svg";
@@ -13,13 +15,13 @@ import logo_8 from "../../../src/assets/icons/about_logo_8.svg";
 const ServicesDetails = () => {
     return (
         <div>
-            <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid grid-cols-2 justify-items-center content-start gap-[29px] pt-[34px] font-poppins'>
+            <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid lg:grid-cols-2 grid-cols-1 justify-items-center content-start lg:gap-[29px] pt-[34px] font-poppins'>
                 <Helmet>
                     <title>Nova Car Care || Services</title>
                 </Helmet>
 
-                <div className='min-[1920px]:text-[18px] text-[16px] max-lg:text-[16px] justify-self-center font-normal leading-[28px] pt-[31px] pb-[65px] lg:mb-[96px] '>
-                    <p className='py-3 font-semibold text-2xl pb-[21px] min-[1920px]:text-[26px] text-[24px]'>From its medieval origins to the digital era</p>
+                <div className='xl:text-[18px] text-[16px] max-lg:text-[16px] justify-self-center font-normal leading-[28px] xl:pt-[31px] lg:pb-[65px] lg:mb-[96px] max-lg:pt-[21px]'>
+                    <p className='py-3 font-semibold text-2xl pb-[21px] xl:text-[26px] text-[24px]'>From its medieval origins to the digital era</p>
                     <p className='pb-3'>
                         So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero’s De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.
                     </p>
@@ -32,16 +34,17 @@ const ServicesDetails = () => {
                 </div>
 
                 <div className=''>
-                    <img src={services_img} alt="services" className='lg:w-[690px]'
-                     />
+                    <img src={services_img} alt="services" className='xl:w-[690px] block max-xl:hidden' />
+                    <img src={services_img_tablet} alt="" className='xl:hidden block max-lg:hidden w-[565px]' />                     
+                    <img src={services_img_mobile} alt="" className='lg:hidden block' />
                 </div>
             </div>
 
 
-            <div className='bg-[#222222] px-5 md:px-9 lg:px-0 lg:mt-[-6rem]'>
-                <div className='container grid max-lg:grid-cols-1 justify-items-center content-start gap-12 md:pt-[119px] text-white relative'>
+            <div className='bg-[#222222] px-5 md:px-9 lg:px-0 xl:mt-[-6rem] max-xl:mt-[-4rem] max-lg:pt-[6rem] '>
+                <div className='lg:pb-[58px] container grid max-xl:grid-cols-1 grid-cols-2 justify-items-center content-start gap-12 xl:pt-[119px] lg:pt-[5rem] text-white relative '>
 
-                    <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
+                    <div className='w-full grid grid-cols-2 md:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
 
                         <div className='grid justify-items-center'>
                             <img className='h-10 mb-4' src={logo_1} alt="logo_1" />

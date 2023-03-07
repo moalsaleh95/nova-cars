@@ -217,7 +217,7 @@ img.arrow {
 
 .modal__spinner-style {
         margin: auto;
-        width:90px;
+        width: 90px;
 }
 
 .modal__spinner {
@@ -260,6 +260,7 @@ img.arrow {
         .modal__video-style {
                 height: auto;
         }
+
         .modal__spinner {
                 top: 50%;
                 left: 50%;
@@ -268,13 +269,17 @@ img.arrow {
                 position: absolute;
                 top: -22rem;
         }
+
         .modal__spinner-style {
                 margin: auto;
-                width:45px;
+                width: 45px;
         }
-        
+
 }
 
 iframe video {
         width: 100vw !important;
 }
+
+
+
