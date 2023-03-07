@@ -7,7 +7,7 @@ const Homepage = () => {
   return (
     <div>
       <Helmet>
-        <title>Nova Car Care || Homepage</title>
+        <title>Nova Car Care</title>
       </Helmet>
       
       <HeroVideo />
