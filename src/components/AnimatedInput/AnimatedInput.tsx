@@ -33,10 +33,10 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
 
   return (
-    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] ${isFocused ? ' border-[#B3916E] border-[1px]' : 'border-[#DDDDDD] border'}`}>
+    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] border-[#DDDDDD] border`}>
 
-      <label className={`absolute top-0 left-3 transition-all text-xs font-medium  px-2
-                        ${isFocused || value ? "-translate-y-[10px] bg-white text-sm text-[#B3916E] z-[3]" : "translate-y-4 lg:translate-y-[27px] text-[22px] text-[#0D2C3B] text-opacity-50 z-[1]"}`}>
+      <label className={`absolute top-0 left-3 transition-all  font-medium  px-2 opacity-50
+                        ${isFocused || value ? "translate-y-[10px] text-sm z-[3]" : "translate-y-4 lg:translate-y-5 text-lg text-[#0D2C3B] z-[1]"}`}>
         {label}
       </label>
       {
@@ -48,7 +48,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] resize-none`}
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] resize-none pl-5 pt-5 text-lg`}
             cols={30}
             rows={10}
 
@@ -61,7 +61,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onBlur={() => onBlur()}
             type={inputType}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2]`
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-5 pl-5 text-lg`
             }
             
           />
