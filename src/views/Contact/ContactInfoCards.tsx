@@ -7,7 +7,7 @@ import ContactInfoCard from '../../components/ContactInfoCard/ContactInfoCard'
 
 const ContactInfoCards = () => {
   return (
-    <div className='px-5 lg:px-auto grid lg:grid-cols-3 gap-y-5 xl:gap-x-[30px] container -mt-[50px]'>
+    <div className='px-5 lg:px-0 grid lg:grid-cols-3 gap-y-5 gap-x-4 xl:gap-x-[30px] container -mt-[50px]'>
         {
             contactInfoData.map(item => {
                 return (
