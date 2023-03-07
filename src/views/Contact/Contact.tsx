@@ -9,7 +9,7 @@ const Contact = () => {
     <div className='min-h-screen'>
         <PageTitleBar />
         <ContactInfoCards />
-        <div className='container grid grid-cols-3'>
+        <div className='container grid grid-cols-3 gap-x-[30px] my-[30px]'>
           <Map wrapperClassNames='col-span-2'/>
           <ContactForm />
         </div>

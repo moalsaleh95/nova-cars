@@ -10,7 +10,7 @@ interface ContactInfoCardProps {
 
 const ContactInfoCard: FC<ContactInfoCardProps> = ({title, subtitle, Icon}) => {
   return (
-    <div className='py-[57px] px-[50px] flex items-center space-x-5 '>
+    <div className='py-[57px] px-[50px] flex items-center space-x-5 bg-white rounded-[20px]'>
         <Icon className="" />
         <div className='flex flex-col'>
             <span className='text-2xl'>{title}</span>
