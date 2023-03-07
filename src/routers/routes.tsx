@@ -1,4 +1,5 @@
 import { About, Homepage } from "../views";
+import { Contact } from "../views/Contact";
 
 const viewsUrls: any[] = [
     {
@@ -14,7 +15,14 @@ const viewsUrls: any[] = [
         component: About,
         type: "public",
         id: '2'
-    }
+    },
+    {
+        path: "/contact",
+        exact: true,
+        component: Contact,
+        type: "public",
+        id: '3'
+    },
 ];
 
 export default viewsUrls;
