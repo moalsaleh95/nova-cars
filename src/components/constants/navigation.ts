@@ -24,7 +24,7 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
   // },
   {
     id: randomId(),
-    href: "/",
+    href: "/contact",
     name: "Contact",
   }
 ];
