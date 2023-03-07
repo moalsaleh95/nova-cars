@@ -19,9 +19,10 @@ const MenuItems: FC<MenuItemsProps> = ({
 
   const handleNavLink = (item: NavigationItemType) => {
     // urlNavigate(item.href)
-    if(item.href == '/about') goToPage(item.href);
-    if(item.href == '/contact') goToPage(item.href);
-    else goToPage('/');
+    // if(item.href == '/about') goToPage(item.href);
+    // if(item.href == '/contact') goToPage(item.href);
+    // else goToPage('/');
+    urlNavigate(item.href)
   };
 
   const RenderItem = (item: NavigationItemType) => {
