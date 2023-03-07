@@ -34,7 +34,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
   return (
     <div className={`${wrapperClassName} relative w-full flex items-center rounded-[10px] border-[#DDDDDD] border 
-                    ${inputType === 'textArea' ? 'h-[120px]' : ' h-[50px] lg:h-[70px] '}
+                    ${inputType === 'textArea' ? 'h-[110px] ' : ' h-[50px] lg:h-[70px] '}
     `}>
 
       <label className={`absolute top-0 left-3 transition-all  font-medium  px-2 opacity-50

@@ -28,7 +28,7 @@ const ContactForm: FC = () => {
 
 
   return (
-    <div className='w-full xl:w-[450px] rounded-[30px] py-[37px] px-[30px] bg-white' style={{"height":"min-content"}}>
+    <div className='w-full xl:w-[450px] rounded-[30px] pt-[37px] pb-[30px] px-[30px] bg-white' style={{"height":"min-content"}}>
         <span className='text-2xl font-normal'>
             Send a Message
         </span>
