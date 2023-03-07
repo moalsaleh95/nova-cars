@@ -33,7 +33,9 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
 
   return (
-    <div className={`${wrapperClassName} relative w-full h-[50px] lg:h-[70px] flex items-center rounded-[10px] border-[#DDDDDD] border`}>
+    <div className={`${wrapperClassName} relative w-full flex items-center rounded-[10px] border-[#DDDDDD] border 
+                    ${inputType === 'textArea' ? 'h-[120px]' : ' h-[50px] lg:h-[70px] '}
+    `}>
 
       <label className={`absolute top-0 left-3 transition-all  font-medium  px-2 opacity-50
                         ${isFocused || value ? "translate-y-[10px] text-sm z-[3]" : "translate-y-4 lg:translate-y-5 text-lg text-[#0D2C3B] z-[1]"}`}>
