@@ -2,12 +2,12 @@ import React from 'react'
 import { ReactComponent as PhoneIcon } from '../../assets/icons/PhoneIcon.svg'
 import { ReactComponent as LocationIcon } from '../../assets/icons/LocationIcon.svg'
 import { ReactComponent as MailIcon } from '../../assets/icons/MailIcon.svg'
-import ContactInfoCard from '../../components/ContactInfoCard'
+import ContactInfoCard from '../../components/ContactInfoCard/ContactInfoCard'
 
 
 const ContactInfoCards = () => {
   return (
-    <div className='w-full grid grid-cols-3 gap-x-[30px] container border border-rose-600'>
+    <div className='w-full grid grid-cols-3 gap-x-[30px] container -mt-[50px]'>
         {
             contactInfoData.map(item => {
                 return (
