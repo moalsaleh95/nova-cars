@@ -49,7 +49,7 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
               {
                 NAVIGATION_MENU?.map((item: any) => (
-                  <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
+                  item.name === 'Our Services' ? <MenuItems key={item.id} menuItem={item} itemColor={itemColor} onClick={()=>handleClickScroll()} /> : <MenuItems key={item.id} menuItem={item} itemColor={itemColor}  />
                 ))
               }
             </ul>

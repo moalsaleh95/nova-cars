@@ -1,4 +1,5 @@
 import { About, Homepage, Services } from "../views";
+import { Contact } from "../views/Contact";
 
 const viewsUrls: any[] = [
     {
@@ -62,7 +63,7 @@ const viewsUrls: any[] = [
         exact: true,
         component: Services,
         type: "public",
-        id: '94'
+        id: '9'
     },
     {
         path: "/services/polish-paste",
@@ -76,14 +77,21 @@ const viewsUrls: any[] = [
         exact: true,
         component: Services,
         type: "public",
-        id: '10'
+        id: '11'
     },
     {
         path: "/services/motor-cleaning",
         exact: true,
         component: Services,
         type: "public",
-        id: '10'
+        id: '12'
+    },
+    {
+        path: "/contact",
+        exact: true,
+        component: Contact,
+        type: "public",
+        id: '13'
     },
 ];
 
