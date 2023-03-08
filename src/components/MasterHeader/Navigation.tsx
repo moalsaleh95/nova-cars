@@ -26,6 +26,13 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
     return activeHeadingTab === 'mechanics' ? whichLogo : DetailingLogoFooter;
   };
 
+  const handleClickScroll = () => {
+    const services_tabs = document.getElementById('services-tabs');
+    if (services_tabs) {
+      services_tabs.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   return (
     <div className={`relative z-10 ${isScrollTop && 'topnotreach backdrop-filter'}`}>
 
