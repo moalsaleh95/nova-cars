@@ -14,11 +14,11 @@ interface MasterHeaderProps {
 const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadingTab }) => {
   const [isScrollTop, setIsScrollTop] = useState(true);
   const isMobile = useIsMobile()
-
+  
   const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
   const pageLen = page?.length;
   const currentPage = pageLen > 0 && page[pageLen - 1];
-
+  
   useEffect(() => {
     setPage(window.location.pathname.split('/').filter((_, idx) => _ != ''))
   }, [window.location.pathname])

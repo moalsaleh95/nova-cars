@@ -19,11 +19,19 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({ currentPage }) => {
       <div className='container text-lg dark:text-[#fff]'>
         <>
           <Link to="/">Home</Link>
-          {page.map(e => {
+          {page.map((e, index) => {
             return (
               <>
                 <img className='inline px-6 w-[54px]' src={localStorage.theme === "dark" ? chevron_white : chevron_black} alt=""></img>
-                {capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))}
+
+                {index < page.length - 1 ?
+                  <Link to={capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))}>
+                    {capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))}
+                  </Link>
+                  :
+                  capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))
+                }
+
               </>
             )
           })}

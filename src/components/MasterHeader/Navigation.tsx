@@ -30,6 +30,7 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
     const services_tabs = document.getElementById('services-tabs');
     if (services_tabs) {
       services_tabs.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(() => services_tabs.click(), 2000)
     }
   }
 
