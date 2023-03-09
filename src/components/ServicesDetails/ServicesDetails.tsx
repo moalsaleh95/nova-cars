@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import { Helmet } from "react-helmet";
 import services_img from '../../../src/assets/images/services.png'
 import services_img_mobile from '../../../src/assets/images/services_mobile.png';
@@ -13,6 +14,9 @@ import logo_7 from "../../../src/assets/icons/about_logo_7.svg";
 import logo_8 from "../../../src/assets/icons/about_logo_8.svg";
 
 const ServicesDetails = () => {
+
+    const { id } = useParams();
+
     return (
         <div>
             <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid lg:grid-cols-2 grid-cols-1 justify-items-center content-start lg:gap-[29px] pt-[34px] font-poppins'>

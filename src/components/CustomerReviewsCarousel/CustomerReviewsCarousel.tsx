@@ -9,17 +9,17 @@ const CustomerReviewsCarousel = () => {
     const customerReviewsData = [
         {   
             id: "1",
-            name: "Jeff Dahmer",
+            name: "Mo Salah",
             review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
         },
         {   
             id: "2",
-            name: "Jeffrey Epstein",
+            name: "Leo",
             review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
         },
         {   
             id: "3",
-            name: "OJ Simpson",
+            name: "Cristiano",
             review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
         },
         {   
