@@ -28,7 +28,7 @@ const Contacts: Contacts[] = [
     },
     {
         name: 'Opening Hours',
-        content:'Mo-Fr: 10 - 6',
+        content:'Mo-Fr: 10AM - 6PM',
         Icon: clock
     }
 ];
