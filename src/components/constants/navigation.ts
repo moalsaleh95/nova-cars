@@ -9,7 +9,7 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
   },
   {
     id: randomId(),
-    href: "",
+    href: "/#services-tabs",
     name: "Our Services",
   },
   // {

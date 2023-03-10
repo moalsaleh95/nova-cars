@@ -14,7 +14,7 @@ const About: FC<AboutProps> = () => {
 
   useEffect(()=> {
     const mode = localStorage.theme;
-    console.log("current theme is ",localStorage.theme)
+    // console.log("current theme is ",localStorage.theme)
     if (mode === 'dark') {
       setDarkMode('dark')
     }
