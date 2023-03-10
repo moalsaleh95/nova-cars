@@ -5,12 +5,12 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
   {
     id: randomId(),
     href: "/about",
-    name: "About",
+    name: "Hakkımızda",
   },
   {
     id: randomId(),
-    href: "/",
-    name: "Our Services",
+    href: "/#services-tabs",
+    name: "Hizmetlerimiz",
   },
   // {
   //   id: randomId(),
@@ -24,7 +24,7 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
   // },
   {
     id: randomId(),
-    href: "/",
-    name: "Contact",
+    href: "/contact",
+    name: "İletişim",
   }
 ];

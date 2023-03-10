@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { Logo } from "../../lib";
 import { NAVIGATION_MENU } from "../constants/navigation";
 import MenuItems from "./MenuItems";
@@ -6,6 +6,7 @@ import MechanicsLogo from "../../assets/logo/MechanicsLogo.svg";
 import MechanicsLogoFooter from "../../assets/logo/MechanicsLogoFooter.svg";
 import DetailingLogo from "../../assets/logo/DetailingLogo.svg";
 import DetailingLogoFooter from "../../assets/logo/DetailingLogoFooter.svg";
+import { useLocation } from "react-router-dom";
 
 export interface NavigationProps {
   located?: string;
@@ -26,6 +27,26 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
     return activeHeadingTab === 'mechanics' ? whichLogo : DetailingLogoFooter;
   };
 
+  const location = useLocation();
+
+  // useEffect(()=> {
+  //   console.log(location)
+  // }, [location])
+
+  const handleClickScroll = () => {
+    const services_tabs = document.getElementById('services-tabs');
+    if (services_tabs) {
+      services_tabs.scrollIntoView({ behavior: 'smooth' });
+    }
+
+  }
+
+  useEffect(()=> {
+    if (location.pathname === '/') {
+      handleClickScroll()
+    }
+  }, [location])
+  
   return (
     <div className={`relative z-10 ${isScrollTop && 'topnotreach backdrop-filter'}`}>
 
@@ -42,7 +63,7 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
               {
                 NAVIGATION_MENU?.map((item: any) => (
-                  <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
+                  item.name === 'Hizmetlerimiz' ? <MenuItems key={item.id} menuItem={item} itemColor={itemColor} onClick={()=>handleClickScroll()} /> : <MenuItems key={item.id} menuItem={item} itemColor={itemColor}  />
                 ))
               }
             </ul>

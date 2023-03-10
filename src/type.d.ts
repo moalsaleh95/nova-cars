@@ -4,4 +4,7 @@ declare module '*.mp4' {
     export default src;
 }
 
+
 declare module 'react-floating-whatsapp';
+
+declare module 'react-leaflet'
