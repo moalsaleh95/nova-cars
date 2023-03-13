@@ -34,8 +34,8 @@ const DarkModeSwitch = () => {
     }
 
     useEffect(()=> {
-        window.matchMedia("(prefers-color-scheme: dark)").matches ? switchToDark() : switchToLight();
-        // isDark ? switchToDark() : switchToLight();
+      window.matchMedia("(prefers-color-scheme: dark)").matches ? switchToDark() : switchToLight();
+      // isDark ? switchToDark() : switchToLight();
     }, [isDark])
 
   return (

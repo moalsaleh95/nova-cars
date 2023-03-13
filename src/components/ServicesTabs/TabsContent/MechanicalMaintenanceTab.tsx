@@ -1,12 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import carWashBanner from '../../../assets/images/car-wash-banner.png';
 
 const MechanicalMaintenanceTab = () => {
   return (
-    <div className='w-full min-h-[600px] flex flex-col pt-8 items-center dark:bg-[#141414] dark:text-white'>
-      <div className='text-start w-1/2'>
+
+    <div className='md:min-h-[620px] max-h-full flex flex-col lg:flex-row justify-between pl-5 xl:pl-0 pr-5 md:pr-7 pt-8 pb-5 xl:pb-0  md:pt-[37px] relative dark:bg-[#141414] dark:text-white'>
+      <div className='h-full flex items-center'>
+        <img src={carWashBanner} className='hidden lg:inline-block min-w-[580px] min-h-[289px] mt-36' alt='car wash banner' />
+      </div>
+      <div className='content w-full'>
         <h2 className='text-[26px] mb-[22px]'>Mekanik Bakım</h2>
-        <p className=''>
+        <p className='text-lg'>
           Mekanik sistemler içerisinde meydana gelebilecek aşınmadan kaynaklı problemleri ortadan
           kaldırmak ve sistemin sağlığını korumak için düzenli olarak mekanik bakım yapılması
           gerekmektedir. Mekanik bakım hizmetlerimiz kapsamında otomobilin tüm mekanik aksamları

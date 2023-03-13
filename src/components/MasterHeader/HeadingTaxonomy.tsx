@@ -2,7 +2,7 @@ import React, { FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import chevron_black from '../../assets/icons/chevron-down.svg';
 import chevron_white from '../../assets/icons/chevron-left-white.svg';
-
+import { HashLink } from 'react-router-hash-link';
 import { capitalizeFirstLetter } from '../../common/capitalizeFirstLetter';
 
 interface HeadingTaxonomyProps {
@@ -19,17 +19,18 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({ currentPage }) => {
       <div className='container text-lg dark:text-[#fff]'>
         <>
           <Link to="/">Home</Link>
+
           {page.map((e, index) => {
             return (
               <>
                 <img className='inline px-6 w-[54px]' src={localStorage.theme === "dark" ? chevron_white : chevron_black} alt=""></img>
 
                 {index < page.length - 1 ?
-                  <Link to={capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))}>
-                    {capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))}
-                  </Link>
+                  <HashLink smooth to={e === 'services' ? '/#services-tabs' : e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} >
+                    {e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}
+                  </HashLink>
                   :
-                  capitalizeFirstLetter(e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' '))
+                  e.split('-').join(' ').split(' ').map((word) => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
                 }
 
               </>

@@ -33,12 +33,12 @@ const AnimatedInput: FC<InfoProps> = (props) => {
 
 
   return (
-    <div className={`${wrapperClassName} relative w-full flex items-center rounded-[10px] border-[#DDDDDD] border 
+    <div className={`${wrapperClassName} relative w-full flex items-center rounded-[10px] border-[#DDDDDD] dark:border-[#222222] border 
                     ${inputType === 'textArea' ? 'h-[110px] ' : ' h-[50px] lg:h-[70px] '}
     `}>
 
-      <label className={`absolute top-0 left-3 transition-all  font-medium  px-2 opacity-50
-                        ${isFocused || value ? "translate-y-[10px] text-sm z-[3]" : "translate-y-[10px] lg:translate-y-5 text-lg text-[#0D2C3B] z-[1]"}`}>
+      <label className={`absolute top-0 left-3 transition-all  font-medium  px-2 opacity-50 dark:text-white 
+                        ${isFocused || value ? "translate-y-[10px] text-sm z-[3]" : "translate-y-[10px] lg:translate-y-5 text-lg text-[#0D2C3B]   z-[1]"}`}>
         {label}
       </label>
       {
@@ -50,7 +50,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onFocus={() => onFocus()}
             onBlur={() => onBlur()}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] resize-none pl-5 pt-5 text-lg`}
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] resize-none pl-5 pt-5 text-lg dark:text-white`}
             cols={30}
             rows={10}
 
@@ -63,7 +63,7 @@ const AnimatedInput: FC<InfoProps> = (props) => {
             onBlur={() => onBlur()}
             type={inputType}
             name={name}
-            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-5 pl-5 text-lg`
+            className={`border-none w-full h-full cursor-pointer transition ease-out bg-transparent focus:ring-0 relative z-[2] pt-5 pl-5 text-lg dark:text-white`
             }
             
           />
