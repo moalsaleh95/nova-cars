@@ -100,7 +100,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
       }
 
       {
-        page[0] === 'services' ?
+        page[0] === 'services' || page[0] === 'contact' ?
           <>
             <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
               <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Services</p>
