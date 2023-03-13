@@ -28,8 +28,8 @@ const ContactForm: FC = () => {
 
 
   return (
-    <div className='w-full xl:w-[450px] rounded-[30px] pt-[37px] pb-[30px] px-[30px] bg-white' style={{"height":"min-content"}}>
-        <span className='text-2xl font-normal'>
+    <div className='w-full xl:w-[450px] rounded-[30px] pt-[37px] pb-[30px] px-[30px] bg-white dark:bg-[#0b0b0b]' style={{"height":"min-content"}}>
+        <span className='text-2xl font-normal dark:text-white'>
             Send a Message
         </span>
           <form className='w-full space-y-[30px] md:space-y-0 2xl:space-y-[30px] md:gap-4 2xl:gap-0 mt-6 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1' onSubmit={ handleSubmit } >
