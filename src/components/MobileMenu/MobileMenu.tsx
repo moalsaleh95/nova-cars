@@ -69,7 +69,7 @@ const MobileMenu: FC = () => {
         leave="transition-opacity duration-500 transition-[transform_,_opacity]"
         leaveFrom="opacity-100 translate-x-0"
         leaveTo="opacity-0 translate-x-[100%]"
-        className='absolute top-0 right-0 h-screen w-2/3 min-w-[250px] z-[100] bg-white'
+        className='absolute top-[100px] right-0 h-screen w-full min-w-[250px] z-[100] bg-white'
         ref={drawerRef}
 
         >
