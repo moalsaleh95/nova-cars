@@ -52,7 +52,7 @@ const CustomerReviewsCarousel = () => {
                     `<div class='nav-button owl-next'><img class="!w-3" src=${arrow} alt="" /></div>`
                 ]}
                 mouseDrag= {false} touchDrag={true}
-                stagePadding={0} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={1} loop={true}
+                stagePadding={0} margin={0} autoplay ={true} merge={true} nav dots={true} slideBy={2} dotsEach={2} loop={true}
                 responsive= {
                     {
                         '1':{
@@ -62,10 +62,8 @@ const CustomerReviewsCarousel = () => {
                             items: 2
                         }
                     }
-                    
                 }
-                
-                >  
+            >  
                 {reviews} 
             </OwlCarousel>  
             <div className='triangle absolute top-[10.5rem]'></div>
