@@ -9,23 +9,23 @@ const CustomerReviewsCarousel = () => {
     const customerReviewsData = [
         {   
             id: "1",
-            name: "Mo Salah",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
+            name: "Ali Aydoğdu",
+            review: "Aracımda ortaya çıkan hasarın onarımı ve tarafıma yeni araç temini konusunda şirketinizin sunmuş olduğu hizmet kusursuz olup yardımlarınız için sonsuz teşekkür ederim."
         },
         {   
             id: "2",
-            name: "Leo",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
+            name: "Bahar Ekinci",
+            review: "Arabamı hiç şüphem olmadan rahatça güvenip bırakabileceğim çok güzel bir oto servisi. Güler yüzlü ve misafirperver tüm ekibe teşekkür ediyorum."
         },
         {   
             id: "3",
-            name: "Cristiano",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
+            name: "Salih Kormazer",
+            review: "Firma olarak tüm araçlarımız için bakım ve onarım hizmeti alıyoruz. Gerçekten işlerinde çok başarılılar. Güvenle aracınızı teslim edebilirsiniz."
         },
         {   
             id: "4",
-            name: "Homer Simpson",
-            review: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores sed dignissimos autem tempora corporis distinctio."
+            name: "Rıdvan Tancar",
+            review: "Müşteri ilişkileri ve ustanın araç hakkında tecrübesi üst düzey gözünüz kapalı aracınızı teslim edebileceğiniz bir servistir."
         }
     ]
 
