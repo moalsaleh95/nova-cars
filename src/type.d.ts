@@ -8,3 +8,5 @@ declare module '*.mp4' {
 declare module 'react-floating-whatsapp';
 
 declare module 'react-leaflet'
+
+declare module 'react-router-hash-link'
