@@ -40,14 +40,14 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
 
         </div>
 
-        <div className="flex-shrink-0 hidden md:flex items-center justify-end text-neutral-700 space-x-1 ">
+        <div className="flex-shrink-0 hidden md:flex items-center justify-end space-x-1 ">
           <div className="items-center flex space-x-1">
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
               {
                 NAVIGATION_MENU?.map((item: any) => (
                   item.name === 'Hizmetlerimiz' ? 
                   <HashLink smooth to="/#services-tabs">
-                    <span className={`font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
+                    <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
                       {item.name}
                     </span>
                   </HashLink> 
