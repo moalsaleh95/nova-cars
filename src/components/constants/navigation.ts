@@ -12,16 +12,6 @@ export const NAVIGATION_MENU: NavigationItemType[] = [
     href: "/#services-tabs",
     name: "Hizmetlerimiz",
   },
-  // {
-  //   id: randomId(),
-  //   href: "/",
-  //   name: "Corporate",
-  // },
-  // {
-  //   id: randomId(),
-  //   href: "/",
-  //   name: "Reservations",
-  // },
   {
     id: randomId(),
     href: "/contact",
