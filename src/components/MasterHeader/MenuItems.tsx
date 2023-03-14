@@ -44,7 +44,7 @@ const MenuItems: FC<MenuItemsProps> = ({
             color: isActive ? 'black' : "#fff",
             fontWeight: isActive ? 'bold' : "normal",
           })}
-          target={item.targetBlank ? "underline" : 'none'}
+          target={item.targetBlank ? "_blank" : undefined}
           rel="noopener noreferrer"
           className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium text-[${itemColor}] py-2 px-[.1vw]`}
           to={item.href}
