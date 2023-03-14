@@ -14,11 +14,13 @@ interface MenuItemsProps {
 const MenuItems: FC<MenuItemsProps> = ({
   menuItem,
   located,
-  itemColor = '#ffffff',
+  itemColor = '#fff',
   onClick
 }) => {
 
   const urlNavigate = useNavigate();
+
+  const activeLink = window.location.pathname.split('/')[1];
 
   const handleNavLink = (item: NavigationItemType) => {
     // urlNavigate(item.href)
@@ -40,17 +42,13 @@ const MenuItems: FC<MenuItemsProps> = ({
         <NavLink
           // exact
           // strict
-          style={({isActive}) => ({
-            color: isActive ? 'black' : "#fff",
-            fontWeight: isActive ? 'bold' : "normal",
-          })}
           target={item.targetBlank ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium text-[${itemColor}] py-2 px-[.1vw]`}
+          className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium !text-[${itemColor}] py-2 px-[.1vw]`}
           to={item.href}
           onClick={(e: any) => { handleNavLink(item) }}
         >
-          <span className={`font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
+          <span className={`${'/' + activeLink === item.href ? 'active-nav-item !text-[#fff]' : ''} font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
             {item.name}
           </span>
         </NavLink>
@@ -62,3 +60,4 @@ const MenuItems: FC<MenuItemsProps> = ({
 };
 
 export default MenuItems;
+
