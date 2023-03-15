@@ -18,7 +18,7 @@ const Contacts: Contacts[] = [
     },
     {
         name: 'Email',
-        content: 'info@novacar.com',
+        content: 'info@novacarscare.com',
         Icon: email
     },
     {

@@ -29,7 +29,7 @@ const contactInfoData = [
     },
     {
         title: 'E-mail',
-        subtitle: 'info@novacar.com',
+        subtitle: 'info@novacarscare.com',
         Icon: MailIcon,
         id: '2'
     },
