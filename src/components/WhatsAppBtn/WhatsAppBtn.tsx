@@ -9,6 +9,7 @@ const WhatsAppBtn = () => {
     setTimeout(() => {
       const btn = document.getElementsByClassName("styles-module_whatsappButton__tVits floating-whatsapp-button")?.[0];
       // @ts-ignore
+      // Property 'click' does not exist on type 'Element'.
       btn.click()
     }, 15000);
   },[])
