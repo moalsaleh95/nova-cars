@@ -1,10 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 const WhatsAppBtn = () => {
 
   const isDark = localStorage.theme === 'dark' ? true : false;
-  
+
+  useEffect(()=> {
+    setTimeout(() => {
+      const btn = document.getElementsByClassName("styles-module_whatsappButton__tVits floating-whatsapp-button")?.[0];
+      // @ts-ignore
+      btn.click()
+    }, 15000);
+  },[])
 
   return (
     <FloatingWhatsApp 
@@ -12,12 +19,12 @@ const WhatsAppBtn = () => {
         accountName={"Nova Car Care"} 
         chatboxHeight={400}
         allowEsc
-        notification
+        notification={true}
         notificationSound={true}
         allowClickAway
-        avatar={"https://novacarcare.s3.amazonaws.com/whatsapp.png"}
         messageDelay={1}
         darkMode = {isDark}
+        avatar={"https://novacarcare.s3.amazonaws.com/whatsapp.png"}
         // statusMessage={""}
         // chatMessage={""}
     />
