@@ -33,15 +33,15 @@ const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values }) => {
 
 
         if (isDark && input && button && dropdown) {
-            input.style.cssText += 'background:black!important;color:white!important';
-            button.style.cssText += 'background: black !important;';
+            input.style.cssText += 'background:#0b0b0b!important;color:white!important';
+            button.style.cssText += 'background:#0b0b0b !important;';
             dropdown.style.cssText += 'border: none !important;background-color: #000 !important;color: #fff !important;'
             // dropdown_hover.forEach(e => e.style.cssText += 'color: #000 !important;')
             dropdown_hover?.forEach(e=> e.addEventListener('mouseover', () => e.style.cssText += 'color: #000 !important;'))
             dropdown_hover?.forEach(e=> e.addEventListener('mouseleave', () => e.style.cssText += 'color: #fff !important;'))
         }
     }, [isDark, input, button, dropdown, dropdown_hover])
-    
+
 
     const [phone, setPhone] = useState('');
     const [isFocused, setIsFocused] = useState(false);
