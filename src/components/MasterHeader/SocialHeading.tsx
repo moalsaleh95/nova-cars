@@ -92,7 +92,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                         <div className="flex justify-between space-x-4">
                             {
                                SocialIcons?.map((social: any) => (
-                                 <section><img src={social.icon} /></section>
+                                 <section><img src={social.icon} className='cursor-pointer' /></section>
                                )) 
                             }
                             <section className='text-[#43AF77] text-[14px] font-medium flex items-center whitespace-nowrap'>+90 212 344 xx xx</section>
