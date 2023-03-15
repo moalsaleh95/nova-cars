@@ -45,14 +45,21 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
               {
                 NAVIGATION_MENU?.map((item: any) => (
-                  item.name === 'Hizmetlerimiz' ? 
-                  <HashLink smooth to="/#services-tabs">
-                    <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
-                      {item.name}
-                    </span>
-                  </HashLink> 
-                    : 
-                  <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
+                  item.name === 'Hizmetlerimiz' ?
+                    <HashLink smooth to="/#services-tabs">
+                      <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
+                        {item.name}
+                      </span>
+                    </HashLink>
+                    :
+                    item.name === 'SSS' ?
+                      <HashLink smooth to="/#faq">
+                        <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
+                          {item.name}
+                        </span>
+                      </HashLink>
+                      :
+                      <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
                 ))
               }
             </ul>

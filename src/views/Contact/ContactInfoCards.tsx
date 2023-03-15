@@ -23,7 +23,7 @@ const ContactInfoCards = () => {
 const contactInfoData = [
     {
         title: 'Telefon',
-        subtitle: '+44 781-824-4483',
+        subtitle: '+90 543 329 71 51',
         Icon: PhoneIcon,
         id: '1'
     },
