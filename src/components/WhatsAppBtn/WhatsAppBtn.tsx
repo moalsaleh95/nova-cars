@@ -16,7 +16,7 @@ const WhatsAppBtn = () => {
 
   return (
     <FloatingWhatsApp
-      phoneNumber={"+905549867024"}
+      phoneNumber={"+905433297151"}
       accountName={"Nova Car Care"}
       chatboxHeight={400}
       allowEsc
