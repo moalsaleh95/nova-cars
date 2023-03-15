@@ -22,19 +22,19 @@ const ContactInfoCards = () => {
 
 const contactInfoData = [
     {
-        title: 'Phone',
+        title: 'Telefon',
         subtitle: '+44 781-824-4483',
         Icon: PhoneIcon,
         id: '1'
     },
     {
-        title: 'E-mail',
-        subtitle: 'info@novacar.com',
+        title: 'E-Posta',
+        subtitle: 'info@novacarscare.com',
         Icon: MailIcon,
         id: '2'
     },
     {
-        title: 'Location',
+        title: 'Lokasyon',
         subtitle: 'Merkez Mh. Şişli - İstanbul, Turkey',
         Icon: LocationIcon,
         id: '3'
