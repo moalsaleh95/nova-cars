@@ -58,11 +58,11 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({ currentPage }) => {
 
 
 const labels: Record<string, string> = {
-  services: "servislerimiz",
-  Home: "ana sayfa",
+  "services": "servislerimiz",
+  "Home": "ana sayfa",
   "motor-repair": "motor onarim",
-  contact: "İletişim",
-  about: "Hakkımızda",
+  "contact": "İletişim",
+  "about": "Hakkımızda",
   "car-wash": "Oto Yıkama",
   "interrior-cleaning": "Detaylı İç Temizlik",
   "mechanical-maintenance": "Mekanik Bakım",
