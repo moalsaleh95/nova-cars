@@ -1,11 +1,13 @@
 import React, { FC, ReactNode } from 'react'
-import instagram from '../../assets/socials/instagram.svg';
-import facebook from '../../assets/socials/facebook.svg';
-import twitter from '../../assets/socials/twitter.svg';
-import youtube from '../../assets/socials/youtube.svg';
-import whatsapp from '../../assets/socials/whatsapp.svg';
+import { ReactComponent as Instagram } from '../../assets/socials/instagram-logo-black.svg';
+import { ReactComponent as Facebook } from '../../assets/socials/facebook-logo-black.svg';
+import { ReactComponent as Twitter } from '../../assets/socials/twitter-logo-black.svg';
+import { ReactComponent as Youtube } from '../../assets/socials/youtube-logo-black.svg';
+import { ReactComponent as LinkedIn } from '../../assets/socials/linkedin-logo-black.svg';
+import { ReactComponent as Phone } from '../../assets/socials/phone.svg';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 import { MainColor } from '../constants/colors';
+
 
 
 interface SocialHeadingProps {
@@ -15,29 +17,33 @@ interface SocialHeadingProps {
 
 interface SocialIconsProps {
     name: string;
-    icon: ReactNode;
+    Icon: any;
 };
 
 export const SocialIcons: SocialIconsProps[] = [
     {
         name: 'Instagram',
-        icon: instagram
+        Icon: Instagram
     },
     {
         name: 'Facebook',
-        icon: facebook
+        Icon: Facebook
     },
     {
         name: 'Twitter',
-        icon: twitter
+        Icon: Twitter
     },
     {
         name: 'Youtube',
-        icon: youtube
+        Icon: Youtube
     },
     {
-        name: 'Whatsapp',
-        icon: whatsapp
+        name: 'LinkedIN',
+        Icon: LinkedIn
+    },
+    {
+        name: 'phone',
+        Icon: Phone
     }
 ];
 
@@ -89,13 +95,18 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                     </div>
 
                     <div className='flex justify-end items-center'>
-                        <div className="flex justify-between space-x-4">
+                        <div className="flex justify-between items-center space-x-4">
                             {
-                               SocialIcons?.map((social: any) => (
-                                 <section><img src={social.icon} className='cursor-pointer' /></section>
-                               )) 
+                               SocialIcons?.map((social: any) => {
+                                const {Icon} = social
+                                return (
+                                 <section>
+                                    {/* <img src={social.icon} className='cursor-pointer' /> */}
+                                    <Icon className="text-orange-400" />
+                                </section>
+                               )}) 
                             }
-                            <section className='text-[#43AF77] text-[14px] font-medium flex items-center whitespace-nowrap'>+90 543 329 71 51</section>
+                            <section className='text-black dark:text-white text-[14px] font-medium flex items-center whitespace-nowrap'>+90 543 329 71 51</section>
                         </div>
                     </div>
                 </div>

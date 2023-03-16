@@ -84,7 +84,7 @@ const MobileMenu: FC = () => {
                                 const {href, name, id, targetBlank} = menuItem
                                 return (
                                     <li key={id}>
-                                        <a href={href} target={targetBlank ? "_blank" : ""}>
+                                        <a href={href} target={targetBlank ? "_blank" : ""} className="text-2xl font-medium">
                                             {name}
                                         </a> 
                                     </li>
@@ -100,5 +100,17 @@ const MobileMenu: FC = () => {
     </div>
   )
 }
+
+
+
+
+
+// function SocialMedias () {
+//   return (
+
+//   )
+// }
+
+
 
 export default MobileMenu
