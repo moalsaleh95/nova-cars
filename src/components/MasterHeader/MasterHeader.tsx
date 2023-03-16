@@ -69,7 +69,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
       }
 
 
-      <div className={`header bg-[#d81212] ${location.pathname === '/' ? 'h-[520px]' : 'h-[120px]'} relative lg:top-0 w-full lg:left-0 lg:right-0`}>
+      <div className={`header sticky top-0 left-0 z-50 bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0`}>
         {
           isMobile
             ?
