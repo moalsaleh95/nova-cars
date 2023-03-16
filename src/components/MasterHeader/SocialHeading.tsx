@@ -13,6 +13,8 @@ import { MainColor } from '../constants/colors';
 interface SocialHeadingProps {
     activeHeadingTab?: string;
     setActiveHeadingTab?: any;
+    activeTabClassNames?: string;
+    phoneNumberClassNames?: string;
 };
 
 interface SocialIconsProps {
@@ -48,7 +50,7 @@ export const SocialIcons: SocialIconsProps[] = [
 ];
 
 // TODO: on Mechanics or Detailing active, use ButtonPrimary
-const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHeadingTab}) => {
+const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHeadingTab, activeTabClassNames, phoneNumberClassNames}) => {
 
     // active heading
     const ActiveHeading = ( heading: any ) => (
@@ -82,7 +84,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
             <div className="container h-[70px] lg:flex bottom-0 w-full items-center min-h-[50px] bg-[#fff] dark:bg-[#0B0B0B]">
                 <div className='w-full flex justify-between my-4'>
 
-                    <div className='flex items-end'>
+                    <div className={`flex items-end ${activeTabClassNames}`}>
                         <div className='flex items-center justify-center h-full'>
                             {/* <span className='whitespace-nowrap mr-4 mt-5'>
                                 { activeHeadingTab === 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
@@ -106,7 +108,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                                 </section>
                                )}) 
                             }
-                            <section className='text-black dark:text-white text-[14px] font-medium flex items-center whitespace-nowrap'>+90 543 329 71 51</section>
+                            <section className={`text-black dark:text-white text-[14px] font-medium flex items-center whitespace-nowrap ${phoneNumberClassNames}`}>+90 543 329 71 51</section>
                         </div>
                     </div>
                 </div>
