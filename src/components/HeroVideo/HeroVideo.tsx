@@ -34,8 +34,8 @@ function HeroVideo() {
                 />
 
                 <div className='absolute h-full flex flex-col justify-center items-center z-[60]'>
-                    <p className='text-2xl md:text-4xl md:w-[35rem] text-white font-bold text-center py-1'>History, Purpose <br /> and Usage</p>
-                    <p className='text-sm md:text-base text-white md:w-[35rem] text-center py-1 px-8'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis corporis modi itaque facilis.</p>
+                    <p className='text-2xl md:text-4xl md:w-[35rem] text-white font-bold text-center py-1'>Profesyonel Araç < br/>Bakım Merkezi</p>
+                    <p className='text-sm md:text-base text-white md:w-[35rem] text-center py-1 px-8'>Araçlarınızın mekanik bakım ve onarım ihtiyaçlarını bir arada karşılıyor, aracınızı memnuniyet garantisi ile teslim ediyoruz.</p>
                     <button onClick={() => openModal()} className="bg-black md:bg-black w-[7rem] mt-1 mx-auto hover:bg-[#D81212] text-[#EFC000] font-bold py-2 px-4 rounded-full">
                         <img onClick={() => setVideoLoading(!videoLoading)} className='inline' src="https://img.icons8.com/material-rounded/24/FAB005/play--v1.png" alt="" /> Play
 

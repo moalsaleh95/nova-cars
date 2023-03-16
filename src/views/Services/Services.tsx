@@ -1,5 +1,8 @@
 import React, { FC, useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import ServicesDetails from '../../components/ServicesDetails/ServicesDetails';
+import { ServicesData } from '../../lib';
+import { ErrorPage } from '../404';
 
 interface AboutProps {
 
@@ -8,6 +11,8 @@ interface AboutProps {
 const About: FC<AboutProps> = () => {
 
   const [darkMode, setDarkMode] = useState<string>(localStorage.theme)
+  const params = useParams()
+  const pageExists = ServicesData.filter(service => service.id === params.id)[0]
 
   useEffect(() => {
     const mode = localStorage.theme;
@@ -21,7 +26,14 @@ const About: FC<AboutProps> = () => {
   }, [localStorage.theme])
 
   return (
-    <ServicesDetails />
+    <>
+      {
+        pageExists 
+        ? <ServicesDetails service={pageExists} /> 
+        : <ErrorPage />
+      }
+      
+    </>
   )
 };
 
