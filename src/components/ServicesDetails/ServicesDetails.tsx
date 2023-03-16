@@ -94,16 +94,16 @@ const ServicesDetails = () => {
 
                     <div className='max-lg:pb-[48px] pb-[58px]'>
                         <div className='font-poppins'>
-                            <p className='py-3 font-semibold text-2xl my-4'>From its medieval origins to the digital era</p>
+                            <p className='py-3 font-semibold text-2xl my-4'>Kalite ve Güvenin Adresi</p>
 
                             <p className='pb-3'>
-                                So how did the classical Latin become so incoherent? According to McClintock, a 15th century typesetter likely scrambled part of Cicero’s De Finibus in order to provide placeholder text to mockup various fonts for a type specimen book.
+                                kalite ve güvenin adresi sloganı ile yola çıkan Nova Car Care, alanında uzman teknik kadrosu ve kurumsal yapısıyla İstanbul’un en nitelikli oto bakım ve onarım servisi olarak sektöre yeni bir bakış açısı getirmek için çalışmalarına devam etmektedir. Kalitemizi, birinci sınıf ürünlerin, profesyonel servisin ve müşteri beklentilerinin karşılanmasının bir toplamı olarak tanımlamaktayız.
                             </p>
                             <p className='pb-3'>
-                                It’s difficult to find examples of lorem ipsum in use before Letraset made it popular as a dummy text in the 1960s, although McClintock says he remembers coming across the lorem ipsum passage in a book of old metal type samples. So far he hasn’t relocated where he once saw the passage, but the popularity of Cicero in the 15th century supports the theory that the filler text has been used for centuries.
+                                en iyi çözümü sunabilmemizi sağlar. Düzenli kalite kontrolleri ile standartlarımızın korunmasını garanti altına alırız. Denetlemelerimiz, servis kalitesini iyileştirmeye devam etme çabamızın temelidir.
                             </p>
                             <p>
-                                And anyways, as Cecil Adams reasoned, “[Do you really] think graphic arts supply houses were hiring classics scholars in the 1960s?” Perhaps. But it seems reasonable to imagine that there was a version in use far before the age of Letraset.
+                              Her iş kolumuzda, en kaliteli ürün ve hizmetleri çözüm ortaklarımız ile beraber müşterilerimize sunar, daima rekabetten bir adım önde olmaya çalışırız. İş ortaklarımızın ve müşterilerimizin taleplerini önceden tespit eder, hızla yararlı çözüm üretmeye çalışıyoruz.
                             </p>
 
                         </div>
