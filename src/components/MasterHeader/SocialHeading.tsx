@@ -95,12 +95,12 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                     </div>
 
                     <div className='flex justify-end items-center'>
-                        <div className="flex justify-between items-center space-x-4">
+                        <div className="flex justify-between items-center space-x-[40px]">
                             {
                                SocialIcons?.map((social: any) => {
                                 const {Icon} = social
                                 return (
-                                 <section>
+                                 <section >
                                     {/* <img src={social.icon} className='cursor-pointer' /> */}
                                     <Icon className="text-black dark:text-white" />
                                 </section>
