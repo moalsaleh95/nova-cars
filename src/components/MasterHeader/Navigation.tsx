@@ -47,14 +47,14 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
                 NAVIGATION_MENU?.map((item: any) => (
                   item.name === 'Hizmetlerimiz' ?
                     <HashLink smooth to="/#services-tabs">
-                      <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
+                      <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 ${located === 'footer' ? 'text-black dark:text-white' : ''}`}>
                         {item.name}
                       </span>
                     </HashLink>
                     :
                     item.name === 'SSS' ?
                       <HashLink smooth to="/#faq">
-                        <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 `}>
+                        <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 ${located === 'footer' ? 'text-black dark:text-white' : ''}`}>
                           {item.name}
                         </span>
                       </HashLink>
