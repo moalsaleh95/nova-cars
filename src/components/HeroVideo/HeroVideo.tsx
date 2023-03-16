@@ -23,6 +23,7 @@ function HeroVideo() {
 
     return (
         <div>
+             <div className='h-[420px] bg-[#d81212]'></div>
             <div className='relative flex justify-center -translate-y-[380px] sm:-translate-y-[400px] overflow-hidden'>
                 <video className='rounded-[2rem] w-[90%]'
                     src={"https://novacarcare.s3.amazonaws.com/novacarcaredemo.mp4"}
