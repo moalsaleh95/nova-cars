@@ -52,8 +52,10 @@ const FaqAccordion = () => {
   const questions= FAQData.map((item, idx) => {
 
     const { id, question, answer } = item;
+    const defaultOpen = (idx === 1 ?  true :  false);
+    
     return (
-      <Disclosure as="div" className="mt-2" key={id}>
+      <Disclosure defaultOpen={defaultOpen} as="div" className="mt-2" key={id}>
             {({ open }) => (
               <>
                 <Disclosure.Button 
