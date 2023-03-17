@@ -3,6 +3,7 @@ import { XMarkIcon } from '@heroicons/react/20/solid'
 import React, { FC, useEffect, useRef, useState } from 'react'
 import { ReactComponent as Hamburger } from '../../assets/icons/Hamburger.svg'
 import { NAVIGATION_MENU } from '../constants/navigation'
+import SocialHeading, { SocialIcons } from '../MasterHeader/SocialHeading'
 
 const MobileMenu: FC = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState<boolean>(false)
@@ -73,18 +74,18 @@ const MobileMenu: FC = () => {
         ref={drawerRef}
 
         >
-            <div className='w-full h-full mobileMenuShadow' ref={drawerRef} >   
+            <div className='w-full h-full mobileMenuShadow relative' ref={drawerRef} >   
                 <div className='w-full border-b h-10'>    
                     <XMarkIcon className='h-9' onClick={() => {setIsMenuOpen(false)}}/>
                 </div>    
-                <div className='pt-8 px-2'>
+                <div className='pt-8 px-5'>
                     <ul className='space-y-4'>
                         {
                             NAVIGATION_MENU.map(menuItem => {
                                 const {href, name, id, targetBlank} = menuItem
                                 return (
                                     <li key={id}>
-                                        <a href={href} target={targetBlank ? "_blank" : ""}>
+                                        <a href={href} target={targetBlank ? "_blank" : ""} className="text-2xl font-medium">
                                             {name}
                                         </a> 
                                     </li>
@@ -93,12 +94,25 @@ const MobileMenu: FC = () => {
                         }
 
                     </ul>
-                </div>        
+                </div>  
+                <div className='px-5 absolute top-[calc(100vh_-_170px)] left-0 w-full'><SocialHeading activeTabClassNames={'hidden'} phoneNumberClassNames='hidden' /></div>      
             </div>
         </Transition>
         
     </div>
   )
 }
+
+
+
+
+
+// function SocialMedias () {
+//   return (
+
+//   )
+// }
+
+
 
 export default MobileMenu
