@@ -104,7 +104,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                                 return (
                                  <section >
                                     {/* <img src={social.icon} className='cursor-pointer' /> */}
-                                    <Icon className="text-black dark:text-white" />
+                                    <Icon className="text-black dark:text-white cursor-pointer" />
                                 </section>
                                )}) 
                             }
