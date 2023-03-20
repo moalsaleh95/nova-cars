@@ -136,7 +136,6 @@ const ServicesTabs: FC = () => {
 
     useLayoutEffect(() => {
        const activeTabFromLocalStorage = localStorage.getItem('activeTab')
-       console.log('this is the active item from the local storage: ', activeTabFromLocalStorage)
        if(activeTabFromLocalStorage){
             setActiveTab(Number(activeTabFromLocalStorage))
        } else {
@@ -148,7 +147,6 @@ const ServicesTabs: FC = () => {
 
     
     const handleTabSelect = (e: number) => {
-        console.log('this is the selected tab', e)
         localStorage.setItem('activeTab', e.toString())
         setActiveTab(e)
     }
