@@ -15,60 +15,61 @@ import BodyRepairTab from './TabsContent/BodyRepairTab'
 import PolishPasteTab from './TabsContent/PolishPasteTab'
 import PaintlessDentRepairTab from './TabsContent/PaintlessDentRepairTab'
 import MotorCleansingTab from './TabsContent/MotorCleansingTab'
+import { tabsData } from '../../lib'
 
 
 
 
-const tabsData = [
-    {
-        id: '1',
-        name: 'Detaylı İç Temizlik',
-        Icon: CarWashIcon,
-        content: <InterriorCleaningTab />
-    },
-    {
-        id: '2',
-        name: 'Oto Yıkama',
-        Icon: CarWashIcon,
-        content: <CarWashTab />,
-    },
-    {
-        id: '3',
-        name: 'Mekanik Bakım',
-        Icon: carMaintenanceIcon,
-        content: <MechanicalMaintenanceTab />,
-    },
-    {
-        id: '4',
-        name: 'Boya Onarımı',
-        Icon: carPaintingIcon,
-        content: <PaintRepairTab />,
-    },
-    {
-        id: '5',
-        name: 'Kaporta Onarımı',
-        Icon: bodyRepairIcon,
-        content: <BodyRepairTab />,
-    },
-    {
-        id: '6',
-        name: "Pasta Cila",
-        Icon: expertiseReportIcon,
-        content: <PolishPasteTab />,
-    },
-    {
-        id: '7',
-        name: 'Boyasız Göçük Onarımı',
-        Icon: carMaintenanceIcon,
-        content: <PaintlessDentRepairTab />,
-    },
-    {
-        id: '8',
-        name: 'Detaylı Motor Temizlik',
-        Icon: carPaintingIcon,
-        content: <MotorCleansingTab />,
-    },
-]
+// const tabsData = [
+//     {
+//         id: '1',
+//         name: 'Detaylı İç Temizlik',
+//         Icon: CarWashIcon,
+//         content: <InterriorCleaningTab />
+//     },
+//     {
+//         id: '2',
+//         name: 'Oto Yıkama',
+//         Icon: CarWashIcon,
+//         content: <CarWashTab />,
+//     },
+//     {
+//         id: '3',
+//         name: 'Mekanik Bakım',
+//         Icon: carMaintenanceIcon,
+//         content: <MechanicalMaintenanceTab />,
+//     },
+//     {
+//         id: '4',
+//         name: 'Boya Onarımı',
+//         Icon: carPaintingIcon,
+//         content: <PaintRepairTab />,
+//     },
+//     {
+//         id: '5',
+//         name: 'Kaporta Onarımı',
+//         Icon: bodyRepairIcon,
+//         content: <BodyRepairTab />,
+//     },
+//     {
+//         id: '6',
+//         name: "Pasta Cila",
+//         Icon: expertiseReportIcon,
+//         content: <PolishPasteTab />,
+//     },
+//     {
+//         id: '7',
+//         name: 'Boyasız Göçük Onarımı',
+//         Icon: carMaintenanceIcon,
+//         content: <PaintlessDentRepairTab />,
+//     },
+//     {
+//         id: '8',
+//         name: 'Detaylı Motor Temizlik',
+//         Icon: carPaintingIcon,
+//         content: <MotorCleansingTab />,
+//     },
+// ]
 
 
 // let [categories] = useState({
