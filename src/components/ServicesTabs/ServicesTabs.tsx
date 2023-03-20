@@ -149,6 +149,7 @@ const ServicesTabs: FC = () => {
     const handleTabSelect = (e: number) => {
         localStorage.setItem('activeTab', e.toString())
         setActiveTab(e)
+        
     }
     
     
