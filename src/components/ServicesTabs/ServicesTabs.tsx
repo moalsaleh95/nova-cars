@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC, useEffect, useLayoutEffect, useState } from 'react'
 import { Tab } from '@headlessui/react'
 import { ReactComponent as CarWashIcon } from '../../assets/icons/carWashIcon.svg'
 import { ReactComponent as carTransportationIcon } from '../../assets/icons/carTransportationIcon.svg'
@@ -123,12 +123,40 @@ const tabsData = [
 //   })
 
 
+
+
+
+
+
 const ServicesTabs: FC = () => {
 
+    const [activeTab, setActiveTab] = useState(1)
+
+
+    useLayoutEffect(() => {
+       const activeTabFromLocalStorage = localStorage.getItem('activeTab')
+       console.log('this is the active item from the local storage: ', activeTabFromLocalStorage)
+       if(activeTabFromLocalStorage){
+            setActiveTab(Number(activeTabFromLocalStorage))
+       } else {
+        localStorage.setItem('activeTab', '1')
+        setActiveTab(1)
+       }
+    } ,
+    [])
+
+    
+    const handleTabSelect = (e: number) => {
+        console.log('this is the selected tab', e)
+        localStorage.setItem('activeTab', e.toString())
+        setActiveTab(e)
+    }
+    
+    
     return (
         <div id="services-tabs" className="z-0 -mb-[29rem] md:-mb-[35rem] px-5 md:px-0 -translate-y-[352px] md:-translate-y-[560px]">
             <div className='w-full container pb-16 rounded-[2rem] '>
-                <Tab.Group defaultIndex={1}>
+                <Tab.Group selectedIndex={activeTab}>
                     <Tab.List className="flex w-full h-[152px] md:h-[160px] items-end space-x-1 pt-1 overflow-x-scroll overflow-y-hidden md:overflow-x-visible">
                         <div className='w-full h-[140px] flex items-end bg-[#F1F1F1] rounded-t-lg'>
                             {tabsData.map((tab, index) => {
@@ -149,6 +177,7 @@ const ServicesTabs: FC = () => {
                                      ${isLast && 'rounded-tr-lg'}   `
                                         )
                                         }
+                                        onClick={(e: any) => handleTabSelect(index)}
                                     >
                                         <Icon />
                                         <span>
