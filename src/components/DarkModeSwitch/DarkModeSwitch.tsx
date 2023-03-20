@@ -1,41 +1,44 @@
 import React, { useEffect, useState } from 'react';
 
-const DarkModeSwitch = () => {                    
-    const [isDark, setIsDark] = useState(false);
+const DarkModeSwitch = () => {
+  const [isDark, setIsDark] = useState(false);
 
-    // const toggleDarkMode = () => {
-    //     localStorage.theme === 'light' ? switchToDark() : switchToLight();
-    // }
+  // const toggleDarkMode = () => {
+  //     localStorage.theme === 'light' ? switchToDark() : switchToLight();
+  // }
 
-    const switchToDark = () => {
-        setIsDark(true);
+  const switchToDark = () => {
+    setIsDark(true);
+    // if (!htmlAttribute) return;
+    const htmlAttribute = document.querySelector('html');
+    !htmlAttribute?.classList.contains('dark') && htmlAttribute?.classList.add("dark");
 
-        // if (!htmlAttribute) return;
-        const htmlAttribute = document.querySelector('html');
-        !htmlAttribute?.classList.contains('dark') && htmlAttribute?.classList.add("dark");
+    const rootElement = document.getElementById("root")
+    if (!rootElement && !rootElement) return
+    rootElement.style.backgroundColor = "#222222";
+    localStorage.theme = 'dark';
+  }
 
-        const rootElement = document.getElementById("root")
-        if (!rootElement && !rootElement) return
-        rootElement.style.backgroundColor="#222222";
-        localStorage.theme = 'dark';
-    }
+  const switchToLight = () => {
+    setIsDark(false);
 
-    const switchToLight = () => {
-        setIsDark(false);
+    // if (!htmlAttribute) return;
+    const htmlAttribute = document.querySelector('html');
+    htmlAttribute?.classList.remove("dark");
+    localStorage.theme = 'light';
 
-        // if (!htmlAttribute) return;
-        const htmlAttribute = document.querySelector('html');
-        htmlAttribute?.classList.remove("dark");
-        localStorage.theme = 'light';
+    const rootElement = document.getElementById("root")
+    if (!rootElement && !rootElement) return
+    rootElement.style.backgroundColor = "#f9f9f9";
+  }
 
-        const rootElement = document.getElementById("root")
-        if (!rootElement && !rootElement) return
-        rootElement.style.backgroundColor="#f9f9f9";
-    }
+  useEffect(() => {
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? switchToDark() : switchToLight();
+  }, [isDark])
 
-    useEffect(()=> {
-      window.matchMedia("(prefers-color-scheme: dark)").matches ? switchToDark() : switchToLight();
-    }, [isDark])
+  useEffect(() => {
+    console.log('isDark', isDark)
+  }, [isDark])
 
   return (
     // <button className='border-4 border-black dark:border-white dark:text-white'
