@@ -34,7 +34,7 @@ const ServicesDetails: FC<ServicesDetails> = ({service}) => {
 
     return (
         <div>
-            <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid lg:grid-cols-2 grid-cols-1 justify-items-center content-start lg:gap-[29px] pt-[34px] font-poppins'>
+            {/* <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid lg:grid-cols-2 grid-cols-1 justify-items-center content-start lg:gap-[29px] pt-[34px] font-poppins'>
                 <Helmet>
                     <title>Nova Car Care || Services</title>
                 </Helmet>
@@ -116,7 +116,7 @@ const ServicesDetails: FC<ServicesDetails> = ({service}) => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     )
 }
