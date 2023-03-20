@@ -30,7 +30,7 @@ const HeadingTaxonomy: FC<HeadingTaxonomyProps> = ({ currentPage }) => {
     <div className='bg-white pb-6 font-poppins  px-5 md:px-9 lg:px-0 dark:bg-[#0B0B0B]'>
       <div className='container text-lg dark:text-[#fff]'>
         <>
-          <Link to="/">Home</Link>
+          <Link to="/">Ana sayfa</Link>
 
           {page.map((e, index) => {
             return (

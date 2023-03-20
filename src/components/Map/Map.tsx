@@ -34,7 +34,7 @@ const Map: FC<MapProps> = ({ wrapperClassNames }) => {
                     />
                     <Marker position={[41.118, 29.02]} icon={MarkerIcon}>
                         <Popup>
-                            A pretty CSS3 popup. <br /> Easily customizable.
+                            Merkez Mh. Şişli - İstanbul, Turkey
                         </Popup>
                     </Marker>
                 </MapContainer>

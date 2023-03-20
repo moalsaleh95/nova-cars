@@ -16,7 +16,7 @@ const MotorCleansingTab = () => {
           pas birikir. Bu nedenle araç motorunun temizliği çok önemlidir. Motor temizleme işleminde
           önce çok amaçlı konsantre temizleyiciler ile motor yağı, toz ve kirden arındırılarak temizlenir.
           Daha sonra kirin nüfuz etmesini zorlaştıran ve motora parlaklık veren özel motor ve plastik
-          aksam koruyucu ile kaplanır..
+          aksam koruyucu ile kaplanır.
         </p>
         <div className='absolute lg:bottom-[6rem] bottom-[-6rem] mt-10 flex justify-start space-x-8 '>
           <Link to='/services/motor-cleaning' ><button className='px-10 py-4 bg-[#D81212] border-2 border-[#D81212] transition-all text-white rounded-[10px] text-lg hover:text-black hover:bg-white'>Daha fazla bilgi</button></Link>
