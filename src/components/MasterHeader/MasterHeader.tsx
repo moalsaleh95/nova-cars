@@ -61,6 +61,12 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
     }
   }, [location])
 
+  
+  const [dummyState, setDummyState ] = useState(false)
+  useEffect(() => {
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
+  }, [dummyState])
+
   return (
     <>
 
@@ -68,15 +74,14 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         !isMobile && <SocialHeading activeHeadingTab={activeHeadingTab} setActiveHeadingTab={setActiveHeadingTab} />
       }
 
-
-      <div className={`header bg-[#d81212] ${location.pathname === '/' ? 'h-[520px]' : 'h-[120px]'} relative lg:top-0 w-full lg:left-0 lg:right-0`}>
+      <div className={`header sticky top-0 left-0 z-[1000] bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0`}>
         {
           isMobile
             ?
             <MobileHeader />
             :
             <>
-              <Navigation isScrollTop={isScrollTop} activeHeadingTab={activeHeadingTab} />
+              <Navigation isScrollTop={isScrollTop} activeHeadingTab={activeHeadingTab} dummyState={dummyState} />
             </>
         }
       </div>
@@ -85,7 +90,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         page[0] === 'about' ?
           <>
             <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
-              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>About Us</p>
+              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Hakkımızda</p>
             </div>
 
             <div>
@@ -103,7 +108,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         page[0] === 'services' || page[0] === 'contact' ?
           <>
             <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
-              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Services</p>
+              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Hizmetlerimiz</p>
             </div>
 
             <div>

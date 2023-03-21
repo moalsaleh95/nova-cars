@@ -13,7 +13,7 @@ const About = () => {
                 </Helmet>
 
                 <div>
-                    <p className='py-3 font-semibold text-2xl '>About Nova Car Care</p>
+                    <p className='py-3 font-semibold text-2xl '>Hakkımızda</p>
                     Nova Car Care otomobil ile ilgili tüm ihtiyaçlarınıza yönelik bir çözüm noktası olarak hizmet
                     vermektedir. Uzun yıllara dayanan tecrübesini, son teknolojiyi içeren detaycı hizmet anlayışı
                     ile bir arada sunan Nova Car Care verdiği tüm hizmetlerde müşteri memnuniyetini ön planda

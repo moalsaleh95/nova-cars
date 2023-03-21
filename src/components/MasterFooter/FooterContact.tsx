@@ -12,23 +12,23 @@ interface Contacts {
 
 const Contacts: Contacts[] = [
     {
-        name: 'Phone',
-        content:'+44 781-824-4483',
+        name: 'Telefon',
+        content:'+90 543 329 71 51',
         Icon: phone
     },
     {
-        name: 'Email',
-        content: 'info@novacar.com',
+        name: 'E-Posta',
+        content: 'info@novacarscare.com',
         Icon: email
     },
     {
-        name: 'Location',
+        name: 'Lokasyon',
         content: 'Merkez Mh. Şişli - İstanbul, Turkey',
         Icon: location
     },
     {
-        name: 'Opening Hours',
-        content:'Mo-Fr: 10AM - 6PM',
+        name: 'Çalışma Saatleri',
+        content:'Pazartesi-Cuma: 10:00 - 18:00',
         Icon: clock
     }
 ];

@@ -6,28 +6,28 @@ const FaqAccordion = () => {
   const FAQData = [
     {
       id: '1',
-      question: 'Can I trust the suppliers Bookperfect works with?',
-      answer: 'Bookperfect is highly cautious when choosing our vendors and business partners. This vetting of travel suppliers has given us access to the world’s top trusted vendors and suppliers. In turn, they trust Bookperfect to represent the reputations they have earned and to deliver the same high standard of customer service to our mutual clients. As a trusted travel management provider, we consistently deliver top-level service. We choose to work only with well-known, reliable providers to maintain a high standard of service.'
+      question: 'Pasta Cila Nedir ?',
+      answer: 'Bir aracın boyasını daha parlak gösteren, ufak çizikleri kamufle eden işleme pasta cila denir. Çünkü aynı model, aynı özellik ve aynı renkteki iki otomobilden biri pasta cila işlemi nedeniyle daha yeni görünebilir.'
     },
     {
       id: '2',
-      question: 'Are my belongings safe while on the trip?',
-      answer: 'While we take all the precautions to ensure your belongings are safe, we are traveling to some exciting destinations that are sometimes home to skilled thieves. Travel insurance is a must; a lockable bag or money belt will also help.'
+      question: 'Seramik Kaplamadan Sonra Araç Hemen Kullanılabilir Mi?',
+      answer: '48 Saatlik bir süre zarfı içerisinde araca herhangi bir sıvı temas etmesini tavsiye etmediğimizden dolayı yağmurlu havalarda bu süreyi doldurmadan kullanmamanızı öneririz.'
     },
     {
       id: '3',
-      question: 'What is the best way to carry money?',
-      answer: 'We recommend having access to money from various sources – cash, cards, and travel money cards are all commonly used.'
+      question: 'Motor Temizleme Nasıl Yapılır?',
+      answer: 'Motor temizleme işleminde önce çok amaçlı konsantre temizleyiciler ile motor yağı, toz ve kirden arındırılarak temizlenir. Daha sonra kirin nüfuz etmesini zorlaştıran ve motora parlaklık veren özel motor ve plastik aksam koruyucu ile kaplanır. Motor özel malzemeler ile koruma altına alınır.'
     },
     {
       id: '4',
-      question: 'Will refrigeration be available for medicines?',
-      answer: 'Availability of refrigeration cannot be guaranteed. As a general rule, many of our city hotels provide access to small fridges; however, outside of this, primarily when trekking or in homestay environments, you cannot rely on access to refrigeration. Please be sure to advise Bookperfect if you travel with medication requiring refrigeration.'
+      question: 'Motor Koruma Nedir?',
+      answer: 'Motor aracın çalışmasını sağlayan en hayati parçadır. Bu nedenle motor koruma hizmetleri aracın sorunsuz çalışması için gerekli olan bakım hizmetlerini sunmaktadır. Motor koruma uygulaması ile kirin nüfuz etmesini zorlaştıran ve motora parlaklık veren özel motor ve plastik aksam koruyucu ile kaplanır. Motor özel malzemeler ile koruma altına alınır.'
     },
     {
       id: '5',
-      question: 'What if I get ill or injured on the trip and cannot continue?',
-      answer: 'If you must leave the trip early due to illness, we will do whatever we can to get you home or on your onward journey. Your travel insurance, compulsory on all our trips, should cover any costs incurred if illness occurs.'
+      question: 'Jant Temizliği Nasıl Yapılır?',
+      answer: 'Araç jant temizliği işlemine başlanmadan önce aracın tüm tekerlekleri özenle yıkanır. Jant temizliği ve bakım hizmetinde jantlar özel kimyasallar ve aparatlar ile detaylı olarak temizlenir. Parlatma spreyi ve jant cilası kullanılarak ilk günkü parlaklığında kavuşturulur. Aynı zamanda zamanla biriken kirlerin uzun bir süre boyunca daha kolay bir şekilde temizlenmesi sağlanmış olur.'
     }
   ]
 
@@ -52,8 +52,10 @@ const FaqAccordion = () => {
   const questions= FAQData.map((item, idx) => {
 
     const { id, question, answer } = item;
+    const defaultOpen = (idx === 1 ?  true :  false);
+    
     return (
-      <Disclosure as="div" className="mt-2" key={id}>
+      <Disclosure defaultOpen={defaultOpen} as="div" className="mt-2" key={id}>
             {({ open }) => (
               <>
                 <Disclosure.Button 

@@ -1,0 +1,8 @@
+export {default as BodyRepairTab} from './BodyRepairTab'
+export {default as InterriorCleaningTab} from './InterriorCleaningTab'
+export {default as MechanicalMaintenanceTab} from './MechanicalMaintenanceTab'
+export {default as MotorCleansingTab} from './MotorCleansingTab'
+export {default as PaintlessDentRepairTab} from './PaintlessDentRepairTab'
+export {default as PaintRepairTab} from './PaintRepairTab'
+export {default as PolishPasteTab} from './PolishPasteTab'
+export {default as CarWashTab} from './CarWashTab'

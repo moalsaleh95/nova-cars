@@ -10,7 +10,7 @@ const CarWashTab: FC = () => {
             <img src={carWashBanner} className='hidden lg:inline-block min-w-[580px] min-h-[289px] mt-36' alt='car wash banner' />
         </div>
         <div className='content w-full'>
-            <h2 className='text-[26px] mb-[22px]'>From its medieval origins to the digital era</h2>
+            <h2 className='text-[26px] mb-[22px]'>Oto Yıkama</h2>
             <p className='text-lg'> 
                   Nova Car Care farkıyla kullanılan yüksek kalitede ki ürünler ve profesyonel hizmet anlayışı 
                 ile klasik sulu oto yıkama uygulamalarında bile araçlar çok daha temiz ve detaylı yıkama 
@@ -19,8 +19,8 @@ const CarWashTab: FC = () => {
                 yıkama hizmeti verilir.
             </p>            
             <div className='absolute lg:bottom-[6rem] bottom-[-6rem] mt-10 flex justify-start space-x-8 '>
-                <Link to='/services/car-wash' ><button className='px-10 py-4 bg-[#D81212] border-2 border-[#D81212] transition-all text-white rounded-[10px] text-lg hover:text-black hover:bg-white'>Learn More</button></Link>
-                <a target="_blank" rel="noreferrer" href="https://wa.me/905549867024"><button className='px-10 py-4 hidden md:inline-block rounded-[10px] text-lg border-2 border-[#707070] hover:bg-[#D81212] hover:text-white transition-all hover:border-[#D81212]'>Contact Now</button></a>
+                <Link to='/services/car-wash' ><button className='px-10 py-4 bg-[#D81212] border-2 border-[#D81212] transition-all text-white rounded-[10px] text-lg hover:text-black hover:bg-white'>Daha fazla bilgi</button></Link>
+                <a target="_blank" rel="noreferrer" href="https://wa.me/905433297151"><button className='px-10 py-4 hidden md:inline-block rounded-[10px] text-lg border-2 border-[#707070] hover:bg-[#D81212] hover:text-white transition-all hover:border-[#D81212]'>Bize ulaşın</button></a>
             </div>
         </div>
     </div>

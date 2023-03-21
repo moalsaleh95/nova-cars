@@ -18,7 +18,7 @@ const ServicesSection = () => {
 
                     <div className='grid justify-items-center'>
                         <img className='h-10 mb-4' src={logo_1} alt="logo_1" />
-                        <p className='text-center'>Roadside <br /> Assistance</p>
+                        <p className='text-center'>Detaylı İç<br />Temizlik </p>
                     </div>
 
                     <div className='grid justify-items-center'>
@@ -53,7 +53,7 @@ const ServicesSection = () => {
 
                     <div className='grid justify-items-center'>
                         <img className='h-10 mb-4' src={logo_8} alt="logo_1" />
-                        <p className='text-center'>Seramik <br /> kaplama</p>
+                        <p className='text-center'>Detaylı Motor<br /> Temizlik </p>
                     </div>
 
                 </div>

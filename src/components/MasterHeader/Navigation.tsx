@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Logo } from "../../lib";
 import { NAVIGATION_MENU } from "../constants/navigation";
 import MenuItems from "./MenuItems";
@@ -13,10 +13,10 @@ export interface NavigationProps {
   itemColor?: string;
   isScrollTop?: boolean;
   activeHeadingTab?: string;
+  dummyState?: boolean
 };
 
-const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics' }) => {
-
+const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics', dummyState }) => {
   const whichLogo = localStorage.theme === 'dark' ? MechanicsLogo : MechanicsLogoFooter
 
   const HeadingLogo = () => {
@@ -26,7 +26,6 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
   const FooterLogo = () => {
     return activeHeadingTab === 'mechanics' ? whichLogo : DetailingLogoFooter;
   };
-
 
 
   return (
@@ -40,19 +39,26 @@ const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScro
 
         </div>
 
-        <div className="flex-shrink-0 hidden md:flex items-center justify-end text-neutral-700 space-x-1 ">
+        <div className="flex-shrink-0 hidden md:flex items-center justify-end space-x-1 ">
           <div className="items-center flex space-x-1">
             <ul className={`navigation p-0 flex flex-col md:flex-row justify-between items-center space-x-2 relative dark:text-white`}>
               {
                 NAVIGATION_MENU?.map((item: any) => (
-                  item.name === 'Hizmetlerimiz' ? 
-                  <HashLink smooth to="/#services-tabs">
-                    <span className={`font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
-                      {item.name}
-                    </span>
-                  </HashLink> 
-                    : 
-                  <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
+                  item.name === 'Hizmetlerimiz' ?
+                    <HashLink smooth to="/#services-tabs">
+                      <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 ${located === 'footer' ? 'text-black dark:text-white' : ''}`}>
+                        {item.name}
+                      </span>
+                    </HashLink>
+                    :
+                    item.name === 'SSS' ?
+                      <HashLink smooth to="/#faq">
+                        <span className={`font-poppins text-white font-medium text-base lg:text-xl xl:px-4 ${located === 'footer' ? 'text-black dark:text-white' : ''}`}>
+                          {item.name}
+                        </span>
+                      </HashLink>
+                      :
+                      <MenuItems key={item.id} menuItem={item} itemColor={itemColor} />
                 ))
               }
             </ul>
