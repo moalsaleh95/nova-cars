@@ -61,6 +61,12 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
     }
   }, [location])
 
+  
+  const [dummyState, setDummyState ] = useState(false)
+  useEffect(() => {
+    window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
+  }, [dummyState])
+
   return (
     <>
 
@@ -75,7 +81,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
             <MobileHeader />
             :
             <>
-              <Navigation isScrollTop={isScrollTop} activeHeadingTab={activeHeadingTab} />
+              <Navigation isScrollTop={isScrollTop} activeHeadingTab={activeHeadingTab} dummyState={dummyState} />
             </>
         }
       </div>

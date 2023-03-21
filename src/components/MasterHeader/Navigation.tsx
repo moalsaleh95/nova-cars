@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { Logo } from "../../lib";
 import { NAVIGATION_MENU } from "../constants/navigation";
 import MenuItems from "./MenuItems";
@@ -13,10 +13,10 @@ export interface NavigationProps {
   itemColor?: string;
   isScrollTop?: boolean;
   activeHeadingTab?: string;
+  dummyState?: boolean
 };
 
-const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics' }) => {
-
+const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics', dummyState }) => {
   const whichLogo = localStorage.theme === 'dark' ? MechanicsLogo : MechanicsLogoFooter
 
   const HeadingLogo = () => {
