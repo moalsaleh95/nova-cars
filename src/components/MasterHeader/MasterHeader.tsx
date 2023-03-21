@@ -74,7 +74,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         !isMobile && <SocialHeading activeHeadingTab={activeHeadingTab} setActiveHeadingTab={setActiveHeadingTab} />
       }
 
-      <div className={`header sticky top-0 left-0 z-[1000] bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0`}>
+      <div className={`header sticky top-0 left-0 z-[1000] bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0 `}>
         {
           isMobile
             ?
@@ -108,7 +108,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         page[0] === 'services' || page[0] === 'contact' ?
           <>
             <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
-              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Hizmetlerimiz</p>
+              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>İletişim</p>
             </div>
 
             <div>
