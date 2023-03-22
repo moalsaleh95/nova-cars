@@ -65,7 +65,7 @@ const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values }) => {
         <div className={`dark:bg-[#0b0b0b] rounded-2xl flex justify-start items-center relative w-full border-[#DDDDDD] dark:border-[#222222] border h-[50px] lg:h-[70px] cursor-pointer`} >
             <div className='relative flex items-center' style={{ padding: "0px 12px 12px 20px" }}>
                 <label className={`${isFocused || phone ? "-translate-y-[10px] lg:translate-y-[-12px] text-sm" : "text-lg"} ${!isFocused || phone ? "transition ease-out" : ""}  text-[#0D2C3B] absolute top-[10px] left-3 transition-all z-[9] font-medium  px-2 opacity-50 dark:text-white cursor-pointer`}>
-                    Phone Number
+                    Telefon Numaranız
                 </label>
                 <div
                     onFocus={() => onFocus()}
