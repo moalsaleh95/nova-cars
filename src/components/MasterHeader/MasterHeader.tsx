@@ -16,7 +16,7 @@ interface MasterHeaderProps {
 const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadingTab }) => {
   const [isScrollTop, setIsScrollTop] = useState(true);
   const isMobile = useIsMobile()
-
+  const [ isHeaderTransparent, setIsHeaderTransparent ] = useState(false)
   const [page, setPage] = useState(window.location.pathname.split('/').filter((_, idx) => _ != ''));
   const pageLen = page?.length;
   const currentPage = pageLen > 0 && page[pageLen - 1];
@@ -61,6 +61,16 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
     }
   }, [location])
 
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+    if(isMobile && window.scrollY > 88 ){
+      setIsHeaderTransparent(true);
+    } else if (!isMobile && window.scrollY > 127){
+      setIsHeaderTransparent(true);
+    } else {setIsHeaderTransparent(false);}
+    });
+}, [isMobile]);
   
   const [dummyState, setDummyState ] = useState(false)
   useEffect(() => {
@@ -74,11 +84,14 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         !isMobile && <SocialHeading activeHeadingTab={activeHeadingTab} setActiveHeadingTab={setActiveHeadingTab} />
       }
 
-      <div className={`header sticky top-0 left-0 z-[1000] bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0`}>
+      <div className={`header sticky top-0 left-0 z-[1000] bg-[#d81212]  md:h-[120px] lg:top-0 w-full lg:left-0 lg:right-0 
+      ${isHeaderTransparent && !isMobile ? 'bg-opacity-75 backdrop-saturate-150 backdrop-blur-sm border-b border-[#d81212]' : ''}
+      ${isHeaderTransparent && isMobile ? '!bg-transparent' : ''}      
+      `}>
         {
           isMobile
             ?
-            <MobileHeader />
+            <MobileHeader isHeaderTransparent={isHeaderTransparent}/>
             :
             <>
               <Navigation isScrollTop={isScrollTop} activeHeadingTab={activeHeadingTab} dummyState={dummyState} />
@@ -108,7 +121,7 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
         page[0] === 'services' || page[0] === 'contact' ?
           <>
             <div className='bg-white px-5 md:px-9 lg:px-0  dark:bg-[#0B0B0B]'>
-              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>Hizmetlerimiz</p>
+              <p className='container text-4xl font-extrabold pb-3 pt-6  dark:text-[#fff]'>İletişim</p>
             </div>
 
             <div>

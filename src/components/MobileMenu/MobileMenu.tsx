@@ -61,7 +61,7 @@ const MobileMenu: FC = () => {
 
   return (
     <div>
-        <Hamburger onClick={handleClick} />
+        <Hamburger className='dark:text-white' onClick={handleClick} />
         <Transition
         show={isMenuOpen}
         enter="transition-opacity transition-[transform_,_opacity] duration-500"
@@ -70,7 +70,7 @@ const MobileMenu: FC = () => {
         leave="transition-opacity duration-500 transition-[transform_,_opacity]"
         leaveFrom="opacity-100 translate-x-0"
         leaveTo="opacity-0 translate-x-[100%]"
-        className='absolute top-[100px] right-0 h-screen w-full min-w-[250px] z-[100] bg-white'
+        className='absolute top-[100px] right-0 h-screen w-full min-w-[250px] z-[100] bg-white dark:bg-[#0B0B0B]'
         ref={drawerRef}
 
         >
@@ -85,7 +85,7 @@ const MobileMenu: FC = () => {
                                 const {href, name, id, targetBlank} = menuItem
                                 return (
                                     <li key={id}>
-                                        <a href={href} target={targetBlank ? "_blank" : ""} className="text-2xl font-medium">
+                                        <a href={href} target={targetBlank ? "_blank" : ""} className="text-2xl font-medium text-[#0B0B0B] dark:text-white">
                                             {name}
                                         </a> 
                                     </li>
