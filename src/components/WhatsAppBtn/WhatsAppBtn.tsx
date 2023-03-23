@@ -11,7 +11,7 @@ const WhatsAppBtn = () => {
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
       btn.click()
-    }, 15000);
+    }, 13000);
   }, [])
 
   return (
