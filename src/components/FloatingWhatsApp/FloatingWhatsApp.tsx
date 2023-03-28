@@ -81,11 +81,11 @@ export default function FloatingWhatsApp({
   onNotification,
   onLoopDone,
 
-  phoneNumber = '1234567890',
+  phoneNumber = '+905549867024',
   accountName = 'Account Name',
   avatar = dummyAvatar,
-  statusMessage = 'Typically replies within 1 hour',
-  chatMessage = 'Hello there! 🤝 \nHow can we help?',
+  statusMessage = 'Çevrimiçi',
+  chatMessage = 'Merhabalar,                              Nasıl yardımcı olabiliriz?',
   placeholder = 'Type a message..',
 
   messageDelay = 2,
@@ -231,7 +231,7 @@ export default function FloatingWhatsApp({
       >
         <header className={css.chatHeader}>
           <div className={css.avatar}>
-            <img src={avatar} width='60' height='60' alt='whatsapp-avatar' />
+            <img src='https://novacarcare.s3.amazonaws.com/whatsapp.png' width='60' height='60' alt='whatsapp-avatar' />
           </div>
           <div className={css.status}>
             <span className={css.statusTitle}>{accountName}</span>
@@ -264,20 +264,12 @@ export default function FloatingWhatsApp({
               </span>
             </div>
           )}
+          
         </div>
 
-        {/* <footer className={css.chatFooter}>
-          <form onSubmit={handleSubmit}>
-            <input className={css.input} placeholder={placeholder} ref={inputRef} dir='auto' />
-            <button type='submit' className={css.buttonSend}>
-              <SendSVG />
-            </button>
-          </form>
-        </footer> */}
-
-        <a className={`${css.chatFooter} border-2 border-[#075e54]`} href=''>
-          <button className='mx-auto'>
-              Contact Us
+        <a className={`${css.chatFooter} flex border-2 `} href='https://wa.me/905549867024' target='_blank'>
+          <button className='font-poppins font-normal !text-white !mx-auto border-[#075e54] !bg-[#075e54] w-full rounded-lg py-2'>
+            Contact Us
           </button>
         </a>
       </div>

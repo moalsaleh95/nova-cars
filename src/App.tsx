@@ -18,7 +18,7 @@ const App: FC<AppProps> = () => {
     <Router>
       <MasterHeader activeHeadingTab = {activeHeadingTab} setActiveHeadingTab = {setActiveHeadingTab} />
       <Routers />
-      <FloatingWhatsApp accountName={'Nova Cars Care'} phoneNumber={'6546'} />
+      <FloatingWhatsApp accountName={'Nova Cars Care'} phoneNumber={'+905549867024'} />
       <MasterFooter activeHeadingTab = {activeHeadingTab} />
       <DarkModeSwitch />
     </Router>
