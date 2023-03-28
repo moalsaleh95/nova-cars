@@ -1,10 +1,10 @@
-type State = {
+interface State  {
     isOpen: boolean
     isDelay: boolean
     isNotification: boolean
   }
   
-  type Action = { type: 'open' } | { type: 'close' } | { type: 'delay' } | { type: 'notification' }
+  interface Action { type: 'open' | 'close' | 'delay' | 'notification' }
   
   export function reducer(state: State, action: Action): State {
     switch (action.type) {

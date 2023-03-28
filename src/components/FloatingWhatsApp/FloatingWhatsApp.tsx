@@ -108,7 +108,7 @@ export default function FloatingWhatsApp({
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 
-  darkMode = false,
+  darkMode = localStorage.theme,
   style,
   className = 'floating-whatsapp'
 }: FloatingWhatsAppProps) {
@@ -124,6 +124,17 @@ export default function FloatingWhatsApp({
   const soundRef = useRef<HTMLAudioElement | null>(null)
   const loops = useRef(0)
   const notificationInterval = useRef(0)
+
+  // const isDark = localStorage.theme === 'dark' ? true : false;
+
+  useEffect(() => {
+    setTimeout(() => {
+      const btn = document.getElementsByClassName("styles_whatsappButton__WryQ2 floating-whatsapp-button")?.[0];
+      // @ts-ignore
+      // Property 'click' does not exist on type 'Element'.
+      btn.click()
+    }, 13000);
+  }, [])
 
   const handleNotification = useCallback(() => {
     if (!notification) return
@@ -267,8 +278,8 @@ export default function FloatingWhatsApp({
           
         </div>
 
-        <a className={`${css.chatFooter} flex border-2 `} href='https://wa.me/905549867024' target='_blank'>
-          <button className='font-poppins font-normal !text-white !mx-auto border-[#075e54] !bg-[#075e54] w-full rounded-lg py-2'>
+        <a className={`${css.chatFooter} flex`} href='https://wa.me/905549867024' target='_blank'>
+          <button className='font-poppins font-normal !text-white !mx-auto border-[#075e54] !bg-[#075e54] w-full rounded-2xl py-2'>
             Contact Us
           </button>
         </a>
