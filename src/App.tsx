@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import { MasterFooter, MasterHeader } from './components';
-import { WhatsAppBtn } from './components/WhatsAppBtn';
+import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 import Routers from './routers';
 import { DarkModeSwitch } from './components/DarkModeSwitch';
 
@@ -18,7 +18,7 @@ const App: FC<AppProps> = () => {
     <Router>
       <MasterHeader activeHeadingTab = {activeHeadingTab} setActiveHeadingTab = {setActiveHeadingTab} />
       <Routers />
-      <WhatsAppBtn />
+      <FloatingWhatsApp accountName={'Nova Cars Care'} phoneNumber={'6546'} />
       <MasterFooter activeHeadingTab = {activeHeadingTab} />
       <DarkModeSwitch />
     </Router>
