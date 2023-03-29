@@ -108,7 +108,7 @@ export default function FloatingWhatsApp({
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 
-  darkMode = localStorage.theme,
+  // darkMode = true,
   style,
   className = 'floating-whatsapp'
 }: FloatingWhatsAppProps) {
@@ -125,7 +125,7 @@ export default function FloatingWhatsApp({
   const loops = useRef(0)
   const notificationInterval = useRef(0)
 
-  // const isDark = localStorage.theme === 'dark' ? true : false;
+  const darkMode = localStorage.theme === 'dark' ? true : false;
 
   useEffect(() => {
     setTimeout(() => {
@@ -279,7 +279,7 @@ export default function FloatingWhatsApp({
         </div>
 
         <a className={`${css.chatFooter} flex`} href='https://wa.me/905549867024' target='_blank'>
-          <button className='font-poppins font-normal !text-white !mx-auto border-[#075e54] !bg-[#075e54] w-full rounded-2xl py-2'>
+          <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
             İletişime Geç
           </button>
         </a>
