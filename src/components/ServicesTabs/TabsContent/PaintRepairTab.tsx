@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PaintRepair from '../../../assets/images/services/4- Boya Onarimi.jpeg';
+import PaintRepair from '../../../assets/images/services/4-BoyaOnarimi.jpeg';
 
 const PaintRepairTab = () => {
   return (

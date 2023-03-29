@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Link } from 'react-router-dom';
-import InterriorCleaningImage from '../../../assets/images/services/1- Detayli Ic Temizlik.jpeg';
+import InterriorCleaningImage from '../../../assets/images/services/1-DetayliIcTemizlik.jpeg';
 
 const InterriorCleaningTab: FC = () => {
   return (

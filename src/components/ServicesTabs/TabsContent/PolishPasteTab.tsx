@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PlishPasteImage from '../../../assets/images/services/6- Pasta Cila.jpeg';
+import PlishPasteImage from '../../../assets/images/services/6-PastaCila.jpeg';
 
 const PolishPasteTab = () => {
   return (

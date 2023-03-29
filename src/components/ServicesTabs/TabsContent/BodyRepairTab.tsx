@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BodyRepairImage from '../../../assets/images/services/5- Kaporta Onarımı.jpeg';
+import BodyRepairImage from '../../../assets/images/services/5-KaportaOnarımı.jpeg';
 
 const BodyRepairTab = () => {
   return (
