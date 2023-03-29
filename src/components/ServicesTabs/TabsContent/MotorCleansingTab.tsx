@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MotorCleansingImage from '../../../assets/images/services/8- Detayli Motor Temizlik.jpeg';
+import MotorCleansingImage from '../../../assets/images/services/8-DetayliMotorTemizlik.jpeg';
 
 const MotorCleansingTab = () => {
   return (

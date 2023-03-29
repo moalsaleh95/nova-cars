@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import carWashBanner from '../../../assets/images/services/2- Oto Yikama.jpeg';
+import carWashBanner from '../../../assets/images/services/2-OtoYikama.jpeg';
 import { Link } from 'react-router-dom';
 
 

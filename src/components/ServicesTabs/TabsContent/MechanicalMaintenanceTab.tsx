@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import MechanicalMaintenanceImage from '../../../assets/images/services/3- Mekanik Bakim.jpeg';
+import MechanicalMaintenanceImage from '../../../assets/images/services/3-MekanikBakim.jpeg';
 
 const MechanicalMaintenanceTab = () => {
   return (
