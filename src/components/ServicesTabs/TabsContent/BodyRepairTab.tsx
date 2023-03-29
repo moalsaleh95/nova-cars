@@ -2,6 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import BodyRepairImage from '../../../assets/images/services/5-KaportaOnarimi.jpeg';
 
+
+
+
+
+
+
+
+
+
 const BodyRepairTab = () => {
   return (
 
