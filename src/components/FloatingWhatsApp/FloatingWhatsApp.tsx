@@ -279,7 +279,7 @@ export default function FloatingWhatsApp({
         </div>
 
         <a className={`${css.chatFooter} flex`} href='https://wa.me/905549867024' target='_blank'>
-          <button className='font-poppins font-normal !text-white !mx-auto border-[#075e54] !bg-[#075e54] w-full rounded-2xl py-2'>
+          <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
             İletişime Geç
           </button>
         </a>
