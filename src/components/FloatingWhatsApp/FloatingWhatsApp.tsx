@@ -108,7 +108,7 @@ export default function FloatingWhatsApp({
   chatboxStyle,
   chatboxClassName = 'floating-whatsapp-chatbox',
 
-  darkMode = localStorage.theme,
+  // darkMode = true,
   style,
   className = 'floating-whatsapp'
 }: FloatingWhatsAppProps) {
@@ -125,7 +125,7 @@ export default function FloatingWhatsApp({
   const loops = useRef(0)
   const notificationInterval = useRef(0)
 
-  // const isDark = localStorage.theme === 'dark' ? true : false;
+  const darkMode = localStorage.theme === 'dark' ? true : false;
 
   useEffect(() => {
     setTimeout(() => {
