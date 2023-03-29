@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import paintlessDentRepair from '../../../assets/images/services/7-BoyasızGöçükOnarımı.jpeg';
+import paintlessDentRepair from '../../../assets/images/services/7-BoyasızGocukOnarimi.jpeg';
 
 const PaintlessDentRepairTab = () => {
   return (
