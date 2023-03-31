@@ -8,55 +8,14 @@ import logo_6 from "../../../src/assets/icons/about_logo_6.svg";
 import logo_7 from "../../../src/assets/icons/about_logo_7.svg";
 import logo_8 from "../../../src/assets/icons/about_logo_8.svg";
 import car_image from "../../../src/assets/icons/car_image.png";
+import ServicesGrid from '../ServicesGrid/ServicesGrid';
 
 const ServicesSection = () => {
     return (
         <div className='bg-[#222222] px-5  md:px-9 lg:px-0'>
             <div className='container grid grid-cols-1 md:grid-cols-2 justify-items-center content-start gap-12 py-10 md:py-[120px] text-white relative'>
 
-                <div className='w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_1} alt="logo_1" />
-                        <p className='text-center'>Detaylı İç<br />Temizlik </p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_2} alt="logo_1" />
-                        <p className='text-center'>Oto <br /> Yıkama</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_3} alt="logo_1" />
-                        <p className='text-center'>Mekanik <br /> Onarımı</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_4} alt="logo_1" />
-                        <p className='text-center'>Boya <br /> Onarımı</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_5} alt="logo_1" />
-                        <p className='text-center'>Kaporta <br /> Onarımı</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_6} alt="logo_1" />
-                        <p className='text-center'>Pasta <br /> Cila</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_7} alt="logo_1" />
-                        <p className='text-center'>Göçük <br /> Onarımı</p>
-                    </div>
-
-                    <div className='grid justify-items-center'>
-                        <img className='h-10 mb-4' src={logo_8} alt="logo_1" />
-                        <p className='text-center'>Detaylı Motor<br /> Temizlik </p>
-                    </div>
-
-                </div>
+                <ServicesGrid />
 
                 <div>
                     <div className='font-poppins'>

@@ -14,6 +14,7 @@ import logo_7 from "../../../src/assets/icons/about_logo_7.svg";
 import logo_8 from "../../../src/assets/icons/about_logo_8.svg";
 import { tabsData } from '../../lib';
 import { HashLink } from 'react-router-hash-link';
+import ServicesGrid from '../ServicesGrid/ServicesGrid';
 
 
 interface ServicesDetails {
@@ -34,11 +35,7 @@ const ServicesDetails: FC<ServicesDetails> = ({service}) => {
     const {id , content : { title, text}, name} = service
     const navigate = useNavigate()
     
-    const handleServiceSelect = (e: string) => {
-        localStorage.setItem('activeTab', `${Number(e) - 1 }` )
-        navigate('/#services-tabs')
-    }
-
+  
     return (
         <div>
             <div className='container poppins dark:text-white dark:bg-[#222222] bg-[#f9f9f9] px-5 md:px-9 lg:px-0 grid lg:grid-cols-2 grid-cols-1 justify-items-center content-start lg:gap-[29px] pt-[34px] font-poppins'>
@@ -62,67 +59,7 @@ const ServicesDetails: FC<ServicesDetails> = ({service}) => {
             <div className='bg-[#222222] px-5 md:px-9 lg:px-0 xl:mt-[-6rem] max-xl:mt-[-4rem] max-lg:pt-[6rem] '>
                 <div className='lg:pb-[58px] container grid max-xl:grid-cols-1 grid-cols-2 justify-items-center content-start gap-12 xl:pt-[119px] lg:pt-[5rem] text-white relative '>
 
-                    <div className='w-full grid grid-cols-2 md:grid-cols-4 justify-between gap-6 mg:gap-8 lg:gap-28 bg-[#0B0B0B] rounded-2xl p-4 lg:p-14'>
-
-
-                    {
-                        tabsData.map(tab => {
-                            const {Icon, id, name} = tab
-                            return (
-                                <HashLink smooth to="/#services-tabs">
-                                    <div className='grid justify-items-center cursor-pointer' key={id} onClick={() => handleServiceSelect(id)}>
-                                        {/* <img className='h-10 mb-4' src={Icon as unknown as string} alt="logo_1" /> */}
-                                        <Icon />
-                                        <p className='text-center'> {name} </p>
-                                    </div>
-
-                                </HashLink>
-                                )
-                        })
-                    }
-
-
-                        {/* <div className='grid justify-items-center' onClick={handleServiceSelect()}>
-                            <img className='h-10 mb-4' src={logo_1} alt="logo_1" />
-                            <p className='text-center'>Roadside <br /> Assistance</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_2} alt="logo_1" />
-                            <p className='text-center'>Oto <br /> Yıkama</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_3} alt="logo_1" />
-                            <p className='text-center'>Mekanik <br /> Onarımı</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_4} alt="logo_1" />
-                            <p className='text-center'>Boya <br /> Onarımı</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_5} alt="logo_1" />
-                            <p className='text-center'>Kaporta <br /> Onarımı</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_6} alt="logo_1" />
-                            <p className='text-center'>Pasta <br /> Cila</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_7} alt="logo_1" />
-                            <p className='text-center'>Göçük <br /> Onarımı</p>
-                        </div>
-
-                        <div className='grid justify-items-center'>
-                            <img className='h-10 mb-4' src={logo_8} alt="logo_1" />
-                            <p className='text-center'>Seramik <br /> kaplama</p>
-                        </div> */}
-
-                    </div>
+                        <ServicesGrid />
 
                     <div className='max-lg:pb-[48px] pb-[58px]'>
                         <div className='font-poppins'>
