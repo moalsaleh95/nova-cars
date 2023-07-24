@@ -13,7 +13,7 @@ interface Contacts {
 const Contacts: Contacts[] = [
     {
         name: 'Telefon',
-        content:'+90 543 329 71 51',
+        content:'+90 541 335 37 13',
         Icon: phone
     },
     {
