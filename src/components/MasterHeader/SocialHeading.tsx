@@ -31,18 +31,18 @@ export const SocialIcons: SocialIconsProps[] = [
         name: 'Facebook',
         Icon: Facebook
     },
-    {
-        name: 'Twitter',
-        Icon: Twitter
-    },
+    // {
+    //     name: 'Twitter',
+    //     Icon: Twitter
+    // },
     {
         name: 'Youtube',
         Icon: Youtube
     },
-    {
-        name: 'LinkedIN',
-        Icon: LinkedIn
-    },
+    // {
+    //     name: 'LinkedIN',
+    //     Icon: LinkedIn
+    // },
     {
         name: 'phone',
         Icon: Phone
