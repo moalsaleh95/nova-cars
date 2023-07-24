@@ -1,5 +1,6 @@
 import React from 'react'
 import ContactForm from '../../components/ContactForm/ContactForm'
+import GoogleMap from '../../components/GoogleMaps/GoogleMap'
 import Map from '../../components/Map/Map'
 import ContactInfoCards from './ContactInfoCards'
 import PageTitleBar from './PageTitleBar'
@@ -10,7 +11,8 @@ const Contact = () => {
         <PageTitleBar />
         <ContactInfoCards />
         <div className='container grid grid-cols-1 xl:grid-cols-3 gap-x-[30px] lg:mt-4 my-[30px] lg:px-9 2xl:px-0'>
-          <Map wrapperClassNames='col-span-2'/>
+          {/* <Map wrapperClassNames='col-span-2'/> */}
+          <GoogleMap wrapperClassNames='col-span-2' /> 
           <div className='px-5 lg:px-0 w-full col-span-2 xl:col-span-1 mt-[30px] lg:mt-4 2xl:mt-0'>
             <ContactForm />
           </div>
