@@ -12,17 +12,18 @@ interface AppProps {
 }
 
 const App: FC<AppProps> = () => {
-  // const [activeHeadingTab, setActiveHeadingTab] = useState<string>('detailing');
+  const [activeHeadingTab, setActiveHeadingTab] = useState<string>('detailing');
 
   return (
     <Router>
       <MasterHeader 
-      // activeHeadingTab = {activeHeadingTab} setActiveHeadingTab = {setActiveHeadingTab}
+      activeHeadingTab = {activeHeadingTab} 
+      // setActiveHeadingTab = {setActiveHeadingTab}
        />
       <Routers />
       <FloatingWhatsApp accountName={'Nova Cars Care'} phoneNumber={'+905549867024'} />
       <MasterFooter 
-      // activeHeadingTab = {activeHeadingTab} 
+      activeHeadingTab = {activeHeadingTab} 
       />
       <DarkModeSwitch />
     </Router>
