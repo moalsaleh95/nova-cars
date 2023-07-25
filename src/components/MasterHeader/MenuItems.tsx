@@ -44,11 +44,11 @@ const MenuItems: FC<MenuItemsProps> = ({
           // strict
           target={item.targetBlank ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium !text-[${itemColor}] py-2 px-[.1vw]`}
+          className={`inline-flex items-center xl:text-xs whitespace-nowrap text-xl my-[34px] xl:my-0 font-medium py-2 px-[.1vw] ${located === 'footer' ? 'text-black dark:text-white' : 'text-white'}`}
           to={item.href}
           onClick={(e: any) => { handleNavLink(item) }}
         >
-          <span className={`${'/' + activeLink === item.href ? 'active-nav-item !text-[#fff]' : ''} font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
+          <span className={`${'/' + activeLink === item.href ? 'active-nav-item' : ''} font-poppins font-medium text-base lg:text-xl xl:px-4 `}>
             {item.name}
           </span>
         </NavLink>
