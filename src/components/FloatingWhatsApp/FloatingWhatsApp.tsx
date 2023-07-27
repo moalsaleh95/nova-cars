@@ -81,7 +81,7 @@ export default function FloatingWhatsApp({
   onNotification,
   onLoopDone,
 
-  phoneNumber = '+905549867024',
+  phoneNumber = '+905413353713',
   accountName = 'Account Name',
   avatar = dummyAvatar,
   statusMessage = 'Çevrimiçi',
@@ -278,7 +278,7 @@ export default function FloatingWhatsApp({
 
         </div>
 
-        <a className={`${css.chatFooter} flex`} href='https://wa.me/905549867024' target='_blank'>
+        <a className={`${css.chatFooter} flex`} href='https://wa.me/905413353713' target='_blank'>
           <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
             İletişime Geç
           </button>
