@@ -219,7 +219,7 @@ export default function FloatingWhatsApp({
   }, [allowEsc, isOpen, handleClose])
 
   return (
-    <div className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className}`} style={style}>
+    <div id='whatsapp-button' className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className}`} style={style}>
       <div
         className={`${css.whatsappButton} ${buttonClassName}`}
         onClick={handleOpen}

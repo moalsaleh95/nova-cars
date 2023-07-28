@@ -8,18 +8,22 @@ interface Contacts {
     name?: string;
     content?: string;
     Icon?: any;
+    href?: string;
 };
 
 const Contacts: Contacts[] = [
     {
         name: 'Telefon',
         content:'+90 541 335 37 13',
-        Icon: phone
+        Icon: phone,
+        href: 'tel:+905413353713'
+        
     },
     {
         name: 'E-Posta',
         content: 'info@novacarscare.com',
-        Icon: email
+        Icon: email,
+        href: 'mailto:info@aliceautoservice.com'
     },
     {
         name: 'Lokasyon',
@@ -39,7 +43,7 @@ const FooterContact = () => {
         <div className='flex flex-col md:flex-row justify-between px-5 md:px-9 space-y-12 md:space-y-0'>
             {
                 Contacts.map((contact: any) => { 
-                    const { Icon } = contact
+                    const { Icon, href } = contact
                     return (
                  <div className='flex md:flex-row space-x-5 md:space-x-2'>
                     <span className=''>
@@ -48,7 +52,7 @@ const FooterContact = () => {
                     </span>
                    <div className='flex flex-col'>
                     <span className='font-poppins font-normal text-[18px] text-[#000000] dark:text-[#fff]'>{contact.name}</span>
-                    <span className='font-poppins font-light text-[16px] text-[#000000] dark:text-[#fff]'>{contact.content}</span>
+                    <a href={href} className='font-poppins font-light text-[16px] text-[#000000] dark:text-[#fff]'>{contact.content}</a>
                    </div> 
                 </div>
                 )})
