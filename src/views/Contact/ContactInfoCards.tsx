@@ -25,19 +25,21 @@ const contactInfoData = [
         title: 'Telefon',
         subtitle: '+90 541 335 37 13',
         Icon: PhoneIcon,
-        id: '1'
+        id: '1',
+        href: 'tel:+905413353713'
     },
     {
         title: 'E-Posta',
         subtitle: 'info@novacarscare.com',
         Icon: MailIcon,
-        id: '2'
+        id: '2',
+        href: 'mailto:info@novacarscare.com'
     },
     {
         title: 'Lokasyon',
         subtitle: 'Merkez Mh. Şişli - İstanbul, Turkey',
         Icon: LocationIcon,
-        id: '3'
+        id: '3',
     },
   
 ]
