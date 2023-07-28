@@ -39,7 +39,7 @@ const ContactForm: FC = () => {
               <AnimatedInput value={values.email} inputType='text' label='E-Posta Adresi ' name='email' onChange={(e: any) => handleChange(e)}/>
               {/* <AnimatedInput value={values.phoneNo} inputType='text' label='Phone Number' name='phoneNo' onChange={(e: any) => handleChange(e)}/> */}
               <AnimatedInput value={values.message} inputType='textArea' label='Mesajınız' name='message' onChange={(e: any) => handleChange(e)} wrapperClassName='h-[150px] md:col-span-3 xl:col-span-1'/>
-              <button className='w-full bg-[#D81212] flex justify-center items-center px-[30px] py-3 lg:py-[18px] text-white text-base rounded-[10px] md:col-span-3 xl:col-span-1'> Mesajı  Gönderin</button>
+              <button id="send-message-button" className='w-full bg-[#D81212] flex justify-center items-center px-[30px] py-3 lg:py-[18px] text-white text-base rounded-[10px] md:col-span-3 xl:col-span-1'> Mesajı  Gönderin</button>
           </form>
     </div>
   )
