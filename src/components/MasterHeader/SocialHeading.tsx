@@ -108,7 +108,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
                                 </section>
                                )}) 
                             }
-                            <section className={`text-black dark:text-white text-[14px] font-medium flex items-center whitespace-nowrap ${phoneNumberClassNames}`}>+90 541 335 37 13</section>
+                            <a href='tel:+905413353713' className={`text-black dark:text-white text-[14px] font-medium flex items-center whitespace-nowrap ${phoneNumberClassNames}`}>+90 541 335 37 13</a>
                         </div>
                     </div>
                 </div>
