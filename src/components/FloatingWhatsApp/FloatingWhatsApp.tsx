@@ -221,7 +221,6 @@ export default function FloatingWhatsApp({
   return (
     <div className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className}`} style={style}>
       <div
-        id='whatsapp-button'
         className={`${css.whatsappButton} ${buttonClassName}`}
         onClick={handleOpen}
         style={buttonStyle}
@@ -279,7 +278,7 @@ export default function FloatingWhatsApp({
 
         </div>
 
-        <a className={`${css.chatFooter} flex`} href='https://wa.me/905413353713' target='_blank'>
+        <a id='whatsapp-button' className={`${css.chatFooter} flex`} href='https://wa.me/905413353713' target='_blank'>
           <button className='font-poppins font-normal !text-white !mx-auto border-[#25D366] !bg-[#25D366] w-full rounded-2xl py-2'>
             İletişime Geç
           </button>
