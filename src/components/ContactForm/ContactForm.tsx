@@ -1,6 +1,8 @@
 import React, { FC, useEffect, useState } from 'react'
 import AnimatedInput from '../AnimatedInput/AnimatedInput'
 import TelInput from '../TelInput/TelInput'
+import emailjs from '@emailjs/browser'
+ 
 
 const ContactForm: FC = () => {
   const [values, setValues] = useState({
@@ -18,12 +20,26 @@ const ContactForm: FC = () => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    // console.log(values)
+    
+    console.log(values)
+    emailjs.init(process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY as string);
+    emailjs.send(process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string,"template_y596dpw",{
+      nameSurname: values.nameSurname,
+      admin: "Nova Car Care",
+      message: values.message,
+      email: values.email,
+      phoneNo: values.phoneNo
+      }).then(function(response) {
+        console.log('SUCCESS!', response.status, response.text);
+     }, function(error) {
+        console.log('FAILED...', error);
+     });
   }
 
 
   useEffect(() => {
     // console.log('the form values are : ', values)
+    
   },
     [values])
 
@@ -35,7 +51,7 @@ const ContactForm: FC = () => {
         </span>
           <form className='w-full space-y-[30px] md:space-y-0 2xl:space-y-[30px] md:gap-4 2xl:gap-0 mt-6 grid grid-cols-1 md:grid-cols-3 xl:grid-cols-1' onSubmit={ handleSubmit } >
               <AnimatedInput value={values.nameSurname} inputType='text' label='İsim, Soyadı' name='nameSurname' onChange={(e: any) => handleChange(e)}/>
-              <TelInput onInputChange={(e: any) => handleChange(e, 'telephone')} inputName='telephone' values={values} />
+              <TelInput onInputChange={(e: any) => handleChange(e, 'phoneNo')} inputName='phoneNo' values={values} />
               <AnimatedInput value={values.email} inputType='text' label='E-Posta Adresi ' name='email' onChange={(e: any) => handleChange(e)}/>
               {/* <AnimatedInput value={values.phoneNo} inputType='text' label='Phone Number' name='phoneNo' onChange={(e: any) => handleChange(e)}/> */}
               <AnimatedInput value={values.message} inputType='textArea' label='Mesajınız' name='message' onChange={(e: any) => handleChange(e)} wrapperClassName='h-[150px] md:col-span-3 xl:col-span-1'/>
