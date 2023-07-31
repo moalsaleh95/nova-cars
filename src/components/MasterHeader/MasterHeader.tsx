@@ -73,9 +73,9 @@ const MasterHeader: FC<MasterHeaderProps> = ({ activeHeadingTab, setActiveHeadin
 }, [isMobile]);
   
   const [dummyState, setDummyState ] = useState(false)
-  useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
-  }, [dummyState])
+  // useEffect(() => {
+  //   window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
+  // }, [dummyState])
 
   return (
     <>
