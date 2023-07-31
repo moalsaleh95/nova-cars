@@ -11,7 +11,7 @@ const MasterFooter: FC<MasterFooterProps> = ({ activeHeadingTab}) => {
 
   const [dummyState, setDummyState ] = useState(false)
   useEffect(() => {
-    window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
+    // window.matchMedia("(prefers-color-scheme: dark)").matches ? setDummyState(!dummyState) : setDummyState(!dummyState);
   }, [dummyState])
   
 
