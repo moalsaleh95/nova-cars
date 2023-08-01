@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 import useForm from '../../hooks/useForm'
 import useValidate from '../../lib/helpers/Validate'
 import Validate from '../../lib/helpers/Validate'
- 
+import MoonLoader from 'react-spinners/MoonLoader'
 
 const ContactForm: FC = () => {
   const [values, setValues] = useState({
@@ -17,7 +17,7 @@ const ContactForm: FC = () => {
 
   })
   const [errors, setErrors] = useState<Record<string, string>>({})
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const navigate = useNavigate()
 
 
@@ -89,8 +89,10 @@ const ContactForm: FC = () => {
               <AnimatedInput value={values.email} inputType='text' label='E-Posta Adresi ' name='email' onChange={(e: any) => handleChange(e)}/>
               {/* <AnimatedInput value={values.phoneNo} inputType='text' label='Phone Number' name='phoneNo' onChange={(e: any) => handleChange(e)}/> */}
               <AnimatedInput value={values.message} inputType='textArea' label='Mesajınız' name='message' onChange={(e: any) => handleChange(e)} wrapperClassName='h-[150px] md:col-span-3 xl:col-span-1'/>
-              <button id="send-message-button" className='w-full bg-[#D81212] flex justify-center items-center px-[30px] py-3 lg:py-[18px] text-white text-base rounded-[10px] md:col-span-3 xl:col-span-1' disabled={isLoading}> 
-              
+              <button id="send-message-button" className={`w-full bg-[#D81212] flex justify-center items-center px-[30px] py-3 lg:py-[18px] text-white text-base rounded-[10px] md:col-span-3 xl:col-span-1 ${isLoading && 'opacity-70'}`} disabled={isLoading}> 
+              {
+                isLoading && <MoonLoader size={20} color="#fff" className='mr-2'/>
+              }
                Mesajı  Gönderin
                
               </button>
