@@ -132,7 +132,7 @@ export default function FloatingWhatsApp({
       const btn = document.getElementsByClassName("styles_whatsappButton__WryQ2 floating-whatsapp-button")?.[0];
       // @ts-ignore
       // Property 'click' does not exist on type 'Element'.
-      btn.click()
+      btn?.click()
     }, 13000);
   }, [])
 

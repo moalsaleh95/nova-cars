@@ -25,11 +25,11 @@ const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values }) => {
 
     useEffect(() => {
         localStorage.theme === 'light' ? setIsDark(false) : setIsDark(true);
-        console.log('isDark: ', isDark);
-        console.log('input: ', input);
-        console.log('button: ', button);
-        console.log('dropdown: ', dropdown);
-        console.log('dropdown_hover: ', dropdown_hover);
+        // console.log('isDark: ', isDark);
+        // console.log('input: ', input);
+        // console.log('button: ', button);
+        // console.log('dropdown: ', dropdown);
+        // console.log('dropdown_hover: ', dropdown_hover);
 
 
         if (isDark && input && button && dropdown) {
