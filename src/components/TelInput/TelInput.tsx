@@ -9,12 +9,12 @@ interface TooglePropsType {
 
 interface TelInputProps {
     onInputChange?: any;
-    errors?: any;
+    errors?: Record<string, string>;
     inputName?: string;
     values?: any;
 };
 
-const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values }) => {
+const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values, errors }) => {
 
     const [isDark, setIsDark] = useState(true);
 
@@ -67,6 +67,8 @@ const TelInput: FC<TelInputProps> = ({ onInputChange, inputName, values }) => {
                 <label className={`${isFocused || phone ? "-translate-y-[10px] lg:translate-y-[-12px] text-sm" : "text-lg"} ${!isFocused || phone ? "transition ease-out" : ""}  text-[#0D2C3B] absolute top-[10px] left-3 transition-all z-[9] font-medium  px-2 opacity-50 dark:text-white cursor-pointer`}>
                     Telefon Numaranız
                 </label>
+                {errors && errors?.[inputName as string]?.length > 0 && <span className='absolute right-[-13px] top-[-20px] bg-red-600 rounded-lg text-white p-2'>{errors && errors[inputName as string]}</span>}
+
                 <div
                     onFocus={() => onFocus()}
                     onBlur={() => onBlur()}
