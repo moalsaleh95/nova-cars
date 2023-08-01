@@ -3,6 +3,9 @@ import AnimatedInput from '../AnimatedInput/AnimatedInput'
 import TelInput from '../TelInput/TelInput'
 import emailjs from '@emailjs/browser'
 import { useNavigate } from 'react-router-dom'
+import useForm from '../../hooks/useForm'
+import useValidate from '../../lib/helpers/Validate'
+import Validate from '../../lib/helpers/Validate'
  
 
 const ContactForm: FC = () => {
@@ -13,18 +16,26 @@ const ContactForm: FC = () => {
     message: null
 
   })
-  const [isLoading, setIsLoading] = useState(false)
+  const [errors, setErrors] = useState<Record<string, string>>({})
+  const [isLoading, setIsLoading] = useState(true)
   const navigate = useNavigate()
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name?: string) => {
-    const value = e?.target?.value ?? e;
-    const inputName = e?.target?.name ?? name;
-    setValues((prevState) => ({ ...prevState, [inputName]: value }))
-  }
+
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setIsLoading(true)
     console.log(values)
+    
+    // check for errors
+    setErrors(Validate(values, 'contactForm'))
+    // if there was any errors set it and return
+    // if(Object.keys(errors).length > 0){
+    //   setIsLoading(false)
+    //   return 
+    // }
+    // if there was not erorrs send the email
+
+
     emailjs.init(process.env.REACT_APP_EMAIL_JS_PUBLIC_KEY as string);
     emailjs.send(process.env.REACT_APP_EMAIL_JS_SERVICE_ID as string,"template_y596dpw",{
       nameSurname: values.nameSurname,
@@ -42,7 +53,22 @@ const ContactForm: FC = () => {
         alert(`an error occured please try again later.`)
         setIsLoading(false)
      });
+    // setIsLoading(false)
   }
+
+  useEffect(() => {
+    console.log('errors are: ', errors)
+  
+  }, [errors])
+  
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>, name?: string) => {
+    const value = e?.target?.value ?? e;
+    const inputName = e?.target?.name ?? name;
+    setValues((prevState) => ({ ...prevState, [inputName]: value }))
+  }
+
+  
 
 
   useEffect(() => {
