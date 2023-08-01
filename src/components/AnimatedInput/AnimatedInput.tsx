@@ -7,11 +7,12 @@ interface InfoProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: any;
   value?: any;
   wrapperClassName?: string;
+  errors?: Record<string, string>
 };
 
 const AnimatedInput: FC<InfoProps> = (props) => {
 
-  const { label, inputType, name, onChange, value, wrapperClassName } = props
+  const { label, inputType, name, onChange, value, wrapperClassName, errors } = props
 
   const [inputValue, setInputValue] = useState("");
   const [isFocused, setIsFocused] = useState(false);
@@ -41,6 +42,10 @@ const AnimatedInput: FC<InfoProps> = (props) => {
                         ${isFocused || value ? "translate-y-[10px] text-sm z-[3]" : "translate-y-[10px] lg:translate-y-5 text-lg text-[#0D2C3B]   z-[1]"}`}>
         {label}
       </label>
+
+      {errors && errors?.[name as string]?.length > 0 && <span className='absolute right-[5px] top-[-20px] bg-red-600 rounded-lg text-white p-2 z-10'>{errors && errors[name as string]}</span>}
+
+
       {
         inputType === 'textArea'
           ?
