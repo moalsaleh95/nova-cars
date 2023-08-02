@@ -7,6 +7,7 @@ import { ReactComponent as LinkedIn } from '../../assets/socials/linkedin-logo-b
 import { ReactComponent as Phone } from '../../assets/socials/phone.svg';
 import ButtonPrimary from '../../lib/Button/ButtonPrimary';
 import { MainColor } from '../constants/colors';
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -76,7 +77,7 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
     );
 
     const handleHeadingTab = ( heading: string ) => {
-        setActiveHeadingTab(heading?.toLowerCase());
+        setActiveHeadingTab(heading);
     }; 
 
     return (
@@ -86,13 +87,13 @@ const SocialHeading: FC<SocialHeadingProps> = ({ activeHeadingTab, setActiveHead
 
                     <div className={`flex items-end ${activeTabClassNames}`}>
                         <div className='flex items-center justify-center h-full'>
-                            {/* <span className='whitespace-nowrap mr-4 mt-5'>
-                                { activeHeadingTab === 'mechanics' ? ActiveHeading('Mechanics') : InactiveHeading('Mechanics') }
-                            </span> */}
 
-                            <span className='mt-5'>
-                                { activeHeadingTab === 'detailing' ? ActiveHeading('Detailing') : InactiveHeading('Detailing') }
-                            </span>
+                            <NavLink to={'oto-yikama'} className='mt-5 mr-4'>
+                                { activeHeadingTab === 'Oto Yıkama' ? ActiveHeading('Oto Yıkama') : InactiveHeading('Oto Yıkama') }
+                            </NavLink>
+                            <NavLink to={'/mekanik'} className='whitespace-nowrap mr-4 mt-5'>
+                                { activeHeadingTab === 'Mechanics' ? ActiveHeading('Mekanik') : InactiveHeading('Mechanics') }
+                            </NavLink>
                         </div>
                     </div>
 

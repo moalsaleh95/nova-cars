@@ -16,15 +16,15 @@ export interface NavigationProps {
   dummyState?: boolean
 };
 
-const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'mechanics', dummyState }) => {
+const Navigation: FC<NavigationProps> = ({ located = 'header', itemColor, isScrollTop = false, activeHeadingTab = 'Mechanics', dummyState }) => {
   const whichLogo = localStorage.theme === 'dark' ? MechanicsLogo : MechanicsLogoFooter
 
   const HeadingLogo = () => {
-    return activeHeadingTab === 'mechanics' ? MechanicsLogo : DetailingLogo;
+    return activeHeadingTab === 'Mechanics' ? MechanicsLogo : DetailingLogo;
   };
 
   const FooterLogo = () => {
-    return activeHeadingTab === 'mechanics' ? whichLogo : DetailingLogoFooter;
+    return activeHeadingTab === 'Mechanics' ? whichLogo : DetailingLogoFooter;
   };
 
 
