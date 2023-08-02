@@ -11,6 +11,20 @@ const viewsUrls: any[] = [
         id: '1'
     },
     {
+        path: "/oto-yikama",
+        exact: true,
+        component: Homepage,
+        type: "public",
+        id: '1'
+    },
+    {
+        path: "/mekanik",
+        exact: true,
+        component: Homepage,
+        type: "public",
+        id: '1'
+    },
+    {
         path: "/about",
         exact: true,
         component: About,

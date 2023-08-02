@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 import { MasterFooter, MasterHeader } from './components';
@@ -12,13 +12,17 @@ interface AppProps {
 }
 
 const App: FC<AppProps> = () => {
-  const [activeHeadingTab, setActiveHeadingTab] = useState<string>('detailing');
-
+  const [activeHeadingTab, setActiveHeadingTab] = useState<string>('Oto Yıkama');
+  useEffect(() => {
+    console.log('the active Heading: ', activeHeadingTab)
+  
+  }, [activeHeadingTab])
+  
   return (
     <Router>
       <MasterHeader 
       activeHeadingTab = {activeHeadingTab} 
-      // setActiveHeadingTab = {setActiveHeadingTab}
+      setActiveHeadingTab = {setActiveHeadingTab}
        />
       <Routers />
       <FloatingWhatsApp accountName={'Nova Cars Care'} phoneNumber={'+905413353713'} />
