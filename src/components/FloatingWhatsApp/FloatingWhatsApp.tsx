@@ -220,7 +220,7 @@ export default function FloatingWhatsApp({
 
   return (
     <div className={`${css.floatingWhatsapp} ${darkMode ? `${css.dark} ` : ''} ${className}`} style={style}>
-      <div
+      {/* <div
         className={`${css.whatsappButton} ${buttonClassName}`}
         onClick={handleOpen}
         style={buttonStyle}
@@ -232,7 +232,22 @@ export default function FloatingWhatsApp({
             1
           </span>
         )}
-      </div>
+      </div> */}
+
+      <a id='whatsapp-button'
+        href='https://wa.me/905413353713' target='_blank'
+        className={`${css.whatsappButton} ${buttonClassName}`}
+        aria-hidden='true'
+      >
+        <WhatsappSVG />
+        {isNotification && (
+          <span className={`${css.notificationIndicator} ${notificationClassName}`} style={notificationStyle}>
+            1
+          </span>
+        )}
+      </a>
+
+
 
       <div
         className={`${css.whatsappChatBox} ${isOpen ? css.open : css.close} ${chatboxClassName}`}
