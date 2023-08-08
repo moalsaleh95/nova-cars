@@ -236,7 +236,7 @@ export default function FloatingWhatsApp({
 
       <a id='whatsapp-button'
         href='https://wa.me/905413353713' target='_blank'
-        className={`${css.whatsappButton} ${buttonClassName}`}
+        className={`wp-link ${css.whatsappButton} ${buttonClassName}`}
         aria-hidden='true'
       >
         <WhatsappSVG />
