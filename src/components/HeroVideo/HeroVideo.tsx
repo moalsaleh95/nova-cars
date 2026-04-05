@@ -26,7 +26,7 @@ function HeroVideo() {
              <div className='h-[420px] bg-[#d81212]'></div>
             <div className='relative flex justify-center -translate-y-[380px] sm:-translate-y-[400px] overflow-hidden'>
                 <video className='rounded-[2rem] w-[90%]'
-                    src={"https://novacarcare.s3.amazonaws.com/novacarcaredemo.mp4"}
+                    src={"https://cdn.pixabay.com/video/2015/11/09/1295-145209438_large.mp4"}
                     autoPlay
                     loop
                     muted
@@ -63,7 +63,7 @@ function HeroVideo() {
                                                         id='videoPlayer'
                                                         className="modal__video-style"
                                                         onLoad={() => spinner()}
-                                                        src="https://novacarcare.s3.amazonaws.com/novacarcaredemo.mp4"
+                                                        src="https://cdn.pixabay.com/video/2015/11/09/1295-145209438_large.mp4"
                                                         title="Nova Car Care"
                                                         controls
                                                         loop

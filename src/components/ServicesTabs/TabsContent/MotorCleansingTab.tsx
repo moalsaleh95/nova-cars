@@ -7,9 +7,9 @@ const MotorCleansingTab = () => {
 
     <div className='md:min-h-[620px] max-h-full flex flex-col lg:flex-row justify-between pl-5 xl:pl-0 pr-5 md:pr-7 pt-8 pb-5 xl:pb-0  md:pt-[37px] relative dark:bg-[#141414] dark:text-white'>
       <div className='h-full flex items-center'>
-        <img src={'https://novacarcare.s3.amazonaws.com/services/DetayliMotorTemizlik.jpeg'} className='hidden lg:inline-block min-w-[580px] min-h-[289px] mt-20 mx-8 rounded-xl' alt='car wash banner' />
+        <img src={'https://images.pexels.com/photos/33814734/pexels-photo-33814734.jpeg'} className='hidden lg:inline-block min-w-[580px] min-h-[289px] mt-20 mx-8 rounded-xl' alt='car wash banner' />
       </div>
-      <div className='content w-full'>
+      <div className='relative'>
         <h2 className='text-[26px] mb-[22px]'>Detaylı Motor Temizlik</h2>
         <p className='text-lg'>
           Otomobilin motor kısmında zamanla toz, yağ katmanları, çamur, kireç, zift, demir tozları ve
