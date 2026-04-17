@@ -29,7 +29,7 @@ body {
 
 .owl-nav {
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
 }
 
 .owl-carousel .owl-nav button.owl-prev,
